@@ -26,12 +26,12 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 	std::string num3;
 	std::vector<std::string> resultVector;
 
-	for (auto i = num2.size() - 1; i >= 0; i--) {
+	for (uint64_t i = num2.size() - 1; i >= 0; i--) {
 		auto carry = 0;
 		auto base = 0;
 		num3 = "";
 
-		for (auto j = num1.size() - 1; j >= 0; j--) {
+		for (uint64_t j = num1.size() - 1; j >= 0; j--) {
 			auto n1 = num1.at(j);
 			auto n2 = num2.at(i);
 
@@ -49,7 +49,7 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 
 		std::reverse(num3.begin(), num3.end());
 
-		for (size_t k = num2.size() - 2 - i; k >= 0; k--) {
+		for (uint64_t k = num2.size() - 2 - i; k >= 0; k--) {
 			num3 = num3 + "0";
 		}
 
@@ -162,16 +162,6 @@ uint64_t sumOfVector(std::vector<uint64_t> numbers) {
 	return result;
 }
 
-bool checkPrime(int n) {
-	if (n == 2) return true;
-	if (n < 2 || n % 2 == 0) return false;
-
-	for (int i = 3; i * i <= n; i += 2) {
-		if (n % i == 0) return false;
-	}
-	return true;
-}
-
 std::vector<std::string> loadNumbers(std::string fileName) {
 	std::vector<std::string> result;
 	std::ifstream numbersFile(fileName);
@@ -191,3 +181,250 @@ std::vector<std::string> loadNumbers(std::string fileName) {
 
 	return result;
 }
+
+std::vector<uint64_t> primeFactors(uint64_t number) {
+	auto limit = sqrt(number);
+	std::vector<uint64_t> listOfPrimes;
+
+	while (number % 2 == 0) {
+		listOfPrimes.push_back(2);
+		number /= 2;
+	}
+
+	for (int i = 3; i < limit; i += 2) {
+		while (number % i == 0) {
+			listOfPrimes.push_back(i);
+			number /= i;
+		}
+	}
+
+	return listOfPrimes;
+}
+
+bool isPalindrome(int number) {
+	std::string forward = std::to_string(number);
+	std::string backward = forward;
+	std::reverse(backward.begin(), backward.end());
+
+	return (forward == backward);
+}
+
+bool isDivisibleByRange(int begin, int end, int number) {
+	for (int i = begin; i <= end; i++) {
+		if (!(number % i == 0)) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+int sumOfSquares(int number) {
+	int result = 0;
+
+	for (int i = 1; i <= number; i++) {
+		result += i * i;
+	}
+
+	return result;
+}
+
+int squareOfSums(int number) {
+	int result = 0;
+
+	for (int i = 1; i <= number; i++) {
+		result += i;
+	}
+	result = result * result;
+
+	return result;
+}
+
+bool checkPrime(int n) {
+	if (n == 2) return true;
+	if (n < 2 || n % 2 == 0) return false;
+
+	for (int i = 3; i * i <= n; i += 2) {
+		if (n % i == 0) return false;
+	}
+	return true;
+}
+
+int getPrimeByIndex(int index) {
+	int counter = 0;
+	int prime = 0;
+	int number = 1;
+
+	bool result = false;
+
+	while (counter < index) {
+		result = checkPrime(number);
+		if (result == true) {
+			prime = number;
+			counter++;
+		}
+		number++;
+	}
+
+	return prime;
+}
+
+int collatz(int number) {
+	int result = 1;
+	uint64_t temp = number;
+
+	while (temp != 1) {
+		if (temp % 2 == 0) {
+			temp = temp / 2;
+		}
+		else {
+			temp = (3 * temp) + 1;
+		}
+		result++;
+	}
+
+	return result;
+}
+
+std::vector<bool> setBits(std::string bitString) {
+	std::vector<bool> result;
+
+	for (auto b : bitString) {
+		if (b == '0') {
+			result.push_back(false);
+		}
+		else if (b == '1') {
+			result.push_back(true);
+		}
+	}
+
+	return result;
+}
+
+std::vector<bool> shiftBits(std::vector<bool> bits, int numberOfBits, int amountToShift) {
+	std::vector<bool> result = bits;
+
+	auto begin = result.begin();
+	auto end = result.end() - 1;
+	auto midpoint = result.size() / 2;
+
+	if ((numberOfBits > 0) && (amountToShift > 0)) {
+		for (int i = 0; i < numberOfBits; i++) {
+			std::iter_swap(begin + midpoint - 1 - i, begin + midpoint - 1 - i + amountToShift);
+		}
+	}
+
+	return result;
+}
+
+SolutionStruct recursiveShifts(SolutionStruct solution) {
+	SolutionStruct s;
+
+
+
+	return s;
+}
+
+
+template<typename T>
+std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
+	for (auto b : v) {
+		out << b;
+	}
+	return out;
+}
+
+std::string makeStringFromNumber(int number) {
+	std::string result;
+
+	std::string textnum = std::to_string(number);
+
+	for (uint64_t i = 0; i < textnum.length(); i++) {
+		if (textnum.at(i) == '1') { result += "one"; }
+		if (textnum.at(i) == '2') { result += "two"; }
+		if (textnum.at(i) == '3') { result += "three"; }
+		if (textnum.at(i) == '4') { result += "four"; }
+		if (textnum.at(i) == '5') { result += "five"; }
+		if (textnum.at(i) == '6') { result += "six"; }
+		if (textnum.at(i) == '7') { result += "seven"; }
+		if (textnum.at(i) == '8') { result += "eight"; }
+		if (textnum.at(i) == '9') { result += "nine"; }
+
+		if (textnum.length() - i == 4) {
+			if (textnum.at(i + 1) == '0' && textnum.at(i + 2) == '0' && textnum.at(i + 3) == '0') {
+				result += "thousand";
+				return result;
+			}
+			else { result += "thousand"; }
+		}
+
+		else if (textnum.length() - i == 3) {
+			if (textnum.at(i + 1) == '0' && textnum.at(i + 2) == '0') { result += "hundred"; return result; }
+			if (textnum.at(i) == '0') { result += "and"; }
+			else { result += "hundredand"; }
+		}
+
+		else if (textnum.length() - i == 2) {
+			if (textnum.at(i) == 0 && textnum.at(i + 1) == 0) { return result; }
+
+			if (textnum.at(i) == '0') {
+				if (textnum.at(i + 1) == '1') { result += "one"; return result; }
+				if (textnum.at(i + 1) == '2') { result += "two"; return result; }
+				if (textnum.at(i + 1) == '3') { result += "three"; return result; }
+				if (textnum.at(i + 1) == '4') { result += "four"; return result; }
+				if (textnum.at(i + 1) == '5') { result += "five"; return result; }
+				if (textnum.at(i + 1) == '6') { result += "six"; return result; }
+				if (textnum.at(i + 1) == '7') { result += "seven"; return result; }
+				if (textnum.at(i + 1) == '8') { result += "eight"; return result; }
+				if (textnum.at(i + 1) == '9') { result += "nine"; return result; }
+			}
+			if (textnum.at(i) == '1') {
+				if (textnum.at(i + 1) == '0') { result = result.substr(0, result.length() - 3); result += "ten"; return result; }
+				if (textnum.at(i + 1) == '1') { result = result.substr(0, result.length() - 3); result += "eleven"; return result; }
+				if (textnum.at(i + 1) == '2') { result = result.substr(0, result.length() - 3); result += "twelve"; return result; }
+				if (textnum.at(i + 1) == '3') { result = result.substr(0, result.length() - 3); result += "thirteen"; return result; }
+				if (textnum.at(i + 1) == '4') { result = result.substr(0, result.length() - 3); result += "fourteen"; return result; }
+				if (textnum.at(i + 1) == '5') { result = result.substr(0, result.length() - 3); result += "fifteen"; return result; }
+				if (textnum.at(i + 1) == '6') { result = result.substr(0, result.length() - 3); result += "sixteen"; return result; }
+				if (textnum.at(i + 1) == '7') { result = result.substr(0, result.length() - 3); result += "seventeen"; return result; }
+				if (textnum.at(i + 1) == '8') { result = result.substr(0, result.length() - 3); result += "eighteen"; return result; }
+				if (textnum.at(i + 1) == '9') { result = result.substr(0, result.length() - 3); result += "nineteen"; return result; }
+			}
+			else if (textnum.at(i) == '2') { result = result.substr(0, result.length() - 3); result += "twen"; }
+			else if (textnum.at(i) == '3') { result = result.substr(0, result.length() - 5); result += "thir"; }
+			else if (textnum.at(i) == '4') { result = result.substr(0, result.length() - 4); result += "for"; }
+			else if (textnum.at(i) == '5') { result = result.substr(0, result.length() - 4); result += "fif"; }
+			else if (textnum.at(i) == '8') { result = result.substr(0, result.length() - 1); }
+
+			if (textnum.at(i + 1) == '0') {
+				result += "ty";
+			}
+			else {
+				result += "ty";
+			}
+		}
+	}
+
+	return result;
+}
+
+std::vector<std::string> loadTriangle(std::string fileName) {
+	std::vector<std::string> result;
+	std::ifstream triangleFile(fileName);
+	std::string line;
+
+	if (triangleFile.is_open()) {
+		while (std::getline(triangleFile, line)) {
+			if (line.size() > 0) {
+				result.push_back(line);
+			}
+		}
+	}
+	else {
+		std::cout << "Failed to open file." << std::endl;
+	}
+	triangleFile.close();
+
+	return result;
+}
+
