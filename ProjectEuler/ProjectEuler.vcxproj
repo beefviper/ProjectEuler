@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\beef\source\repos\ProjectEuler\EulerLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,6 +152,29 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Problem0001.cpp" />
+    <ClCompile Include="Problem0002.cpp" />
+    <ClCompile Include="Problem0003.cpp" />
+    <ClCompile Include="Problem0004.cpp" />
+    <ClCompile Include="Problem0005.cpp" />
+    <ClCompile Include="Problem0006.cpp" />
+    <ClCompile Include="Problem0007.cpp" />
+    <ClCompile Include="Problem0008.cpp" />
+    <ClCompile Include="Problem0009.cpp" />
+    <ClCompile Include="Problem0010.cpp" />
+    <ClCompile Include="Problem0011.cpp" />
+    <ClCompile Include="Problem0012.cpp" />
+    <ClCompile Include="Problem0013.cpp" />
+    <ClCompile Include="Problem0014.cpp" />
+    <ClCompile Include="Problem0015.cpp" />
+    <ClCompile Include="Problem0016.cpp" />
+    <ClCompile Include="Problem0017.cpp" />
+    <ClCompile Include="Problem0018.cpp" />
+    <ClCompile Include="Problem0020.cpp" />
+    <ClCompile Include="Problem0021.cpp" />
+    <ClCompile Include="Problem0022.cpp" />
+    <ClCompile Include="Problem0023.cpp" />
+    <ClCompile Include="Problem0025.cpp" />
     <ClCompile Include="ProjectEuler.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -158,6 +182,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EulerLib\EulerLib.vcxproj">
+      <Project>{aa78d400-3651-4a2c-9262-43b068247fb2}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

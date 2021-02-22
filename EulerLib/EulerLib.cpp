@@ -26,16 +26,16 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 	std::string num3;
 	std::vector<std::string> resultVector;
 
-	for (int i = num2.size() - 1; i >= 0; i--) {
-		int carry = 0;
-		int base = 0;
+	for (auto i = num2.size() - 1; i >= 0; i--) {
+		auto carry = 0;
+		auto base = 0;
 		num3 = "";
 
-		for (int j = num1.size() - 1; j >= 0; j--) {
-			int n1 = num1.at(j);
-			int n2 = num2.at(i);
+		for (auto j = num1.size() - 1; j >= 0; j--) {
+			auto n1 = num1.at(j);
+			auto n2 = num2.at(i);
 
-			int n3 = (n1 * n2) + carry;
+			auto n3 = (n1 * n2) + carry;
 
 			base = n3 % 10;
 			carry = n3 / 10;
@@ -49,7 +49,7 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 
 		std::reverse(num3.begin(), num3.end());
 
-		for (int k = num2.size() - 2 - i; k >= 0; k--) {
+		for (size_t k = num2.size() - 2 - i; k >= 0; k--) {
 			num3 = num3 + "0";
 		}
 
@@ -74,12 +74,12 @@ std::string addLargeNumbers(std::string numberOne, std::string numberTwo) {
 	std::string str2 = numberTwo;
 
 	if (str1.size() > str2.size()) {
-		int length = str1.size() - str2.size();
+		auto length = str1.size() - str2.size();
 		std::string padding(length, '0');
 		str2 = padding + str2;
 	}
 	else {
-		int length = str2.size() - str1.size();
+		auto length = str2.size() - str1.size();
 		std::string padding(length, '0');
 		str1 = padding + str1;
 	}
@@ -158,6 +158,36 @@ uint64_t sumOfVector(std::vector<uint64_t> numbers) {
 	for (auto num : numbers) {
 		result += num;
 	}
+
+	return result;
+}
+
+bool checkPrime(int n) {
+	if (n == 2) return true;
+	if (n < 2 || n % 2 == 0) return false;
+
+	for (int i = 3; i * i <= n; i += 2) {
+		if (n % i == 0) return false;
+	}
+	return true;
+}
+
+std::vector<std::string> loadNumbers(std::string fileName) {
+	std::vector<std::string> result;
+	std::ifstream numbersFile(fileName);
+	std::string number;
+
+	if (numbersFile.is_open()) {
+		while (std::getline(numbersFile, number)) {
+			if (number.size() > 0) {
+				result.push_back(number);
+			}
+		}
+	}
+	else {
+		std::cout << "Failed to open file." << std::endl;
+	}
+	numbersFile.close();
 
 	return result;
 }

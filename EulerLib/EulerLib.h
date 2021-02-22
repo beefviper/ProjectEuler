@@ -15,3 +15,5 @@ std::vector<int> createNumber(std::string number);
 std::vector<uint64_t> getFactors(uint64_t number);
 std::vector<uint64_t> getProperDivisors(uint64_t number);
 uint64_t sumOfVector(std::vector<uint64_t> numbers);
+bool checkPrime(int n);
+std::vector<std::string> loadNumbers(std::string fileName);
