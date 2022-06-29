@@ -4,7 +4,7 @@
 #include <vector>
 #include <cstdint>
 
-struct SolutionStruct;
+struct SetOfBits;
 
 int fib(int number);
 std::string multipleLargeNumbers(std::string numOne, std::string numTwo);
@@ -24,11 +24,11 @@ int getPrimeByIndex(int index);
 int collatz(int number);
 std::vector<bool> setBits(std::string bitString);
 std::vector<bool> shiftBits(std::vector<bool> bits, int numberOfBits, int amountToShift);
-SolutionStruct recursiveShifts(SolutionStruct solution);
+SetOfBits recursiveShifts(SetOfBits solution);
 std::string makeStringFromNumber(int number);
 std::vector<std::string> loadTriangle(std::string fileName);
 
-struct SolutionStruct
+struct SetOfBits
 {
 	std::vector<bool> bits;
 	int numberOfBits = 0;

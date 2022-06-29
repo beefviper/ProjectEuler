@@ -316,8 +316,8 @@ std::vector<bool> shiftBits(std::vector<bool> bits, int numberOfBits, int amount
 	return result;
 }
 
-SolutionStruct recursiveShifts(SolutionStruct solution) {
-	SolutionStruct s;
+SetOfBits recursiveShifts(SetOfBits solution) {
+	SetOfBits s;
 
 
 
