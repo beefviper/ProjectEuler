@@ -426,4 +426,3 @@ std::vector<std::string> loadTriangle(std::string fileName) {
 
 	return result;
 }
-
