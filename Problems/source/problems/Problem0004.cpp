@@ -13,14 +13,14 @@ Answer: 906609
 
 #include "ProjectEuler.h"
 
-int problem4()
+uint64_t problem4()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	int num1 = 2203;
 	int num2 = 906609;
 
-	std::cout << num1 << " is " << isPalindrome(num1) << std::endl;
-	std::cout << num2 << " is " << isPalindrome(num2) << std::endl;
+	//std::cout << num1 << " is " << isPalindrome(num1) << std::endl;
+	//std::cout << num2 << " is " << isPalindrome(num2) << std::endl;
 
 	int largestPalindrome = 0;
 	
@@ -37,8 +37,8 @@ int problem4()
 	}
 	
 	result = largestPalindrome;
-	std::cout << "The largest palindrome made from the product of two 3-digit"
-		<< " numbers is " << result << "." << std::endl;
+	//std::cout << "The largest palindrome made from the product of two 3-digit"
+	//	<< " numbers is " << result << "." << std::endl;
 
 	return result;
 }

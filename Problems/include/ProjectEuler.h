@@ -12,26 +12,35 @@
 #include <fstream>
 #include <cstdint>
 
-int problem1();
-int problem2();
-int problem3();
-int problem4();
-int problem5();
-int problem6();
-int problem7();
-int problem8();
-int problem9();
-int problem10();
-int problem11();
-int problem12();
-int problem13();
-int problem14();
-int problem15();
-int problem16();
-int problem17();
-int problem18();
-int problem20();
-int problem21();
-int problem22();
-int problem23();
-int problem25();
+struct Problem
+{
+	uint64_t number;
+	uint64_t (*fnPtrProblem)() { nullptr };
+	uint64_t answer{ 0 };
+};
+
+void createProblems(std::vector<Problem>& problems);
+
+uint64_t problem1();
+uint64_t problem2();
+uint64_t problem3();
+uint64_t problem4();
+uint64_t problem5();
+uint64_t problem6();
+uint64_t problem7();
+uint64_t problem8();
+uint64_t problem9();
+uint64_t problem10();
+uint64_t problem11();
+uint64_t problem12();
+uint64_t problem13();
+uint64_t problem14();
+uint64_t problem15();
+uint64_t problem16();
+uint64_t problem17();
+uint64_t problem18();
+uint64_t problem20();
+uint64_t problem21();
+uint64_t problem22();
+uint64_t problem23();
+uint64_t problem25();

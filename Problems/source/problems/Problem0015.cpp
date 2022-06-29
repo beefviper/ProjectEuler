@@ -14,18 +14,19 @@ Answer:
 
 #include "ProjectEuler.h"
 
-int problem15()
+uint64_t problem15()
 {
+	uint64_t result{ 0 };
+
 	std::string start = "1111111111111111111100000000000000000000";
 	uint64_t counter = 0;
 
-	std::cout << start << " [" << ++counter << "]" << std::endl;
+	//std::cout << start << " [" << ++counter << "]" << std::endl;
 
 	auto bits = setBits(start);
 	auto begin = bits.begin();
 	auto end = bits.end() - 1;
 	auto midpoint = start.length() / 2;
 
-	system("PAUSE");
-    return 0;
+    return result;
 }

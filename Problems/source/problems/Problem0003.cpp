@@ -12,25 +12,25 @@ Answer: 6857
 
 #include "ProjectEuler.h"
 
-int problem3()
+uint64_t problem3()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	auto numberToFactor = 1;
 	std::vector<uint64_t> factors = primeFactors(numberToFactor);
 
-	std::cout << "The prime factors of " << numberToFactor << " is ";
-	for (uint64_t factor : factors) {
-		std::cout << factor << ", ";
-	}
-	std::cout << std::endl;
+	//std::cout << "The prime factors of " << numberToFactor << " is ";
+	//for (uint64_t factor : factors) {
+	//	std::cout << factor << ", ";
+	//}
+	//std::cout << std::endl;
 
 	if (!factors.empty()) {
 		result = factors.back();
-		std::cout << "The largest prime factor of " << numberToFactor << " is "
-			<< result << std::endl;
+		//std::cout << "The largest prime factor of " << numberToFactor << " is "
+		//	<< result << std::endl;
 	}
 	else {
-		std::cout << "There are no prime factors." << std::endl;
+		//std::cout << "There are no prime factors." << std::endl;
 	}
 
     return result;

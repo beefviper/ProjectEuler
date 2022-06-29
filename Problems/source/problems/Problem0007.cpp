@@ -13,14 +13,14 @@ Answer: 104743
 
 #include "ProjectEuler.h"
 
-int problem7()
+uint64_t problem7()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	int index = 10001;
 
 	result = getPrimeByIndex(index);
-	std::cout << "The " << index << "th prime is "
-		<< result << "." << std::endl;
+	//std::cout << "The " << index << "th prime is "
+	//	<< result << "." << std::endl;
 	
 	return result;
 }

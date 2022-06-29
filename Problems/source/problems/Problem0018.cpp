@@ -20,9 +20,11 @@ Answer: 1074
 
 #include "ProjectEuler.h"
 
-int problem18()
+uint64_t problem18()
 {
-	std::string triangleFileName = "large_tri.txt";
+	uint64_t result{ 0 };
+
+	std::string triangleFileName = "data/large_tri.txt";
 	std::vector<std::string> triangleData = loadTriangle(triangleFileName);
 	std::vector<std::vector<int>> triangle;
 
@@ -38,12 +40,12 @@ int problem18()
 		triangle.push_back(v);
 	}
 
-	for (auto& v1 : triangle) {
-		for (auto v2 : v1) {
-			std::cout << v2 << " ";
-		}
-		std::cout << std::endl;
-	}
+	//for (auto& v1 : triangle) {
+	//	for (auto v2 : v1) {
+	//		std::cout << v2 << " ";
+	//	}
+	//	std::cout << std::endl;
+	//}
 
 	for (int i = triangle.size() - 2; i >= 0; i--) {
 		for (int j = 0; j < triangle.at(i).size(); j++) {
@@ -59,12 +61,12 @@ int problem18()
 		}
 	}
 
-	for (auto& v1 : triangle) {
-		for (auto v2 : v1) {
-			std::cout << v2 << " ";
-		}
-		std::cout << std::endl;
-	}
+	//for (auto& v1 : triangle) {
+	//	for (auto v2 : v1) {
+	//		std::cout << v2 << " ";
+	//	}
+	//	std::cout << std::endl;
+	//}
 
-	return 0;
+	return result;
 }

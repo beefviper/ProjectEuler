@@ -14,9 +14,9 @@ Answer: 232792560
 
 #include "ProjectEuler.h"
 
-int problem5()
+uint64_t problem5()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	bool flag = false;
 
 	while (flag == false) {
@@ -24,8 +24,8 @@ int problem5()
 		flag = isDivisibleByRange(1, 20, result);
 	}
 	
-	std::cout << "The smallest positive number that is evenly divisible by"
-		<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
+	//std::cout << "The smallest positive number that is evenly divisible by"
+	//	<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
 
 	return result;
 }

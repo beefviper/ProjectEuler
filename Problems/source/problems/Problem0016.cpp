@@ -12,16 +12,16 @@ Answer: 1366
 
 #include "ProjectEuler.h"
 
-int problem16() {
-	int result = 0;
+uint64_t problem16() {
+	uint64_t result{ 0 };
 	
 	std::string numberOne = "654646846453489";
 	std::string numberTwo = "546546468415312";
 	std::string largeNumber = multipleLargeNumbers(numberOne, numberTwo);
 
-	std::cout << "numberOne = " << numberOne << std::endl;
-	std::cout << "numberTwo = " << numberTwo << std::endl;
-	std::cout << "largeNumber = " << largeNumber << std::endl;
+	//std::cout << "numberOne = " << numberOne << std::endl;
+	//std::cout << "numberTwo = " << numberTwo << std::endl;
+	//std::cout << "largeNumber = " << largeNumber << std::endl;
 	
 	std::string total = "1";
 
@@ -33,7 +33,7 @@ int problem16() {
 		result = result + atoi(&c);
 	}
 
-	std::cout << "The sum is " << result << std::endl;
+	//std::cout << "The sum is " << result << std::endl;
 
 	return result;
 }

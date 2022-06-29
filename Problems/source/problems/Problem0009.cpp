@@ -16,9 +16,9 @@ Answer: 31875000
 
 #include "ProjectEuler.h"
 
-int problem9()
+uint64_t problem9()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	int resultA = 0;
 	int resultB = 0;
 	int resultC = 0;
@@ -40,10 +40,10 @@ int problem9()
 	int sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
-	std::cout << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
-	std::cout << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
-	std::cout << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
-	std::cout << "The product of abc is " << result << "." << std::endl;
+	//std::cout << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
+	//std::cout << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
+	//std::cout << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
+	//std::cout << "The product of abc is " << result << "." << std::endl;
 
     return result;
 }

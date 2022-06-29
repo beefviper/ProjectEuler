@@ -11,21 +11,21 @@ Answer: 5537376230
 
 #include "ProjectEuler.h"
 
-int problem13()
+uint64_t problem13()
 {
 	uint64_t result{ 0 };
-	std::string numbersFileName = "numbers.txt";
+	std::string numbersFileName = "data/numbers.txt";
 	std::vector<std::string> numbers = loadNumbers(numbersFileName);
 	std::string total(50, '0');
 	
 	for (auto& number : numbers) {
-		std::cout << number << std::endl;
+		//std::cout << number << std::endl;
 		total = addLargeNumbers(total, number);
 	}
 
-	std::cout << "The total is " << total << "." << std::endl;
+	//std::cout << "The total is " << total << "." << std::endl;
 
-	result = std::stol(total);
+	//result = std::stol(total);
 
 	return result;
 }

@@ -33,15 +33,14 @@ Answer:
 
 #include "ProjectEuler.h"
 
-int problem25()
+uint64_t problem25()
 {
+	uint64_t result{ 0 };
 	std::string index = "999";
 	std::string answer = "0";
 
+	//std::cout << "index: " << atoi(index.c_str()) + 1
+	//	<< ", answer: " << answer << std::endl;
 
-	std::cout << "index: " << atoi(index.c_str()) + 1
-		<< ", answer: " << answer << std::endl;
-
-	system("PAUSE");
-	return 0;
+	return result;
 }

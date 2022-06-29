@@ -26,10 +26,11 @@ Answer:
 
 #include "ProjectEuler.h"
 
-int problem23()
+uint64_t problem23()
 {
+	uint64_t result{ 0 };
+
 	
 
-	system("PAUSE");
-	return 0;
+	return result;
 }

@@ -12,9 +12,9 @@ Answer:
 
 #include "ProjectEuler.h"
 
-int problem10()
+uint64_t problem10()
 {
-	uint64_t result = 0;
+	uint64_t result{ 0 };
 	int limit = 2000000;
 
 	for (int i = 0; i < limit; i++) {
@@ -23,8 +23,8 @@ int problem10()
 		}
 	}
 
-	std::cout << "The sum of all the primes below " << limit << " is "
-		<< result << "." << std::endl;
+	//std::cout << "The sum of all the primes below " << limit << " is "
+	//	<< result << "." << std::endl;
 
     return result;
 }

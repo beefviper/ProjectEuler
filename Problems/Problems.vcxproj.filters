@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\ProjectEuler.cpp">
+    <ClCompile Include="source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\problems\Problem0001.cpp">
@@ -94,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="source\problems\Problem0025.cpp">
       <Filter>Source Files\Problems</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Problems.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

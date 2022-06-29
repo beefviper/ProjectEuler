@@ -16,9 +16,9 @@ Answer: 648
 
 #include "ProjectEuler.h"
 
-int problem20()
+uint64_t problem20()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	int number = 100;
 	std::string answer = "1";
 
@@ -26,14 +26,14 @@ int problem20()
 		answer = multipleLargeNumbers(answer, std::to_string(i));
 	}
 
-	std::cout << "The factorial of " << number << " is "
-		<< answer << std::endl;
+	//std::cout << "The factorial of " << number << " is "
+	//	<< answer << std::endl;
 
 	for (char c : answer) {
 		result += atoi(&c);
 	}
 
-	std::cout << "The sum of all the digits is " << result << std::endl;
+	//std::cout << "The sum of all the digits is " << result << std::endl;
 
 	return result;
 }

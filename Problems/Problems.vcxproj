@@ -150,6 +150,7 @@
     <ClInclude Include="include\ProjectEuler.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\Problems.cpp" />
     <ClCompile Include="source\problems\Problem0001.cpp" />
     <ClCompile Include="source\problems\Problem0002.cpp" />
     <ClCompile Include="source\problems\Problem0003.cpp" />
@@ -173,7 +174,7 @@
     <ClCompile Include="source\problems\Problem0022.cpp" />
     <ClCompile Include="source\problems\Problem0023.cpp" />
     <ClCompile Include="source\problems\Problem0025.cpp" />
-    <ClCompile Include="source\ProjectEuler.cpp" />
+    <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

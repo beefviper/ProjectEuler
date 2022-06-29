@@ -16,9 +16,9 @@ Answer: 4613732
 
 #include "ProjectEuler.h"
 
-int problem2()
+uint64_t problem2()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 	int index = 1;
 	int number = 0;
 	int max = 4000000;
@@ -31,7 +31,7 @@ int problem2()
 		}
 		index++;
 	}
-	std::cout << std::endl << result << std::endl;
+	//std::cout << std::endl << result << std::endl;
 
     return result;
 }

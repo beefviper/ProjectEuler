@@ -29,9 +29,9 @@ Answer: 76576500
 
 #include "ProjectEuler.h"
 
-int problem12()
+uint64_t problem12()
 {
-	uint64_t result = 0;
+	uint64_t result{ 0 };
 	std::vector<uint64_t> factors;
 	uint64_t numberOfFactors = 0;
 	uint64_t counter = 1;
@@ -44,8 +44,8 @@ int problem12()
 		counter++;
 	}
 
-	std::cout << "The first tringle number with " << numberOfFactors
-		<< " factors is " << result << std::endl;
+	//std::cout << "The first tringle number with " << numberOfFactors
+	//	<< " factors is " << result << std::endl;
 
     return result;
 }

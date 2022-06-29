@@ -19,20 +19,20 @@ Answer: 21124
 
 #include "ProjectEuler.h"
 
-int problem17()
+uint64_t problem17()
 {
-	int result{ 0 };
+	uint64_t result{ 0 };
 	int number{ 1000 };
 
 	//std::string words = makeStringFromNumber(9999);
 
 	for (int i = 1; i <= number; i++) {
 		std::string words = makeStringFromNumber(i);
-		std::cout << words << std::endl;
+		//std::cout << words << std::endl;
 		result += words.length();
 	}
 
-	std::cout << "The total is " << result << "." << std::endl;
+	//std::cout << "The total is " << result << "." << std::endl;
 
 	return result;
 }

@@ -21,10 +21,10 @@ Answer: 871198282
 
 #include "ProjectEuler.h"
 
-int problem22()
+uint64_t problem22()
 {
-	uint64_t result = 0;
-	std::string namesFilename = "names.txt";
+	uint64_t result{ 0 };
+	std::string namesFilename = "data/names.txt";
 	std::ifstream namesFile(namesFilename);
 
 	std::vector<std::string> names;
@@ -62,7 +62,7 @@ int problem22()
 		result += it->second;
 	}
 
-	std::cout << "The sum of all the name scores is " << result << std::endl;
+	//std::cout << "The sum of all the name scores is " << result << std::endl;
 
 	return result;
 }

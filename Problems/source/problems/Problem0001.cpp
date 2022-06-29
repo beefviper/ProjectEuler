@@ -13,9 +13,9 @@ Answer: 233168
 
 #include "ProjectEuler.h"
 
-int problem1()
+uint64_t problem1()
 {
-	int result = 0;
+	uint64_t result{ 0 };
 
 	for (int i = 0; i < 1000; i++) {
 		if ((i % 3 == 0) || (i % 5 == 0)) {
@@ -23,7 +23,7 @@ int problem1()
 		}
 	}
 
-	std::cout << "The sum is: " << result << std::endl;
+	//std::cout << "The sum is: " << result << std::endl;
 	
     return result;
 }
