@@ -8,8 +8,6 @@ int main()
 	std::vector<Problem> problems;
 	createProblems(problems);
 
-	int numberOfProblems = problems.size();
-
 	for (auto& problem : problems)
 	{
 		if (problem.fnPtrProblem() == problem.answer)
