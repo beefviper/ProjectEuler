@@ -10,7 +10,7 @@ int main()
 
 	for (auto& problem : problems)
 	{
-		if (problem.fnPtrProblem() == problem.answer)
+		if (problem.problem() == problem.answer)
 		{
 			std::cout << "Problem " << problem.number << " solution is correct." << std::endl;
 		}

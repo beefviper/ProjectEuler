@@ -15,7 +15,7 @@
 struct Problem
 {
 	uint64_t number;
-	uint64_t (*fnPtrProblem)() { nullptr };
+	uint64_t (*problem)() { nullptr };
 	uint64_t answer{ 0 };
 };
 
