@@ -16,13 +16,13 @@ Answer: 906609
 uint64_t problem4()
 {
 	uint64_t result{ 0 };
-	int num1 = 2203;
-	int num2 = 906609;
+	uint64_t num1{ 2203 };
+	uint64_t num2{ 906609 };
 
 	//std::cout << num1 << " is " << isPalindrome(num1) << std::endl;
 	//std::cout << num2 << " is " << isPalindrome(num2) << std::endl;
 
-	int largestPalindrome = 0;
+	uint64_t largestPalindrome{ 0 };
 	
 	for (int i = 1; i < 1000; i++) {
 		for (int j = 1; j < 1000; j++) {

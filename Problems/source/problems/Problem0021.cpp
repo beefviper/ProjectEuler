@@ -18,8 +18,8 @@ Answer: 31626
 uint64_t problem21()
 {
 	uint64_t result{ 0 };
-	uint64_t number = 496;
-	uint64_t max_num = 10000;
+	uint64_t number{ 496 };
+	uint64_t max_num{ 10000 };
 	std::vector<uint64_t> factors = getFactors(number);
 	std::vector<uint64_t> properDivisors = getProperDivisors(number);
 	uint64_t answer = sumOfVector(properDivisors);

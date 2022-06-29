@@ -16,7 +16,7 @@ Answer: 104743
 uint64_t problem7()
 {
 	uint64_t result{ 0 };
-	int index = 10001;
+	uint64_t index{ 10001 };
 
 	result = getPrimeByIndex(index);
 	//std::cout << "The " << index << "th prime is "

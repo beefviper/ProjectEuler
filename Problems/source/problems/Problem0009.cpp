@@ -19,9 +19,10 @@ Answer: 31875000
 uint64_t problem9()
 {
 	uint64_t result{ 0 };
-	int resultA = 0;
-	int resultB = 0;
-	int resultC = 0;
+
+	uint64_t resultA = 0;
+	uint64_t resultB = 0;
+	uint64_t resultC = 0;
 
 	for (int a = 1; a < 1000; a++) {
 		for (int b = 1; b < 1000; b++) {

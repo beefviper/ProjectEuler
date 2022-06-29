@@ -23,8 +23,8 @@ Answer: 25164150
 uint64_t problem6()
 {
 	uint64_t result{ 0 };
-	
-	int limit = 100;
+	uint64_t limit{ 100 };
+
 	result = squareOfSums(limit) - sumOfSquares(limit);
 
 	//std::cout << "The difference between the sum of the squares of the"

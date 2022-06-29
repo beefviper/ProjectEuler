@@ -19,7 +19,7 @@ Answer: 648
 uint64_t problem20()
 {
 	uint64_t result{ 0 };
-	int number = 100;
+	uint64_t number{ 100 };
 	std::string answer = "1";
 
 	for (int i = 1; i <= number; i++) {

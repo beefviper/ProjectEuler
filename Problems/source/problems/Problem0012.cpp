@@ -32,10 +32,10 @@ Answer: 76576500
 uint64_t problem12()
 {
 	uint64_t result{ 0 };
-	std::vector<uint64_t> factors;
 	uint64_t numberOfFactors = 0;
 	uint64_t counter = 1;
 	uint64_t maxFactors = 500;
+	std::vector<uint64_t> factors;
 
 	while (numberOfFactors < maxFactors) {
 		result += counter;

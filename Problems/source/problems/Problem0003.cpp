@@ -15,7 +15,7 @@ Answer: 6857
 uint64_t problem3()
 {
 	uint64_t result{ 0 };
-	auto numberToFactor = 1;
+	uint64_t numberToFactor{ 1 };
 	std::vector<uint64_t> factors = primeFactors(numberToFactor);
 
 	//std::cout << "The prime factors of " << numberToFactor << " is ";

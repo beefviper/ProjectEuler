@@ -15,7 +15,7 @@ Answer:
 uint64_t problem10()
 {
 	uint64_t result{ 0 };
-	int limit = 2000000;
+	uint64_t limit{ 2000000 };
 
 	for (int i = 0; i < limit; i++) {
 		if (checkPrime(i) == true) {

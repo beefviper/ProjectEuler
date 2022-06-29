@@ -22,7 +22,7 @@ Answer: 21124
 uint64_t problem17()
 {
 	uint64_t result{ 0 };
-	int number{ 1000 };
+	uint64_t number{ 1000 };
 
 	//std::string words = makeStringFromNumber(9999);
 

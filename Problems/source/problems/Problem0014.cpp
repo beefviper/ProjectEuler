@@ -27,9 +27,9 @@ Answer: 837799
 uint64_t problem14()
 {
 	uint64_t result{ 0 };
-	int num = 13;
-	int length = collatz(num);
-	int max_num = 0;
+	uint64_t num = 13;
+	uint64_t length = collatz(num);
+	uint64_t max_num = 0;
 
 //	std::cout << "The chain length for " << num << " is "
 //		<< length << " numbers long." << std::endl;

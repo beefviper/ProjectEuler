@@ -19,9 +19,10 @@ Answer: 4613732
 uint64_t problem2()
 {
 	uint64_t result{ 0 };
-	int index = 1;
-	int number = 0;
-	int max = 4000000;
+
+	uint64_t index{ 1 };
+	uint64_t number{ 0 };
+	uint64_t max{ 4000000 };
 
 	while ( result < max ) {
 		number = fib(index);
