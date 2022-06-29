@@ -25,12 +25,12 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 	std::string num3;
 	std::vector<std::string> resultVector;
 
-	for (uint64_t i = num2.size() - 1; i >= 0; i--) {
+	for (int64_t i = num2.size() - 1; i >= 0; i--) {
 		auto carry = 0;
 		auto base = 0;
 		num3 = "";
 
-		for (uint64_t j = num1.size() - 1; j >= 0; j--) {
+		for (int64_t j = num1.size() - 1; j >= 0; j--) {
 			auto n1 = num1.at(j);
 			auto n2 = num2.at(i);
 
@@ -48,7 +48,7 @@ std::string multipleLargeNumbers(std::string numOne, std::string numTwo) {
 
 		std::reverse(num3.begin(), num3.end());
 
-		for (uint64_t k = num2.size() - 2 - i; k >= 0; k--) {
+		for (int64_t k = num2.size() - 2 - i; k >= 0; k--) {
 			num3 = num3 + "0";
 		}
 
