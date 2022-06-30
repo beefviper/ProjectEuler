@@ -10,14 +10,9 @@ int main()
 
 	for (auto& problem : problems)
 	{
-		if (problem.problem() == problem.answer)
-		{
-			std::cout << "Problem " << problem.number << " solution is correct." << std::endl;
-		}
-		else
-		{
-			std::cout << "Problem " << problem.number << " solution is incorrect." << std::endl;
-		}
+		std::cout << "Problem " << problem.number << " is "
+			<< (problem.problem() == problem.answer ? "correct." : "incorrect.")
+			<< std::endl;
 	}
 
 	return 0;
