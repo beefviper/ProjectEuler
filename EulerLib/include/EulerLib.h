@@ -1,5 +1,7 @@
 #pragma once
 
+#include "BigNum.h"
+
 #include <iostream>
 #include <vector>
 #include <cstdint>

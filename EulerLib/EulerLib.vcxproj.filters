@@ -18,9 +18,15 @@
     <ClCompile Include="source\EulerLib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\BigNum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\EulerLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BigNum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

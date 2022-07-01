@@ -155,9 +155,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\BigNum.cpp" />
     <ClCompile Include="source\EulerLib.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\BigNum.h" />
     <ClInclude Include="include\EulerLib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
