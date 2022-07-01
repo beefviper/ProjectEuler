@@ -25,8 +25,8 @@ private:
 	bool is_valid{ false };
 	bool sign{ true };
 	Number integer;
-	Number faction;
-	uint64_t base{ 10 };
+	Number fraction;
+	uint64_t base{ 0 };
 
 	bool isValidDigitForBase(const char& input_character, uint64_t input_base);
 	bool isValidDigit(const char& input_character);

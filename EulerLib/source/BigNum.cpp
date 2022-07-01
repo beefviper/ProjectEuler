@@ -25,11 +25,6 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 		return (num_iter != num_iter_end) && (*num_iter != character);
 	};
 
-	auto valid_iter_and_digit_for_base = [&num_iter, &num_iter_end, this](uint64_t in_base)
-	{
-		return (num_iter != num_iter_end) && (isValidDigitForBase(*num_iter, in_base));
-	};
-
 	// check for negative
 	if (valid_iter_equals('-'))
 	{
@@ -42,7 +37,7 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 
 	if (valid_iter_equals('0'))
 	{
-		num_iter++;
+		++num_iter;
 
 		// check for hex
 		if (valid_iter_equals('x'))
@@ -63,23 +58,66 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 			++num_iter;
 		}
 		// check for octal
-		else if (valid_iter_and_digit_for_base(8))
+		else if ((num_iter != num_iter_end) && (isValidDigitForBase(*num_iter, 8)))
 		{
 			decoded_base = 8;
 			--num_iter;
 		}
+		// decode base error
+		else
+		{
+			decoded_base = 0;
+			--num_iter;
+		}
 	}
 
-
-	if (base == decoded_base)
+	// assign base
+	if (decoded_base != 0)
 	{
-		if (valid_iter_not_equals('.'))
-		{
+		base = decoded_base;
+	}
+	else
+	{
+		base = input_base;
+	}
 
+	// read in integer digits
+	if (base != 0)
+	{
+		while (valid_iter_not_equals('.') && isValidDigit(*num_iter))
+		{
+			integer.push_back(ctoi(*num_iter));
+			++num_iter;
 		}
 
+		// read in fraction digits
+		if (valid_iter_equals('.'))
+		{
+			while (num_iter != input_number.end() && isValidDigit(*num_iter))
+			{
+				fraction.push_back(*num_iter);
+				++num_iter;
+			}
+		}
 	}
 
+	// pad integer if needed
+	if (integer.empty())
+	{
+		integer.push_back(0);
+	}
+
+	//pad fraction if needed
+	if (fraction.empty())
+	{
+		fraction.push_back(0);
+	}
+
+	// set if valid
+	if (num_iter == input_number.end())
+	{
+		is_valid = true;
+	}
 }
 
 // bignum from bignum
@@ -93,7 +131,7 @@ BigNum& BigNum::operator=(const BigNum& input_number)
 {
 	is_valid = input_number.is_valid;
 	sign = input_number.sign;
-	faction = input_number.faction;
+	fraction = input_number.fraction;
 	integer = input_number.integer;
 	base = input_number.base;
 
@@ -103,25 +141,32 @@ BigNum& BigNum::operator=(const BigNum& input_number)
 // output
 std::ostream& operator<<(std::ostream& output_stream, const BigNum& output_number)
 {
-	output_stream << (output_number.sign ? "" : "-");
-	for (auto digit : output_number.integer)
+	if (output_number.is_valid)
 	{
-		output_stream << digit;
+		output_stream << (output_number.sign ? "" : "-");
+		for (auto digit : output_number.integer)
+		{
+			output_stream << digit;
+		}
+		output_stream << "base" << output_number.base;
 	}
-	output_stream << "base" << output_number.base;
+	else
+	{
+		output_stream << "NaN";
+	}
 
 	return output_stream;
 }
 bool BigNum::isValidDigitForBase(const char& input_character, uint64_t input_base)
 {
 	char temp = ctoi(input_character);
-	return (temp < input_base && temp != -1 && input_base != 0 && input_base != 1);
+	return (temp < input_base&& temp != -1 && input_base != 0 && input_base != 1);
 }
 
 // is digit
 bool BigNum::isValidDigit(const char& input_character)
 {
-	isValidDigitForBase(input_character, base);
+	return isValidDigitForBase(input_character, base);
 }
 
 // char to int
