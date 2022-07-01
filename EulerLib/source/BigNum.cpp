@@ -95,7 +95,7 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 		{
 			while (num_iter != input_number.end() && isValidDigit(*num_iter))
 			{
-				fraction.push_back(*num_iter);
+				fraction.push_back(ctoi(* num_iter));
 				++num_iter;
 			}
 		}
@@ -146,7 +146,7 @@ std::ostream& operator<<(std::ostream& output_stream, const BigNum& output_numbe
 		output_stream << (output_number.sign ? "" : "-");
 		for (auto digit : output_number.integer)
 		{
-			output_stream << digit;
+			output_stream << itoc(digit);
 		}
 		output_stream << "base" << output_number.base;
 	}
@@ -170,7 +170,7 @@ bool BigNum::isValidDigit(const char& input_character)
 }
 
 // char to int
-int BigNum::ctoi(const char& c) {
+int ctoi(const char& c) {
 	int i = 0;
 	if (c >= '0' && c <= '9') { return (i = c - 48); }
 	else if (c >= 'A' && c <= 'Z') { return (i = c - 55); }
@@ -179,7 +179,7 @@ int BigNum::ctoi(const char& c) {
 }
 
 // int to char
-char BigNum::itoc(const int& i) {
+char itoc(const uint64_t& i) {
 	char c = 0;
 	if (i >= 0 && i <= 9) { return (c = 48 + i); }
 	else if (i >= 10 && i <= 35) { return (c = 55 + i); }

@@ -31,7 +31,8 @@ private:
 	bool isValidDigitForBase(const char& input_character, uint64_t input_base);
 	bool isValidDigit(const char& input_character);
 
-	int ctoi(const char& c);
-	char itoc(const int& i);
 
 };
+
+int ctoi(const char& c);
+char itoc(const uint64_t& i);
