@@ -5,7 +5,7 @@
 
 int main()
 {
-	BigNum bignum("0x123456A");
+	BigNum bignum("123456.875875");
 
 	std::cout << bignum << std::endl;
 

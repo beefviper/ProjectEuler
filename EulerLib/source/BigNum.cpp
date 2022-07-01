@@ -93,6 +93,7 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 		// read in fraction digits
 		if (valid_iter_equals('.'))
 		{
+			++num_iter;
 			while (num_iter != input_number.end() && isValidDigit(*num_iter))
 			{
 				fraction.push_back(ctoi(*num_iter));
@@ -147,6 +148,15 @@ std::ostream& operator<<(std::ostream& output_stream, const BigNum& output_numbe
 		for (auto digit : output_number.integer)
 		{
 			output_stream << itoc(digit);
+		}
+		if ((output_number.fraction.size() > 0) ||
+			(output_number.fraction.size() == 0 && output_number.fraction.at(0) == 0))
+		{
+			output_stream << ".";
+			for (auto digit : output_number.fraction)
+			{
+				output_stream << itoc(digit);
+			}
 		}
 		output_stream << "base" << output_number.base;
 	}
