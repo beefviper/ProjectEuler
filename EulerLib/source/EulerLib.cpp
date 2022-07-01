@@ -133,7 +133,7 @@ std::vector<uint64_t> getFactors(uint64_t number) { // broken for 4
 			lower = number / i - 1;
 		}
 	}
-	
+
 	std::sort(factors.begin(), factors.end());
 
 	return factors;
