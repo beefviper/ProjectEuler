@@ -28,8 +28,8 @@ private:
 	Number faction;
 	uint64_t base{ 10 };
 
-	bool isValidDigit(const char& input_character);
 	bool isValidDigitForBase(const char& input_character, uint64_t input_base);
+	bool isValidDigit(const char& input_character);
 
 	int ctoi(const char& c);
 	char itoc(const int& i);
