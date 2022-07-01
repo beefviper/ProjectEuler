@@ -95,7 +95,7 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 		{
 			while (num_iter != input_number.end() && isValidDigit(*num_iter))
 			{
-				fraction.push_back(ctoi(* num_iter));
+				fraction.push_back(ctoi(*num_iter));
 				++num_iter;
 			}
 		}
