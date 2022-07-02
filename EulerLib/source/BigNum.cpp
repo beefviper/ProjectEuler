@@ -150,7 +150,7 @@ std::ostream& operator<<(std::ostream& output_stream, const BigNum& output_numbe
 			output_stream << itoc(digit);
 		}
 		if ((output_number.fraction.size() > 0) ||
-			(output_number.fraction.size() == 0 && output_number.fraction.at(0) == 0))
+			(output_number.fraction.size() == 0 && output_number.fraction.at(0) != 0))
 		{
 			output_stream << ".";
 			for (auto digit : output_number.fraction)

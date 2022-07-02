@@ -1,3 +1,8 @@
+/* ProjectEuler.h         */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
+
 #pragma once
 
 #include "EulerLib.h"

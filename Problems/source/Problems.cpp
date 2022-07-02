@@ -1,4 +1,7 @@
-// Problem0001.cpp : Defines the entry point for the console application.
+/* Problems.cpp           */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 #include "ProjectEuler.h"
 

@@ -1,3 +1,8 @@
+/* EulerLib.cpp           */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
+
 #include <iostream>
 #include <vector>
 #include <string>
