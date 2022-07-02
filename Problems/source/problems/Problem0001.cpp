@@ -1,4 +1,7 @@
-// Problem0001.cpp : Defines the entry point for the console application.
+/* Problem0001.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 1: Multiples of 3 and 5

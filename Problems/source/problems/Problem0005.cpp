@@ -1,4 +1,7 @@
-// Problem0005.cpp : Defines the entry point for the console application.
+/* Problem0005.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 5: Smallest multiple

@@ -1,4 +1,7 @@
-// Problem0014.cpp : Defines the entry point for the console application.
+/* Problem0014.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 14: Longest Collatz sequence

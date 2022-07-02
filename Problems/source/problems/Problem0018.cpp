@@ -1,4 +1,7 @@
-// Problem0018.cpp : This file contains the 'main' function.
+/* Problem0018.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 18: Maximum path sum I

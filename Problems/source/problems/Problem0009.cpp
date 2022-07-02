@@ -1,4 +1,7 @@
-// Problem0009.cpp : Defines the entry point for the console application.
+/* Problem0009.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 9: Special Pythagorean triplet

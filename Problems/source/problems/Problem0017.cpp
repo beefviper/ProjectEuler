@@ -1,4 +1,7 @@
-// Problem0017.cpp : This file contains the 'main' function.
+/* Problem0017.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 17: Number letter counts

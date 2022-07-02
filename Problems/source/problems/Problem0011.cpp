@@ -1,4 +1,7 @@
-// Problem0011.cpp : Defines the entry point for the console application.
+/* Problem0011.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 11: Largest product in a grid

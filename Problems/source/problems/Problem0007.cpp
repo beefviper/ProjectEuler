@@ -1,4 +1,7 @@
-// Problem0007.cpp : Defines the entry point for the console application.
+/* Problem0007.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 7: 10001st prime

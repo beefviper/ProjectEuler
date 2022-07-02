@@ -1,4 +1,7 @@
-// Problem0023.cpp : This file contains the 'main' function. Program execution begins and ends there.
+/* Problem0023.cpp        */
+/* author  : beefviper    */
+/* version : 0.1          */
+/* date    : Jul 01, 2022 */
 
 /*
 Problem 23: Non-abundant sums
