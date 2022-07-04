@@ -14,15 +14,10 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 	std::string::const_iterator num_iter = input_number.begin();
 	std::string::const_iterator num_iter_end = input_number.end();
 
-	// lambda helpers
+	// lambda helper
 	auto valid_iter_equals = [&num_iter, &num_iter_end](const char& character)
 	{
 		return (num_iter != num_iter_end) && (*num_iter == character);
-	};
-
-	auto valid_iter_not_equals = [&num_iter, &num_iter_end](const char& character)
-	{
-		return (num_iter != num_iter_end) && (*num_iter != character);
 	};
 
 	// check for negative
@@ -84,7 +79,7 @@ BigNum::BigNum(const std::string& input_number, uint64_t input_base)
 	// read in integer digits
 	if (base != 0)
 	{
-		while (valid_iter_not_equals('.') && isValidDigit(*num_iter))
+		while (!valid_iter_equals('.') && isValidDigit(*num_iter))
 		{
 			integer.push_back(ctoi(*num_iter));
 			++num_iter;
@@ -180,19 +175,42 @@ bool BigNum::isValidDigit(const char& input_character)
 }
 
 // char to int
-int ctoi(const char& c) {
+int ctoi(const char& c)
+{
 	int i = 0;
-	if (c >= '0' && c <= '9') { return (i = c - 48); }
-	else if (c >= 'A' && c <= 'Z') { return (i = c - 55); }
-	else if (c >= 'a' && c <= 'z') { return (i = c - 61); }
-	else { return -1; }
+	if (c >= '0' && c <= '9')
+	{
+		return (i = c - 48);
+	}
+	else if (c >= 'A' && c <= 'Z')
+	{
+		return (i = c - 55);
+	}
+	else if (c >= 'a' && c <= 'z'){
+		return (i = c - 61);
+	}
+	else
+	{
+		return -1;
+	}
 }
 
 // int to char
-char itoc(const uint64_t& i) {
+char itoc(const uint64_t& i)
+{
 	char c = 0;
-	if (i >= 0 && i <= 9) { return (c = 48 + i); }
-	else if (i >= 10 && i <= 35) { return (c = 55 + i); }
-	else if (i >= 36 && i <= 61) { return (c = 61 + i); }
-	else { return c; }
+	if (i >= 0 && i <= 9)
+	{
+		return (c = 48 + i);
+	}
+	else if (i >= 10 && i <= 35){
+		return (c = 55 + i);
+	}
+	else if (i >= 36 && i <= 61)
+	{
+		return (c = 61 + i);
+	}
+	else{
+		return c;
+	}
 }
