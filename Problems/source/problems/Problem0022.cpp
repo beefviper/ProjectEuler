@@ -19,7 +19,7 @@ What is the total of all the name scores in the file?
 Answer: 871198282
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem22()
 {
@@ -66,3 +66,8 @@ uint64_t problem22()
 
 	return result;
 }
+
+static const ProblemRegistrar problem22_registrar{ 22, problem22, 871198282 };
+
+
+

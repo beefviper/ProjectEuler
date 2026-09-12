@@ -10,7 +10,7 @@ What is the largest prime factor of the number 600851475143 ?
 Answer: 6857
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem3()
 {
@@ -35,3 +35,8 @@ uint64_t problem3()
 
     return result;
 }
+
+static const ProblemRegistrar problem3_registrar{ 3, problem3, 6857 };
+
+
+

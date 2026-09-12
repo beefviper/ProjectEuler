@@ -12,7 +12,7 @@ How many such routes are there through a 20×20 grid ?
 Answer: 
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem15()
 {
@@ -30,3 +30,8 @@ uint64_t problem15()
 
     return result;
 }
+
+static const ProblemRegistrar problem15_registrar{ 15, problem15 };
+
+
+

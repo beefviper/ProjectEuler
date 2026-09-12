@@ -31,7 +31,7 @@ contain 1000 digits?
 Answer:
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem25()
 {
@@ -44,3 +44,8 @@ uint64_t problem25()
 
 	return result;
 }
+
+static const ProblemRegistrar problem25_registrar{ 25, problem25 };
+
+
+

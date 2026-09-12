@@ -27,7 +27,7 @@ divisors?
 Answer: 76576500
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem12()
 {
@@ -49,3 +49,8 @@ uint64_t problem12()
 
     return result;
 }
+
+static const ProblemRegistrar problem12_registrar{ 12, problem12, 76576500 };
+
+
+

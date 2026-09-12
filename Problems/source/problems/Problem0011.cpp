@@ -35,7 +35,7 @@ What is the greatest product of four adjacent numbers in the same direction
 Answer: 70600674
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem11()
 {
@@ -92,4 +92,9 @@ uint64_t problem11()
 
 	return result;
 }
+
+static const ProblemRegistrar problem11_registrar{ 11, problem11, 70600674 };
+
+
+
 

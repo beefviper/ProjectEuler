@@ -11,7 +11,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 Answer: 906609
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem4()
 {
@@ -42,3 +42,8 @@ uint64_t problem4()
 
 	return result;
 }
+
+static const ProblemRegistrar problem4_registrar{ 4, problem4, 906609 };
+
+
+

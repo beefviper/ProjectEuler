@@ -17,7 +17,7 @@ The use of "and" when writing out numbers is in compliance with British usage.
 Answer: 21124
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem17()
 {
@@ -36,3 +36,8 @@ uint64_t problem17()
 
 	return result;
 }
+
+static const ProblemRegistrar problem17_registrar{ 17, problem17, 21124 };
+
+
+

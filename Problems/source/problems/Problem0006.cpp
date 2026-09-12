@@ -18,7 +18,7 @@ hundred natural numbers and the square of the sum.
 Answer: 25164150
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem6()
 {
@@ -33,3 +33,8 @@ uint64_t problem6()
 	
 	return result;
 }
+
+static const ProblemRegistrar problem6_registrar{ 6, problem6, 25164150 };
+
+
+

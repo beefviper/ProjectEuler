@@ -10,7 +10,7 @@ What is the sum of the digits of the number 2^1000?
 Answer: 1366
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem16() {
 	uint64_t result{ 0 };
@@ -37,3 +37,8 @@ uint64_t problem16() {
 
 	return result;
 }
+
+static const ProblemRegistrar problem16_registrar{ 16, problem16, 1366 };
+
+
+

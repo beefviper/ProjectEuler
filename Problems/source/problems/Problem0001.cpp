@@ -11,7 +11,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 Answer: 233168
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem1()
 {
@@ -27,4 +27,9 @@ uint64_t problem1()
 	
     return result;
 }
+
+static const ProblemRegistrar problem1_registrar{ 1, problem1, 233168 };
+
+
+
 

@@ -9,7 +9,7 @@ one-hundred 50-digit numbers.
 Answer: 5537376230
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem13()
 {
@@ -29,3 +29,8 @@ uint64_t problem13()
 
 	return result;
 }
+
+static const ProblemRegistrar problem13_registrar{ 13, problem13 };
+
+
+

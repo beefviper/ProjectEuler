@@ -14,7 +14,7 @@ Find the product abc.
 Answer: 31875000
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem9()
 {
@@ -48,3 +48,8 @@ uint64_t problem9()
 
     return result;
 }
+
+static const ProblemRegistrar problem9_registrar{ 9, problem9, 31875000 };
+
+
+

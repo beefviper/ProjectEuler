@@ -13,7 +13,7 @@ Evaluate the sum of all the amicable numbers under 10000.
 Answer: 31626
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem21()
 {
@@ -77,3 +77,8 @@ uint64_t problem21()
 
 	return result;
 }
+
+static const ProblemRegistrar problem21_registrar{ 21, problem21, 31626 };
+
+
+

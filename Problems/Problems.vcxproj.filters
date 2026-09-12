@@ -18,7 +18,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ProjectEuler.h">
+    <ClInclude Include="include\Problems.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -94,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="source\problems\Problem0025.cpp">
       <Filter>Source Files\Problems</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Problems.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

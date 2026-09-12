@@ -11,7 +11,7 @@ What is the 10 001st prime number?
 Answer: 104743
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem7()
 {
@@ -24,3 +24,8 @@ uint64_t problem7()
 	
 	return result;
 }
+
+static const ProblemRegistrar problem7_registrar{ 7, problem7, 104743 };
+
+
+

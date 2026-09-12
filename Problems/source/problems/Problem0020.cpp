@@ -14,7 +14,7 @@ Find the sum of the digits in the number 100!
 Answer: 648
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem20()
 {
@@ -37,3 +37,8 @@ uint64_t problem20()
 
 	return result;
 }
+
+static const ProblemRegistrar problem20_registrar{ 20, problem20, 648 };
+
+
+

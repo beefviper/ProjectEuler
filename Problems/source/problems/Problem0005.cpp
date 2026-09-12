@@ -12,7 +12,7 @@ the numbers from 1 to 20?
 Answer: 232792560
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem5()
 {
@@ -29,3 +29,8 @@ uint64_t problem5()
 
 	return result;
 }
+
+static const ProblemRegistrar problem5_registrar{ 5, problem5, 232792560 };
+
+
+

@@ -22,7 +22,7 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 Answer: 837799
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem14()
 {
@@ -48,3 +48,8 @@ uint64_t problem14()
 
 	return max_num;
 }
+
+static const ProblemRegistrar problem14_registrar{ 14, problem14, 837799 };
+
+
+

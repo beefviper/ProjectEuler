@@ -163,10 +163,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\ProjectEuler.h" />
+    <ClInclude Include="include\Problems.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Problems.cpp" />
     <ClCompile Include="source\problems\Problem0001.cpp" />
     <ClCompile Include="source\problems\Problem0002.cpp" />
     <ClCompile Include="source\problems\Problem0003.cpp" />

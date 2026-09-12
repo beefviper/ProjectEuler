@@ -14,7 +14,7 @@ four million, find the sum of the even-valued terms.
 Answer: 4613732
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem2()
 {
@@ -36,3 +36,8 @@ uint64_t problem2()
 
     return result;
 }
+
+static const ProblemRegistrar problem2_registrar{ 2, problem2, 4613732 };
+
+
+

@@ -18,7 +18,7 @@ force, and requires a clever method! ;o)
 Answer: 1074
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem18()
 {
@@ -73,3 +73,8 @@ uint64_t problem18()
 	//std::cout << "result: " << result << std::endl;
 	return result;
 }
+
+static const ProblemRegistrar problem18_registrar{ 18, problem18, 1074 };
+
+
+

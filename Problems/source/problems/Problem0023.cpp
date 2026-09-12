@@ -24,13 +24,15 @@ of two abundant numbers.
 Answer: 
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem23()
 {
-	uint64_t result{ 0 };
 
-	
-
-	return result;
+	return 0;
 }
+
+static const ProblemRegistrar problem23_registrar{ 23, problem23 };
+
+
+

@@ -1,19 +1,37 @@
 // ProjectEuler.cpp : Defines the entry point for the console application.
 //
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 int main()
 {
-	std::vector<Problem> problems;
-	createProblems(problems);
+	auto allProblems = problems();
+	std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
+		{
+			return left.number < right.number;
+		});
 
-	for (auto& problem : problems)
+	for (auto& problem : allProblems)
 	{
-		std::cout << "Problem " << problem.number << " is "
-			<< (problem.answer == problem.solution() ? "correct." : "incorrect.")
-			<< std::endl;
+		if (!problem.solution)
+		{
+			std::cout << "Problem " << problem.number << " has no solution function." << std::endl;
+			continue;
+		}
+
+		const auto result = problem.solution();
+		if (problem.answer.has_value())
+		{
+			std::cout << "Problem " << problem.number << " is "
+				<< (problem.answer.value() == result ? "correct." : "incorrect.")
+				<< std::endl;
+		}
+		else
+		{
+			std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
+		}
 	}
 
 	return 0;
 }
+

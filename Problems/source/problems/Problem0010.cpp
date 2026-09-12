@@ -10,7 +10,7 @@ Find the sum of all the primes below two million.
 Answer: 
 */
 
-#include "ProjectEuler.h"
+#include "Problems.h"
 
 uint64_t problem10()
 {
@@ -28,3 +28,8 @@ uint64_t problem10()
 
     return result;
 }
+
+static const ProblemRegistrar problem10_registrar{ 10, problem10 };
+
+
+
