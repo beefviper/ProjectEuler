@@ -15,13 +15,13 @@ Answer: 6857
 uint64_t problem3()
 {
 	uint64_t result{ 0 };
-	uint64_t numberToFactor{ 1 };
+	uint64_t numberToFactor{ 600851475143 };
 	std::vector<uint64_t> factors = primeFactors(numberToFactor);
 
 	//std::cout << "The prime factors of " << numberToFactor << " is ";
-	//for (uint64_t factor : factors) {
-	//	std::cout << factor << ", ";
-	//}
+	for (uint64_t factor : factors) {
+		//std::cout << factor << ", ";
+	}
 	//std::cout << std::endl;
 
 	if (!factors.empty()) {
