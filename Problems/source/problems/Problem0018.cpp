@@ -68,5 +68,8 @@ uint64_t problem18()
 	//	std::cout << std::endl;
 	//}
 
+	result = triangle.at(0).at(0);
+
+	//std::cout << "result: " << result << std::endl;
 	return result;
 }
