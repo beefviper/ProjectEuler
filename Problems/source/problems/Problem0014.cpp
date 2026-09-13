@@ -49,7 +49,7 @@ uint64_t problem14()
 	return max_num;
 }
 
-static const ProblemRegistrar problem14_registrar{ 14, problem14, 837799 };
+static const ProblemRegistrar problem14_registrar{ Problem{ 14, problem14, 837799 } };
 
 
 

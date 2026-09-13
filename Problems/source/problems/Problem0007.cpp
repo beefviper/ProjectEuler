@@ -25,7 +25,7 @@ uint64_t problem7()
 	return result;
 }
 
-static const ProblemRegistrar problem7_registrar{ 7, problem7, 104743 };
+static const ProblemRegistrar problem7_registrar{ Problem{ 7, problem7, 104743 } };
 
 
 
