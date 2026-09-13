@@ -5,11 +5,11 @@ Problem 14: Longest Collatz sequence
 
 The following iterative sequence is defined for the set of positive integers:
 
-n → n/2 (n is even)
-n → 3n + 1 (n is odd)
+n â†’ n/2 (n is even)
+n â†’ 3n + 1 (n is odd)
 
 Using the rule above and starting with 13, we generate the following sequence:
-13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+13 â†’ 40 â†’ 20 â†’ 10 â†’ 5 â†’ 16 â†’ 8 â†’ 4 â†’ 2 â†’ 1
 
 It can be seen that this sequence (starting at 13 and finishing at 1)
 contains 10 terms. Although it has not been proved yet (Collatz Problem),
@@ -34,8 +34,8 @@ uint64_t problem14()
 //	std::cout << "The chain length for " << num << " is "
 //		<< length << " numbers long." << std::endl;
 
-	for (int i = 1; i <= 1000000; i++) {
-		int max_temp = collatz(i);
+	for (uint64_t i = 1; i <= 1000000; i++) {
+		uint64_t max_temp = collatz(i);
 		if (max_temp > result) {
 			result = max_temp;
 			max_num = i;
@@ -50,6 +50,3 @@ uint64_t problem14()
 }
 
 static const ProblemRegistrar problem14_registrar{ Problem{ 14, problem14, 837799 } };
-
-
-

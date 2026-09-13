@@ -6,7 +6,7 @@ Problem 25
 
 The Fibonacci sequence is defined by the recurrence relation:
 
-	Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+	Fn = Fnâˆ’1 + Fnâˆ’2, where F1 = 1 and F2 = 1.
 
 Hence the first 12 terms will be:
 
@@ -46,6 +46,3 @@ uint64_t problem25()
 }
 
 static const ProblemRegistrar problem25_registrar{ Problem{ 25, problem25 } };
-
-
-

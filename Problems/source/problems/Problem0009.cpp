@@ -38,7 +38,7 @@ uint64_t problem9()
 		}
 	}
 
-	int sum = resultA + resultB + resultC;
+	uint64_t sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
 	//std::cout << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
@@ -50,6 +50,3 @@ uint64_t problem9()
 }
 
 static const ProblemRegistrar problem9_registrar{ Problem{ 9, problem9, 31875000 } };
-
-
-

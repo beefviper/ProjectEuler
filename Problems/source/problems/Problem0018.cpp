@@ -26,12 +26,12 @@ uint64_t problem18()
 
 	std::string triangleFileName = "data/large_tri.txt";
 	std::vector<std::string> triangleData = loadTriangle(triangleFileName);
-	std::vector<std::vector<int>> triangle;
+	std::vector<std::vector<int64_t>> triangle;
 
-	for (unsigned int i = 0; i < triangleData.size(); i++) {
+	for (uint64_t i = 0; i < triangleData.size(); i++) {
 		std::stringstream ss(triangleData.at(i));
 		std::string s;
-		std::vector<int> v;
+		std::vector<int64_t> v;
 
 		while (std::getline(ss, s, ' ')) {
 			v.push_back(atoi(s.c_str()));
@@ -47,10 +47,10 @@ uint64_t problem18()
 	//	std::cout << std::endl;
 	//}
 
-	for (int i = triangle.size() - 2; i >= 0; i--) {
-		for (int j = 0; j < triangle.at(i).size(); j++) {
-			int a = triangle.at(i + 1).at(j);
-			int b = triangle.at(i + 1).at(j + 1);
+	for (int64_t i = triangle.size() - 2; i >= 0; i--) {
+		for (int64_t j = 0; j < static_cast<int64_t>(triangle.at(i).size()); j++) {
+			int64_t a = triangle.at(i + 1).at(j);
+			int64_t b = triangle.at(i + 1).at(j + 1);
 
 			if (a > b) {
 				triangle.at(i).at(j) += a;
@@ -75,6 +75,3 @@ uint64_t problem18()
 }
 
 static const ProblemRegistrar problem18_registrar{ Problem{ 18, problem18, 1074 } };
-
-
-

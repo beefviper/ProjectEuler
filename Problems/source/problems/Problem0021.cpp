@@ -5,7 +5,7 @@ Problem 21: Amicable numbers
 
 Let d(n) be defined as the sum of proper divisors of n
 (numbers less than n which divide evenly into n).
-If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable
+If d(a) = b and d(b) = a, where a â‰  b, then a and b are an amicable
 pair and each of a and b are called amicable numbers.
 
 Evaluate the sum of all the amicable numbers under 10000.
@@ -79,6 +79,3 @@ uint64_t problem21()
 }
 
 static const ProblemRegistrar problem21_registrar{ Problem{ 21, problem21, 31626 } };
-
-
-

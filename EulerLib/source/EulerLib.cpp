@@ -6,7 +6,7 @@
 
 #include "EulerLib.h"
 
-int fib(int number) {
+uint64_t fib(uint64_t number) {
 	if (number == 1) {
 		return 1;
 	}
@@ -190,7 +190,7 @@ std::vector<uint64_t> primeFactors(uint64_t number) {
 		number /= 2;
 	}
 
-	for (int i = 3; i < limit; i += 2) {
+	for (uint64_t i = 3; i < limit; i += 2) {
 		while (number % i == 0) {
 			listOfPrimes.push_back(i);
 			number /= i;
@@ -200,7 +200,7 @@ std::vector<uint64_t> primeFactors(uint64_t number) {
 	return listOfPrimes;
 }
 
-bool isPalindrome(int number) {
+bool isPalindrome(uint64_t number) {
 	std::string forward = std::to_string(number);
 	std::string backward = forward;
 	std::reverse(backward.begin(), backward.end());
@@ -208,8 +208,8 @@ bool isPalindrome(int number) {
 	return (forward == backward);
 }
 
-bool isDivisibleByRange(int begin, int end, int number) {
-	for (int i = begin; i <= end; i++) {
+bool isDivisibleByRange(uint64_t begin, uint64_t end, uint64_t number) {
+	for (uint64_t i = begin; i <= end; i++) {
 		if (!(number % i == 0)) {
 			return false;
 		}
@@ -218,20 +218,20 @@ bool isDivisibleByRange(int begin, int end, int number) {
 	return true;
 }
 
-int sumOfSquares(int number) {
-	int result = 0;
+uint64_t sumOfSquares(uint64_t number) {
+	uint64_t result = 0;
 
-	for (int i = 1; i <= number; i++) {
+	for (uint64_t i = 1; i <= number; i++) {
 		result += i * i;
 	}
 
 	return result;
 }
 
-int squareOfSums(int number) {
-	int result = 0;
+uint64_t squareOfSums(uint64_t number) {
+	uint64_t result = 0;
 
-	for (int i = 1; i <= number; i++) {
+	for (uint64_t i = 1; i <= number; i++) {
 		result += i;
 	}
 	result = result * result;
@@ -239,20 +239,20 @@ int squareOfSums(int number) {
 	return result;
 }
 
-bool checkPrime(int n) {
+bool checkPrime(uint64_t n) {
 	if (n == 2) return true;
 	if (n < 2 || n % 2 == 0) return false;
 
-	for (int i = 3; i * i <= n; i += 2) {
+	for (uint64_t i = 3; i * i <= n; i += 2) {
 		if (n % i == 0) return false;
 	}
 	return true;
 }
 
-int getPrimeByIndex(int index) {
-	int counter = 0;
-	int prime = 0;
-	int number = 1;
+uint64_t getPrimeByIndex(uint64_t index) {
+	uint64_t counter = 0;
+	uint64_t prime = 0;
+	uint64_t number = 1;
 
 	bool result = false;
 
@@ -268,8 +268,8 @@ int getPrimeByIndex(int index) {
 	return prime;
 }
 
-int collatz(int number) {
-	int result = 1;
+uint64_t collatz(uint64_t number) {
+	uint64_t result = 1;
 	uint64_t temp = number;
 
 	while (temp != 1) {
@@ -300,7 +300,7 @@ std::vector<bool> setBits(std::string bitString) {
 	return result;
 }
 
-std::vector<bool> shiftBits(std::vector<bool> bits, int numberOfBits, int amountToShift) {
+std::vector<bool> shiftBits(std::vector<bool> bits, uint64_t numberOfBits, uint64_t amountToShift) {
 	std::vector<bool> result = bits;
 
 	auto begin = result.begin();
@@ -308,7 +308,7 @@ std::vector<bool> shiftBits(std::vector<bool> bits, int numberOfBits, int amount
 	auto midpoint = result.size() / 2;
 
 	if ((numberOfBits > 0) && (amountToShift > 0)) {
-		for (int i = 0; i < numberOfBits; i++) {
+		for (uint64_t i = 0; i < numberOfBits; i++) {
 			std::iter_swap(begin + midpoint - 1 - i, begin + midpoint - 1 - i + amountToShift);
 		}
 	}
@@ -333,7 +333,7 @@ std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
 	return out;
 }
 
-std::string makeStringFromNumber(int number) {
+std::string makeStringFromNumber(uint64_t number) {
 	std::string result;
 
 	std::string textnum = std::to_string(number);

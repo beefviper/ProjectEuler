@@ -21,13 +21,13 @@ struct Problem {
 	std::function<uint64_t()> solution;
 	std::optional<uint64_t> answer{};
 
-	// REMOVED constexpr — no benefit, and technically false
+	// REMOVED constexpr â€” no benefit, and technically false
 	Problem(uint64_t n,
 			std::function<uint64_t()> s = {},
 			std::optional<uint64_t> a = {})
 		: number{n}, solution{std::move(s)}, answer{std::move(a)} {}
 
-	// Safe wrapper (no constexpr needed — runtime only)
+	// Safe wrapper (no constexpr needed â€” runtime only)
 	std::optional<uint64_t> try_solve() const {
 		return solution ? std::make_optional(solution()) : std::nullopt;
 	}
