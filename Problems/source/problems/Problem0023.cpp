@@ -3,7 +3,7 @@
 // author: beefviper
 // date: Sept 14, 2026
 
-#include "Problems.h"
+#include "problems.h"
 
 // Problem0023.cpp : This file contains the 'main' function. Program execution begins and ends there.
 

@@ -3,7 +3,7 @@
 // author: beefviper
 // date: Sept 14, 2026
 
-#include "Problems.h"
+#include "problems.h"
 
 /*
 Problem 1: Multiples of 3 and 5

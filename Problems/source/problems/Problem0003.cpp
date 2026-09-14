@@ -3,7 +3,7 @@
 // author: beefviper
 // date: Sept 14, 2026
 
-#include "Problems.h"
+#include "problems.h"
 
 /*
 Problem 3: Largest prime factor
