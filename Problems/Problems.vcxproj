@@ -163,33 +163,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Problems.h" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\menu.cpp" />
+    <ClCompile Include="source\problems\problem0001.cpp" />
+    <ClCompile Include="source\problems\problem0002.cpp" />
+    <ClCompile Include="source\problems\problem0003.cpp" />
+    <ClCompile Include="source\problems\problem0004.cpp" />
+    <ClCompile Include="source\problems\problem0005.cpp" />
+    <ClCompile Include="source\problems\problem0006.cpp" />
+    <ClCompile Include="source\problems\problem0007.cpp" />
+    <ClCompile Include="source\problems\problem0008.cpp" />
+    <ClCompile Include="source\problems\problem0009.cpp" />
+    <ClCompile Include="source\problems\problem0010.cpp" />
+    <ClCompile Include="source\problems\problem0011.cpp" />
+    <ClCompile Include="source\problems\problem0012.cpp" />
+    <ClCompile Include="source\problems\problem0013.cpp" />
+    <ClCompile Include="source\problems\problem0014.cpp" />
+    <ClCompile Include="source\problems\problem0015.cpp" />
+    <ClCompile Include="source\problems\problem0016.cpp" />
+    <ClCompile Include="source\problems\problem0017.cpp" />
+    <ClCompile Include="source\problems\problem0018.cpp" />
+    <ClCompile Include="source\problems\problem0020.cpp" />
+    <ClCompile Include="source\problems\problem0021.cpp" />
+    <ClCompile Include="source\problems\problem0022.cpp" />
+    <ClCompile Include="source\problems\problem0023.cpp" />
+    <ClCompile Include="source\problems\problem0025.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\problems\Problem0001.cpp" />
-    <ClCompile Include="source\problems\Problem0002.cpp" />
-    <ClCompile Include="source\problems\Problem0003.cpp" />
-    <ClCompile Include="source\problems\Problem0004.cpp" />
-    <ClCompile Include="source\problems\Problem0005.cpp" />
-    <ClCompile Include="source\problems\Problem0006.cpp" />
-    <ClCompile Include="source\problems\Problem0007.cpp" />
-    <ClCompile Include="source\problems\Problem0008.cpp" />
-    <ClCompile Include="source\problems\Problem0009.cpp" />
-    <ClCompile Include="source\problems\Problem0010.cpp" />
-    <ClCompile Include="source\problems\Problem0011.cpp" />
-    <ClCompile Include="source\problems\Problem0012.cpp" />
-    <ClCompile Include="source\problems\Problem0013.cpp" />
-    <ClCompile Include="source\problems\Problem0014.cpp" />
-    <ClCompile Include="source\problems\Problem0015.cpp" />
-    <ClCompile Include="source\problems\Problem0016.cpp" />
-    <ClCompile Include="source\problems\Problem0017.cpp" />
-    <ClCompile Include="source\problems\Problem0018.cpp" />
-    <ClCompile Include="source\problems\Problem0020.cpp" />
-    <ClCompile Include="source\problems\Problem0021.cpp" />
-    <ClCompile Include="source\problems\Problem0022.cpp" />
-    <ClCompile Include="source\problems\Problem0023.cpp" />
-    <ClCompile Include="source\problems\Problem0025.cpp" />
-    <ClCompile Include="source\main.cpp" />
+    <ClInclude Include="include\menu.h" />
+    <ClInclude Include="include\problems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
