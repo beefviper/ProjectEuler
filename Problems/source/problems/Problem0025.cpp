@@ -10,7 +10,7 @@ static const std::string title{ "1000-digit Fibonacci number" };
 static const std::string body{ R"(
 The Fibonacci sequence is defined by the recurrence relation:
 
-	Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+	Fn = Fn-1 + Fn-2, where F1 = 1 and F2 = 1.
 
 Hence the first 12 terms will be:
 

@@ -9,7 +9,7 @@ static const std::string title{ "Largest product in a series" };
 
 static const std::string body{ R"(
 The four adjacent digits in the 1000-digit number that have the greatest
-product are 9 × 9 × 8 × 9 = 5832.
+product are 9 x 9 x 8 x 9 = 5832.
 
 731671765313306249192251196744265747423553491949349698352031277450632 \
 623957831801698480186947885184385861560789112949495459501737958331952 \
