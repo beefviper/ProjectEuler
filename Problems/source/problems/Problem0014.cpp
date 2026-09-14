@@ -10,11 +10,11 @@ static const std::string title{ "Longest Collatz sequence" };
 static const std::string body{ R"(
 The following iterative sequence is defined for the set of positive integers:
 
-n â†’ n/2 (n is even)
-n â†’ 3n + 1 (n is odd)
+n → n/2 (n is even)
+n → 3n + 1 (n is odd)
 
 Using the rule above and starting with 13, we generate the following sequence:
-13 â†’ 40 â†’ 20 â†’ 10 â†’ 5 â†’ 16 â†’ 8 â†’ 4 â†’ 2 â†’ 1
+13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 
 It can be seen that this sequence (starting at 13 and finishing at 1)
 contains 10 terms. Although it has not been proved yet (Collatz Problem),
