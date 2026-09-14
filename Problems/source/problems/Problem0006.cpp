@@ -1,4 +1,9 @@
-// Problem0006.cpp : Defines the entry point for the console application.
+// problem0006.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 6: Sum square difference
@@ -18,7 +23,6 @@ hundred natural numbers and the square of the sum.
 Answer: 25164150
 */
 
-#include "Problems.h"
 
 uint64_t problem6()
 {
@@ -35,3 +39,4 @@ uint64_t problem6()
 }
 
 static const ProblemRegistrar problem6_registrar{ Problem{ 6, problem6, 25164150 } };
+

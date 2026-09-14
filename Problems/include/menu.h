@@ -1,3 +1,8 @@
+// menu.h
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #pragma once
 
 #include "Problems.h"
@@ -12,3 +17,4 @@ private:
 
     static void runProblem(const Problem& problem);
 };
+

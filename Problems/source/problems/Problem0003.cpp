@@ -1,4 +1,9 @@
-// Problem0003.cpp : Defines the entry point for the console application.
+// problem0003.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 3: Largest prime factor
@@ -10,7 +15,6 @@ What is the largest prime factor of the number 600851475143 ?
 Answer: 6857
 */
 
-#include "Problems.h"
 
 uint64_t problem3()
 {
@@ -37,3 +41,4 @@ uint64_t problem3()
 }
 
 static const ProblemRegistrar problem3_registrar{ Problem{ 3, problem3, 6857 } };
+

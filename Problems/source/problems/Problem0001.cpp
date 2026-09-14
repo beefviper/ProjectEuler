@@ -1,4 +1,9 @@
-// Problem0001.cpp : Defines the entry point for the console application.
+// problem0001.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 1: Multiples of 3 and 5
@@ -11,7 +16,6 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 Answer: 233168
 */
 
-#include "Problems.h"
 
 uint64_t problem1()
 {
@@ -29,3 +33,4 @@ uint64_t problem1()
 }
 
 static const ProblemRegistrar problem1_registrar{ Problem{ 1, problem1, 233168 } };
+

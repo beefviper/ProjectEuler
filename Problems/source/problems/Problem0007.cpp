@@ -1,4 +1,9 @@
-// Problem0007.cpp : Defines the entry point for the console application.
+// problem0007.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 7: 10001st prime
@@ -11,7 +16,6 @@ What is the 10 001st prime number?
 Answer: 104743
 */
 
-#include "Problems.h"
 
 uint64_t problem7()
 {
@@ -26,3 +30,4 @@ uint64_t problem7()
 }
 
 static const ProblemRegistrar problem7_registrar{ Problem{ 7, problem7, 104743 } };
+

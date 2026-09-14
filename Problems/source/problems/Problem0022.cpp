@@ -1,3 +1,10 @@
+// problem0022.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0022.cpp : This file contains the 'main' function.
 
 /*
@@ -19,7 +26,6 @@ What is the total of all the name scores in the file?
 Answer: 871198282
 */
 
-#include "Problems.h"
 
 uint64_t problem22()
 {
@@ -68,3 +74,4 @@ uint64_t problem22()
 }
 
 static const ProblemRegistrar problem22_registrar{ Problem{ 22, problem22, 871198282 } };
+

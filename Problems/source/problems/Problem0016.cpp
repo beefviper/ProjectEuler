@@ -1,3 +1,10 @@
+// problem0016.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0016.cpp : This file contains the 'main' function.
 
 /*
@@ -10,7 +17,6 @@ What is the sum of the digits of the number 2^1000?
 Answer: 1366
 */
 
-#include "Problems.h"
 
 uint64_t problem16() {
 	uint64_t result{ 0 };
@@ -39,3 +45,4 @@ uint64_t problem16() {
 }
 
 static const ProblemRegistrar problem16_registrar{ Problem{ 16, problem16, 1366 } };
+

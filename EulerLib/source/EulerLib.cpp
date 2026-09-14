@@ -1,10 +1,15 @@
+// eulerlib.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "EulerLib.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <algorithm>
-
-#include "EulerLib.h"
 
 uint64_t fib(uint64_t number) {
 	if (number == 1) {
@@ -426,3 +431,4 @@ std::vector<std::string> loadTriangle(std::string fileName) {
 
 	return result;
 }
+

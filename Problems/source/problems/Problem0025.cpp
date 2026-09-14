@@ -1,3 +1,10 @@
+// problem0025.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0025.cpp : This file contains the 'main' function.
 
 /*
@@ -31,7 +38,6 @@ contain 1000 digits?
 Answer:
 */
 
-#include "Problems.h"
 
 uint64_t problem25()
 {
@@ -46,3 +52,4 @@ uint64_t problem25()
 }
 
 static const ProblemRegistrar problem25_registrar{ Problem{ 25, problem25 } };
+

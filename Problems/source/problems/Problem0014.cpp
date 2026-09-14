@@ -1,4 +1,9 @@
-// Problem0014.cpp : Defines the entry point for the console application.
+// problem0014.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 14: Longest Collatz sequence
@@ -22,7 +27,6 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 Answer: 837799
 */
 
-#include "Problems.h"
 
 uint64_t problem14()
 {
@@ -50,3 +54,4 @@ uint64_t problem14()
 }
 
 static const ProblemRegistrar problem14_registrar{ Problem{ 14, problem14, 837799 } };
+

@@ -1,4 +1,9 @@
-// Problem0009.cpp : Defines the entry point for the console application.
+// problem0009.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 9: Special Pythagorean triplet
@@ -14,7 +19,6 @@ Find the product abc.
 Answer: 31875000
 */
 
-#include "Problems.h"
 
 uint64_t problem9()
 {
@@ -50,3 +54,4 @@ uint64_t problem9()
 }
 
 static const ProblemRegistrar problem9_registrar{ Problem{ 9, problem9, 31875000 } };
+

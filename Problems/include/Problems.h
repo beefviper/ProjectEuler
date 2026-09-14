@@ -1,4 +1,8 @@
-#pragma once
+// problems.h
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #pragma once
 
 #include "EulerLib.h"
@@ -13,7 +17,6 @@
 #include <optional>
 #include <sstream>
 #include <string>
-#include <utility>  // for std::move
 #include <vector>
 
 struct Problem {
@@ -45,3 +48,4 @@ public:
 		problems().emplace_back(std::move(problem));
 	}
 };
+

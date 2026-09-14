@@ -1,4 +1,9 @@
-// Problem0002.cpp : Defines the entry point for the console application.
+// problem0002.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 2: Even Fibonacci numbers
@@ -14,7 +19,6 @@ four million, find the sum of the even-valued terms.
 Answer: 4613732
 */
 
-#include "Problems.h"
 
 uint64_t problem2()
 {
@@ -38,3 +42,4 @@ uint64_t problem2()
 }
 
 static const ProblemRegistrar problem2_registrar{ Problem{ 2, problem2, 4613732 } };
+

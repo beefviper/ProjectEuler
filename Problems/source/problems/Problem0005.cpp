@@ -1,4 +1,9 @@
-// Problem0005.cpp : Defines the entry point for the console application.
+// problem0005.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 5: Smallest multiple
@@ -12,7 +17,6 @@ the numbers from 1 to 20?
 Answer: 232792560
 */
 
-#include "Problems.h"
 
 uint64_t problem5()
 {
@@ -31,3 +35,4 @@ uint64_t problem5()
 }
 
 static const ProblemRegistrar problem5_registrar{ Problem{ 5, problem5, 232792560 } };
+

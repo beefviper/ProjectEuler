@@ -1,3 +1,10 @@
+// problem0018.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0018.cpp : This file contains the 'main' function.
 
 /*
@@ -18,7 +25,6 @@ force, and requires a clever method! ;o)
 Answer: 1074
 */
 
-#include "Problems.h"
 
 uint64_t problem18()
 {
@@ -75,3 +81,4 @@ uint64_t problem18()
 }
 
 static const ProblemRegistrar problem18_registrar{ Problem{ 18, problem18, 1074 } };
+

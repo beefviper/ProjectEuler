@@ -1,4 +1,9 @@
-// Problem0008.cpp : Defines the entry point for the console application.
+// problem0008.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Largest product in a series
@@ -29,7 +34,6 @@ greatest product. What is the value of this product?
 Answer: 23514624000
 */
 
-#include "Problems.h"
 
 uint64_t problem8()
 {
@@ -73,3 +77,4 @@ uint64_t problem8()
 }
 
 static const ProblemRegistrar problem8_registrar{ Problem{ 8, problem8, 23514624000 } };
+

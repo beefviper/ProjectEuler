@@ -1,3 +1,10 @@
+// problem0017.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0017.cpp : This file contains the 'main' function.
 
 /*
@@ -17,7 +24,6 @@ The use of "and" when writing out numbers is in compliance with British usage.
 Answer: 21124
 */
 
-#include "Problems.h"
 
 uint64_t problem17()
 {
@@ -38,3 +44,4 @@ uint64_t problem17()
 }
 
 static const ProblemRegistrar problem17_registrar{ Problem{ 17, problem17, 21124 } };
+

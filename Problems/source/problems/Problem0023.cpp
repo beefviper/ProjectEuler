@@ -1,3 +1,10 @@
+// problem0023.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0023.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 /*
@@ -24,7 +31,6 @@ of two abundant numbers.
 Answer: 
 */
 
-#include "Problems.h"
 
 uint64_t problem23()
 {
@@ -33,3 +39,4 @@ uint64_t problem23()
 }
 
 static const ProblemRegistrar problem23_registrar{ Problem{ 23, problem23 } };
+

@@ -1,4 +1,9 @@
-// Problem0012.cpp : Defines the entry point for the console application.
+// problem0012.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 12: Highly divisible triangular number
@@ -27,7 +32,6 @@ divisors?
 Answer: 76576500
 */
 
-#include "Problems.h"
 
 uint64_t problem12()
 {
@@ -51,3 +55,4 @@ uint64_t problem12()
 }
 
 static const ProblemRegistrar problem12_registrar{ Problem{ 12, problem12, 76576500 } };
+

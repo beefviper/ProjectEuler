@@ -1,4 +1,9 @@
-// Problem0013.cpp : Defines the entry point for the console application.
+// problem0013.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 13: Large sum
@@ -9,7 +14,6 @@ one-hundred 50-digit numbers.
 Answer: 5537376230
 */
 
-#include "Problems.h"
 
 uint64_t problem13()
 {
@@ -31,3 +35,4 @@ uint64_t problem13()
 }
 
 static const ProblemRegistrar problem13_registrar{ Problem{ 13, problem13 } };
+

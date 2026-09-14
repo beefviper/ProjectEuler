@@ -1,3 +1,8 @@
+// menu.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #include "menu.h"
 
 Menu::Menu(uint64_t problemNumber)
@@ -55,3 +60,4 @@ void Menu::runProblem(const Problem& problem) {
         std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
     }
 }
+

@@ -1,4 +1,9 @@
-// Problem0010.cpp : Defines the entry point for the console application.
+// problem0010.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 10: Summation of primes
@@ -10,7 +15,6 @@ Find the sum of all the primes below two million.
 Answer: 
 */
 
-#include "Problems.h"
 
 uint64_t problem10()
 {
@@ -30,3 +34,4 @@ uint64_t problem10()
 }
 
 static const ProblemRegistrar problem10_registrar{ Problem{ 10, problem10 } };
+

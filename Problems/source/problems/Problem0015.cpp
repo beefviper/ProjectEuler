@@ -1,4 +1,9 @@
-// Problem0015.cpp : Defines the entry point for the console application.
+// problem0015.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 15: Lattice paths
@@ -12,7 +17,6 @@ How many such routes are there through a 20Ã—20 grid ?
 Answer: 
 */
 
-#include "Problems.h"
 
 uint64_t problem15()
 {
@@ -32,3 +36,4 @@ uint64_t problem15()
 }
 
 static const ProblemRegistrar problem15_registrar{ Problem{ 15, problem15 } };
+

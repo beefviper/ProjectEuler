@@ -1,5 +1,7 @@
-// ProjectEuler.cpp : Defines the entry point for the console application.
-//
+// main.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
 
 #include "menu.h"
 
@@ -9,3 +11,4 @@ int main()
 	Menu menu{doProblem};
 	return menu.run();
 }
+

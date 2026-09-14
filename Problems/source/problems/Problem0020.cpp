@@ -1,3 +1,10 @@
+// problem0020.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0020.cpp : This file contains the 'main' function.
 
 /*
@@ -14,7 +21,6 @@ Find the sum of the digits in the number 100!
 Answer: 648
 */
 
-#include "Problems.h"
 
 uint64_t problem20()
 {
@@ -39,3 +45,4 @@ uint64_t problem20()
 }
 
 static const ProblemRegistrar problem20_registrar{ Problem{ 20, problem20, 648 } };
+

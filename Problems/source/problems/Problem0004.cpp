@@ -1,4 +1,9 @@
-// Problem0004.cpp : Defines the entry point for the console application.
+// problem0004.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 4: Largest palindrome product
@@ -11,7 +16,6 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 Answer: 906609
 */
 
-#include "Problems.h"
 
 uint64_t problem4()
 {
@@ -44,3 +48,4 @@ uint64_t problem4()
 }
 
 static const ProblemRegistrar problem4_registrar{ Problem{ 4, problem4, 906609 } };
+

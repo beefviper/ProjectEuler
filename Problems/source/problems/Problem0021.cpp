@@ -1,3 +1,10 @@
+// problem0021.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
+
 // Problem0021.cpp : This file contains the 'main' function.
 
 /*
@@ -13,7 +20,6 @@ Evaluate the sum of all the amicable numbers under 10000.
 Answer: 31626
 */
 
-#include "Problems.h"
 
 uint64_t problem21()
 {
@@ -79,3 +85,4 @@ uint64_t problem21()
 }
 
 static const ProblemRegistrar problem21_registrar{ Problem{ 21, problem21, 31626 } };
+

@@ -1,3 +1,8 @@
+// eulerlib.h
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #pragma once
 
 #include <iostream>
@@ -34,3 +39,4 @@ struct SetOfBits
 	uint64_t numberOfBits = 0;
 	uint64_t amountToShift = 0;
 };
+

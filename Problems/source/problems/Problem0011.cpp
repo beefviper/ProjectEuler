@@ -1,4 +1,9 @@
-// Problem0011.cpp : Defines the entry point for the console application.
+// problem0011.cpp
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
+#include "Problems.h"
 
 /*
 Problem 11: Largest product in a grid
@@ -35,7 +40,6 @@ What is the greatest product of four adjacent numbers in the same direction
 Answer: 70600674
 */
 
-#include "Problems.h"
 
 uint64_t problem11()
 {
@@ -94,3 +98,4 @@ uint64_t problem11()
 }
 
 static const ProblemRegistrar problem11_registrar{ Problem{ 11, problem11, 70600674 } };
+
