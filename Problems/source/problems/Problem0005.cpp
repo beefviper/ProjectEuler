@@ -5,17 +5,15 @@
 
 #include "problems.h"
 
-/*
-Problem 5: Smallest multiple
+static const std::string title{ "Smallest multiple" };
 
+static const std::string body{ R"(
 2520 is the smallest number that can be divided by each of the numbers
 from 1 to 10 without any remainder.
 
 What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
-
-Answer: 232792560
-*/
+)" };
 
 
 uint64_t problem5()
@@ -34,4 +32,6 @@ uint64_t problem5()
 	return result;
 }
 
-static const ProblemRegistrar problem5_registrar{ Problem{ 5, problem5, 232792560 } };
+static const std::optional<uint64_t> answer{ 232792560 };
+
+static const ProblemRegistrar problem5_registrar{ Problem{ 5, title, body, problem5, answer } };

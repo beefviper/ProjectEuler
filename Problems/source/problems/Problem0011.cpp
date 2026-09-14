@@ -5,10 +5,11 @@
 
 #include "problems.h"
 
-/*
-Problem 11: Largest product in a grid
+static const std::string title{ "Largest product in a grid" };
 
-In the 20Ã—20 grid below, four numbers along a diagonal line have been
+static const std::string body{ R"(
+
+In the 20×20 grid below, four numbers along a diagonal line have been
 marked in [red].
 
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -32,13 +33,11 @@ marked in [red].
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 
-The product of these numbers is 26 Ã— 63 Ã— 78 Ã— 14 = 1788696.
+The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
 What is the greatest product of four adjacent numbers in the same direction
-(up, down, left, right, or diagonally) in the 20Ã—20 grid?
-
-Answer: 70600674
-*/
+(up, down, left, right, or diagonally) in the 20×20 grid?
+)" };
 
 
 uint64_t problem11()
@@ -97,4 +96,6 @@ uint64_t problem11()
 	return result;
 }
 
-static const ProblemRegistrar problem11_registrar{ Problem{ 11, problem11, 70600674 } };
+static const std::optional<uint64_t> answer{ 70600674 };
+
+static const ProblemRegistrar problem11_registrar{ Problem{ 11, title, body, problem11, answer } };

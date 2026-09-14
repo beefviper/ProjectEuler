@@ -5,16 +5,14 @@
 
 #include "problems.h"
 
-/*
-Problem 1: Multiples of 3 and 5
+static const std::string title{ "Multiples of 3 and 5" };
 
+static const std::string body{ R"(
 If we list all the natural numbers below 10 that are multiples of 3 or 5,
 we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
-
-Answer: 233168
-*/
+)" };
 
 
 uint64_t problem1()
@@ -32,4 +30,6 @@ uint64_t problem1()
     return result;
 }
 
-static const ProblemRegistrar problem1_registrar{ Problem{ 1, problem1, 233168 } };
+static const std::optional<uint64_t> answer{ 233168 };
+
+static const ProblemRegistrar problem1_registrar{ Problem{ 1, title, body, problem1, answer } };

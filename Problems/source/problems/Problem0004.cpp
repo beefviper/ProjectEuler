@@ -5,16 +5,14 @@
 
 #include "problems.h"
 
-/*
-Problem 4: Largest palindrome product
+static const std::string title{ "Largest palindrome product" };
 
+static const std::string body{ R"(
 A palindromic number reads the same both ways. The largest palindrome made
-from the product of two 2-digit numbers is 9009 = 91 Ã— 99.
+from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers.
-
-Answer: 906609
-*/
+)" };
 
 
 uint64_t problem4()
@@ -47,4 +45,6 @@ uint64_t problem4()
 	return result;
 }
 
-static const ProblemRegistrar problem4_registrar{ Problem{ 4, problem4, 906609 } };
+static const std::optional<uint64_t> answer{ 906609 };
+
+static const ProblemRegistrar problem4_registrar{ Problem{ 4, title, body, problem4, answer } };

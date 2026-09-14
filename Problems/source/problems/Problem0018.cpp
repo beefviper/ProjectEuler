@@ -7,9 +7,9 @@
 
 // Problem0018.cpp : This file contains the 'main' function.
 
-/*
-Problem 18: Maximum path sum I
+static const std::string title{ "Maximum path sum I" };
 
+static const std::string body{ R"(
 By starting at the top of the triangle below and moving to adjacent
 lines on the row below, the maximum total from top to bottom is 23.
 
@@ -21,9 +21,7 @@ NOTE: As there are only 16384 routes, it is possible to solve this
 problem by trying every route. However, Problem 67, is the same challenge
 with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
-
-Answer: 1074
-*/
+)" };
 
 
 uint64_t problem18()
@@ -80,4 +78,6 @@ uint64_t problem18()
 	return result;
 }
 
-static const ProblemRegistrar problem18_registrar{ Problem{ 18, problem18, 1074 } };
+static const std::optional<uint64_t> answer{ 1074 };
+
+static const ProblemRegistrar problem18_registrar{ Problem{ 18, title, body, problem18, answer } };

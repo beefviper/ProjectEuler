@@ -5,16 +5,14 @@
 
 #include "problems.h"
 
-/*
-Problem 7: 10001st prime
+static const std::string title{ "10001st prime" };
 
+static const std::string body{ R"(
 By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13,
 we can see that the 6th prime is 13.
 
 What is the 10 001st prime number?
-
-Answer: 104743
-*/
+)" };
 
 
 uint64_t problem7()
@@ -29,4 +27,6 @@ uint64_t problem7()
 	return result;
 }
 
-static const ProblemRegistrar problem7_registrar{ Problem{ 7, problem7, 104743 } };
+static const std::optional<uint64_t> answer{ 104743 };
+
+static const ProblemRegistrar problem7_registrar{ Problem{ 7, title, body, problem7, answer } };

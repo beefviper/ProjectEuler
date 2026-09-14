@@ -5,9 +5,9 @@
 
 #include "problems.h"
 
-/*
-Problem 14: Longest Collatz sequence
+static const std::string title{ "Longest Collatz sequence" };
 
+static const std::string body{ R"(
 The following iterative sequence is defined for the set of positive integers:
 
 n â†’ n/2 (n is even)
@@ -23,9 +23,7 @@ it is thought that all starting numbers finish at 1.
 Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million.
-
-Answer: 837799
-*/
+)" };
 
 
 uint64_t problem14()
@@ -53,4 +51,6 @@ uint64_t problem14()
 	return max_num;
 }
 
-static const ProblemRegistrar problem14_registrar{ Problem{ 14, problem14, 837799 } };
+static const std::optional<uint64_t> answer{ 837799 };
+
+static const ProblemRegistrar problem14_registrar{ Problem{ 14, title, body, problem14, answer } };

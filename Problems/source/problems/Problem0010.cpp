@@ -5,15 +5,13 @@
 
 #include "problems.h"
 
-/*
-Problem 10: Summation of primes
+static const std::string title{ "Summation of primes" };
 
+static const std::string body{ R"(
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 Find the sum of all the primes below two million.
-
-Answer: 
-*/
+)" };
 
 
 uint64_t problem10()
@@ -33,4 +31,6 @@ uint64_t problem10()
     return result;
 }
 
-static const ProblemRegistrar problem10_registrar{ Problem{ 10, problem10 } };
+static const std::optional<uint64_t> answer{ std::nullopt };
+
+static const ProblemRegistrar problem10_registrar{ Problem{ 10, title, body, problem10, answer } };

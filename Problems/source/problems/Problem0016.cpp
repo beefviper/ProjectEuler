@@ -7,15 +7,13 @@
 
 // Problem0016.cpp : This file contains the 'main' function.
 
-/*
-Problem 16: Power digit sum
+static const std::string title{ "Power digit sum" };
 
+static const std::string body{ R"(
 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 
 What is the sum of the digits of the number 2^1000?
-
-Answer: 1366
-*/
+)" };
 
 
 uint64_t problem16() {
@@ -44,4 +42,6 @@ uint64_t problem16() {
 	return result;
 }
 
-static const ProblemRegistrar problem16_registrar{ Problem{ 16, problem16, 1366 } };
+static const std::optional<uint64_t> answer{ 1366 };
+
+static const ProblemRegistrar problem16_registrar{ Problem{ 16, title, body, problem16, answer } };

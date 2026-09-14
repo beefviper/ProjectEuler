@@ -7,13 +7,12 @@
 
 // Problem0025.cpp : This file contains the 'main' function.
 
-/*
-1000-digit Fibonacci number
-Problem 25
+static const std::string title{ "1000-digit Fibonacci number" };
 
+static const std::string body{ R"(
 The Fibonacci sequence is defined by the recurrence relation:
 
-	Fn = Fnâˆ’1 + Fnâˆ’2, where F1 = 1 and F2 = 1.
+	Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
 
 Hence the first 12 terms will be:
 
@@ -34,9 +33,7 @@ The 12th term, F12, is the first term to contain three digits.
 
 What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
-
-Answer:
-*/
+)" };
 
 
 uint64_t problem25()
@@ -51,4 +48,6 @@ uint64_t problem25()
 	return result;
 }
 
-static const ProblemRegistrar problem25_registrar{ Problem{ 25, problem25 } };
+static const std::optional<uint64_t> answer{ std::nullopt };
+
+static const ProblemRegistrar problem25_registrar{ Problem{ 25, title, body, problem25, answer } };

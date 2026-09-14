@@ -5,17 +5,15 @@
 
 #include "problems.h"
 
-/*
-Problem 15: Lattice paths
+static const std::string title{ "Lattice paths" };
 
+static const std::string body{ R"(
 Starting in the top left corner of a 2Ã—2 grid, and only being able to
 move to the right and down, there are exactly 6 routes to the bottom
 right corner.
 
 How many such routes are there through a 20Ã—20 grid ?
-
-Answer: 
-*/
+)" };
 
 
 uint64_t problem15()
@@ -35,4 +33,6 @@ uint64_t problem15()
     return result;
 }
 
-static const ProblemRegistrar problem15_registrar{ Problem{ 15, problem15 } };
+static const std::optional<uint64_t> answer{ std::nullopt };
+
+static const ProblemRegistrar problem15_registrar{ Problem{ 15, title, body, problem15, answer } };

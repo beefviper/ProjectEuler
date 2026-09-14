@@ -5,15 +5,13 @@
 
 #include "problems.h"
 
-/*
-Problem 3: Largest prime factor
+static const std::string title{ "Largest prime factor" };
 
+static const std::string body{ R"(
 The prime factors of 13195 are 5, 7, 13 and 29.
 
 What is the largest prime factor of the number 600851475143 ?
-
-Answer: 6857
-*/
+)" };
 
 
 uint64_t problem3()
@@ -40,4 +38,6 @@ uint64_t problem3()
     return result;
 }
 
-static const ProblemRegistrar problem3_registrar{ Problem{ 3, problem3, 6857 } };
+static const std::optional<uint64_t> answer{ 6857 };
+
+static const ProblemRegistrar problem3_registrar{ Problem{ 3, title, body, problem3, answer } };

@@ -5,9 +5,9 @@
 
 #include "problems.h"
 
-/*
-Problem 9: Special Pythagorean triplet
+static const std::string title{ "Special Pythagorean triplet" };
 
+static const std::string body{ R"(
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
 a2 + b2 = c2
 
@@ -15,9 +15,7 @@ For example, 32 + 42 = 9 + 16 = 25 = 52.
 
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
-
-Answer: 31875000
-*/
+)" };
 
 
 uint64_t problem9()
@@ -53,4 +51,6 @@ uint64_t problem9()
     return result;
 }
 
-static const ProblemRegistrar problem9_registrar{ Problem{ 9, problem9, 31875000 } };
+static const std::optional<uint64_t> answer{ 31875000 };
+
+static const ProblemRegistrar problem9_registrar{ Problem{ 9, title, body, problem9, answer } };

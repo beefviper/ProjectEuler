@@ -7,9 +7,9 @@
 
 // Problem0023.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-/*
-Problem 23: Non-abundant sums
+static const std::string title{ "Non-abundant sums" };
 
+static const std::string body{ R"(
 A perfect number is a number for which the sum of its proper divisors
 is exactly equal to the number. For example, the sum of the proper divisors
 of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect number.
@@ -27,9 +27,7 @@ is less than this limit.
 
 Find the sum of all the positive integers which cannot be written as the sum
 of two abundant numbers.
-
-Answer: 
-*/
+)" };
 
 
 uint64_t problem23()
@@ -38,4 +36,6 @@ uint64_t problem23()
 	return 0;
 }
 
-static const ProblemRegistrar problem23_registrar{ Problem{ 23, problem23 } };
+static const std::optional<uint64_t> answer{ std::nullopt };
+
+static const ProblemRegistrar problem23_registrar{ Problem{ 23, title, body, problem23, answer } };

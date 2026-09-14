@@ -22,13 +22,18 @@
 
 struct Problem {
 	uint64_t number{0};
+	std::string title{};
+	std::string body{};
 	std::function<uint64_t()> solution;
 	std::optional<uint64_t> answer{};
 
 	Problem(uint64_t n,
+			std::string t = {},
+			std::string b = {},
 			std::function<uint64_t()> s = {},
 			std::optional<uint64_t> a = {})
-		: number{n}, solution{std::move(s)}, answer{std::move(a)} {}
+		: number{n}, title{std::move(t)}, body{std::move(b)},
+		  solution{std::move(s)}, answer{std::move(a)} {}
 
 	std::optional<uint64_t> try_solve() const {
 		return solution ? std::make_optional(solution()) : std::nullopt;
