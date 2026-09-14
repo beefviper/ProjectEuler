@@ -7,7 +7,12 @@
 
 int main()
 {
-	uint64_t doProblem{0};
-	Menu menu{doProblem};
+	uint64_t all{ 0 };
+
+	uint64_t doProblem{ all };
+	PrintMode printMode{ PrintMode::test };
+	
+	Menu menu{doProblem, printMode};
+	
 	return menu.run();
 }

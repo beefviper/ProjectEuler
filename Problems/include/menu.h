@@ -7,13 +7,21 @@
 
 #include "problems.h"
 
+enum class PrintMode {
+    test,
+    question,
+    statements,
+    both
+};
+
 class Menu {
 public:
-    explicit Menu(uint64_t problemNumber = 0);
+    explicit Menu(uint64_t problemNumber = 0, PrintMode printMode = PrintMode::test);
     int run() const;
 
 private:
     uint64_t problemNumber_{};
+    PrintMode printMode_{};
 
-    static void runProblem(const Problem& problem);
+    void runProblem(const Problem& problem) const;
 };
