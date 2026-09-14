@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0020.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Factorial digit sum" };
 
 static const std::string body{ R"(

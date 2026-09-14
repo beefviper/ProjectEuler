@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0022.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Names scores" };
 
 static const std::string body{ R"(

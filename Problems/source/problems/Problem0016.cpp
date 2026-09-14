@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0016.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Power digit sum" };
 
 static const std::string body{ R"(

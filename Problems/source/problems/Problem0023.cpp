@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0023.cpp : This file contains the 'main' function. Program execution begins and ends there.
-
 static const std::string title{ "Non-abundant sums" };
 
 static const std::string body{ R"(

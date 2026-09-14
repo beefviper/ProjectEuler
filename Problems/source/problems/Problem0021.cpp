@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0021.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Amicable numbers" };
 
 static const std::string body{ R"(

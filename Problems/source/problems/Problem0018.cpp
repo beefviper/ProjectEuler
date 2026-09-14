@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0018.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Maximum path sum I" };
 
 static const std::string body{ R"(

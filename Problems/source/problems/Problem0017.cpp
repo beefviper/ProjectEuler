@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0017.cpp : This file contains the 'main' function.
-
 static const std::string title{ "Number letter counts" };
 
 static const std::string body{ R"(

@@ -5,8 +5,6 @@
 
 #include "problems.h"
 
-// Problem0025.cpp : This file contains the 'main' function.
-
 static const std::string title{ "1000-digit Fibonacci number" };
 
 static const std::string body{ R"(
