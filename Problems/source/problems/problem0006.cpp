@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 6 };
+
 static const std::string title{ "Sum square difference" };
 
 static const std::string body{ R"(
@@ -39,5 +41,5 @@ namespace
 
 	static const std::optional<uint64_t> answer{ 25164150 };
 
-	static const ProblemRegistrar problem_registrar{ Problem{ 6, title, body, problem, answer } };
+	static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };
 }

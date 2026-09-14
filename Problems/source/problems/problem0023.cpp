@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 23 };
+
 static const std::string title{ "Non-abundant sums" };
 
 static const std::string body{ R"(
@@ -35,4 +37,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 23, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 5 };
+
 static const std::string title{ "Smallest multiple" };
 
 static const std::string body{ R"(
@@ -33,4 +35,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 232792560 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 5, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

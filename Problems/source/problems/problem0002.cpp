@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 2 };
+
 static const std::string title{ "Even Fibonacci numbers" };
 
 static const std::string body{ R"(
@@ -40,4 +42,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 4613732 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 2, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

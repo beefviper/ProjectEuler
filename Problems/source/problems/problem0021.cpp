@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 21 };
+
 static const std::string title{ "Amicable numbers" };
 
 static const std::string body{ R"(
@@ -81,4 +83,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 31626 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 21, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

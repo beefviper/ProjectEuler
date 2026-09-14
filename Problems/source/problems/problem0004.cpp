@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 4 };
+
 static const std::string title{ "Largest palindrome product" };
 
 static const std::string body{ R"(
@@ -46,4 +48,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 906609 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 4, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

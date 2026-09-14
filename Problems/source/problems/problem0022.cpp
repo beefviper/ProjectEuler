@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 22 };
+
 static const std::string title{ "Names scores" };
 
 static const std::string body{ R"(
@@ -69,4 +71,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 871198282 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 22, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

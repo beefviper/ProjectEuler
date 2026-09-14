@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 14 };
+
 static const std::string title{ "Longest Collatz sequence" };
 
 static const std::string body{ R"(
@@ -52,4 +54,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 837799 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 14, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 17 };
+
 static const std::string title{ "Number letter counts" };
 
 static const std::string body{ R"(
@@ -40,4 +42,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 21124 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 17, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };

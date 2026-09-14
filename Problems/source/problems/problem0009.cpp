@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+static const uint64_t number{ 9 };
+
 static const std::string title{ "Special Pythagorean triplet" };
 
 static const std::string body{ R"(
@@ -52,4 +54,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 31875000 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ 9, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };
