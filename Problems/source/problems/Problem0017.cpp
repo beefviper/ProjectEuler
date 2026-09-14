@@ -34,11 +34,11 @@ uint64_t problem17()
 
 	for (int i = 1; i <= number; i++) {
 		std::string words = makeStringFromNumber(i);
-		//std::cout << words << std::endl;
+        print << words << std::endl;
 		result += words.length();
 	}
 
-	//std::cout << "The total is " << result << "." << std::endl;
+    print << "The total is " << result << "." << std::endl;
 
 	return result;
 }

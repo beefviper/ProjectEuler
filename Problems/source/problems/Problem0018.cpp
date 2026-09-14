@@ -46,12 +46,12 @@ uint64_t problem18()
 		triangle.push_back(v);
 	}
 
-	//for (auto& v1 : triangle) {
-	//	for (auto v2 : v1) {
-	//		std::cout << v2 << " ";
-	//	}
-	//	std::cout << std::endl;
-	//}
+   for (auto& v1 : triangle) {
+		for (auto v2 : v1) {
+           print << v2 << " ";
+		}
+       print << std::endl;
+	}
 
 	for (int64_t i = triangle.size() - 2; i >= 0; i--) {
 		for (int64_t j = 0; j < static_cast<int64_t>(triangle.at(i).size()); j++) {
@@ -67,16 +67,16 @@ uint64_t problem18()
 		}
 	}
 
-	//for (auto& v1 : triangle) {
-	//	for (auto v2 : v1) {
-	//		std::cout << v2 << " ";
-	//	}
-	//	std::cout << std::endl;
-	//}
+   for (auto& v1 : triangle) {
+		for (auto v2 : v1) {
+           print << v2 << " ";
+		}
+       print << std::endl;
+	}
 
 	result = triangle.at(0).at(0);
 
-	//std::cout << "result: " << result << std::endl;
+    print << "result: " << result << std::endl;
 	return result;
 }
 

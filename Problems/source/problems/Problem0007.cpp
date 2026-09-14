@@ -23,8 +23,8 @@ uint64_t problem7()
 	uint64_t index{ 10001 };
 
 	result = getPrimeByIndex(index);
-	//std::cout << "The " << index << "th prime is "
-	//	<< result << "." << std::endl;
+    print << "The " << index << "th prime is "
+		<< result << "." << std::endl;
 	
 	return result;
 }

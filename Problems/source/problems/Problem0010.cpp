@@ -27,8 +27,8 @@ uint64_t problem10()
 		}
 	}
 
-	//std::cout << "The sum of all the primes below " << limit << " is "
-	//	<< result << "." << std::endl;
+    print << "The sum of all the primes below " << limit << " is "
+		<< result << "." << std::endl;
 
     return result;
 }

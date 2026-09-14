@@ -32,14 +32,14 @@ uint64_t problem20()
 		answer = multipleLargeNumbers(answer, std::to_string(i));
 	}
 
-	//std::cout << "The factorial of " << number << " is "
-	//	<< answer << std::endl;
+    print << "The factorial of " << number << " is "
+		<< answer << std::endl;
 
 	for (char c : answer) {
 		result += atoi(&c);
 	}
 
-	//std::cout << "The sum of all the digits is " << result << std::endl;
+    print << "The sum of all the digits is " << result << std::endl;
 
 	return result;
 }

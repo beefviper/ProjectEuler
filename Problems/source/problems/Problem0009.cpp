@@ -45,10 +45,10 @@ uint64_t problem9()
 	uint64_t sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
-	//std::cout << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
-	//std::cout << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
-	//std::cout << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
-	//std::cout << "The product of abc is " << result << "." << std::endl;
+    print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
+	print << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
+	print << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
+	print << "The product of abc is " << result << "." << std::endl;
 
     return result;
 }

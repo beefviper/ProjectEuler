@@ -28,8 +28,8 @@ uint64_t problem5()
 		flag = isDivisibleByRange(1, 20, result);
 	}
 	
-	//std::cout << "The smallest positive number that is evenly divisible by"
-	//	<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
+    print << "The smallest positive number that is evenly divisible by"
+		<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
 
 	return result;
 }

@@ -64,11 +64,11 @@ uint64_t problem22()
 	}
 
 	for (auto it = nameScore.cbegin(); it != nameScore.cend(); ++it) {
-		//std::cout << it->first << " = " << it->second << std::endl;
+        print << it->first << " = " << it->second << std::endl;
 		result += it->second;
 	}
 
-	//std::cout << "The sum of all the name scores is " << result << std::endl;
+    print << "The sum of all the name scores is " << result << std::endl;
 
 	return result;
 }

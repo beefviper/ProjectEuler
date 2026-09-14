@@ -61,12 +61,12 @@ uint64_t problem11()
 	for (int i = 0; i < 20; i++) {
 		for (int j = 0; j < 20; j++) {
 			if (j != 20 - 1) {
-				//std::cout << std::setfill('0') << std::setw(2)
-				//	<< data[i][j] << ", ";
+                print << std::setfill('0') << std::setw(2)
+					<< data[i][j] << ", ";
 			}
 			else {
-				//std::cout << std::setfill('0') << std::setw(2)
-				//	<< data[i][j] << std::endl;
+                print << std::setfill('0') << std::setw(2)
+					<< data[i][j] << std::endl;
 			}
 		}
 	}
@@ -91,8 +91,8 @@ uint64_t problem11()
 
 	result = *max_element(product.begin(), product.end());
 
-	//std::cout << "The greatest product of four adjacent numbers is "
-	//	<< result << std::endl;
+    print << "The greatest product of four adjacent numbers is "
+		<< result << std::endl;
 
 	return result;
 }

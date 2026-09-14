@@ -23,8 +23,8 @@ uint64_t problem4()
 	uint64_t num1{ 2203 };
 	uint64_t num2{ 906609 };
 
-	//std::cout << num1 << " is " << isPalindrome(num1) << std::endl;
-	//std::cout << num2 << " is " << isPalindrome(num2) << std::endl;
+    print << num1 << " is " << isPalindrome(num1) << std::endl;
+	print << num2 << " is " << isPalindrome(num2) << std::endl;
 
 	uint64_t largestPalindrome{ 0 };
 	
@@ -41,8 +41,8 @@ uint64_t problem4()
 	}
 	
 	result = largestPalindrome;
-	//std::cout << "The largest palindrome made from the product of two 3-digit"
-	//	<< " numbers is " << result << "." << std::endl;
+    print << "The largest palindrome made from the product of two 3-digit"
+		<< " numbers is " << result << "." << std::endl;
 
 	return result;
 }

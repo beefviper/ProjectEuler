@@ -17,28 +17,59 @@
 #include <optional>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
+
+class ConditionalPrint {
+public:
+	void setEnabled(bool enabled) {
+		enabled_ = enabled;
+	}
+
+ template <typename T>
+	ConditionalPrint& operator<<(T&& value) {
+		if (enabled_) {
+			std::cout << std::forward<T>(value);
+		}
+
+		return *this;
+	}
+
+	ConditionalPrint& operator<<(std::ostream& (*manipulator)(std::ostream&)) {
+		if (enabled_) {
+			manipulator(std::cout);
+		}
+
+		return *this;
+	}
+
+private:
+	bool enabled_{false};
+};
+
+inline ConditionalPrint print;
+
+inline void setPrintEnabled(bool enabled) {
+	print.setEnabled(enabled);
+}
 
 struct Problem {
 	uint64_t number{0};
 	std::function<uint64_t()> solution;
 	std::optional<uint64_t> answer{};
 
-	// REMOVED constexpr — no benefit, and technically false
 	Problem(uint64_t n,
 			std::function<uint64_t()> s = {},
 			std::optional<uint64_t> a = {})
 		: number{n}, solution{std::move(s)}, answer{std::move(a)} {}
 
-	// Safe wrapper (no constexpr needed — runtime only)
 	std::optional<uint64_t> try_solve() const {
 		return solution ? std::make_optional(solution()) : std::nullopt;
 	}
 };
 
-// Public instance function (renamed to avoid ambiguity)
 inline std::vector<Problem>& problems() {
-	static std::vector<Problem> registry; // construct-on-first-use: safe & simple
+	static std::vector<Problem> registry;
 	return registry;
 }
 

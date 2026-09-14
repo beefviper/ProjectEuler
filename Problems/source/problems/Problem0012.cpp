@@ -48,8 +48,8 @@ uint64_t problem12()
 		counter++;
 	}
 
-	//std::cout << "The first tringle number with " << numberOfFactors
-	//	<< " factors is " << result << std::endl;
+    print << "The first tringle number with " << numberOfFactors
+		<< " factors is " << result << std::endl;
 
     return result;
 }

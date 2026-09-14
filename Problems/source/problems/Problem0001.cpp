@@ -27,7 +27,7 @@ uint64_t problem1()
 		}
 	}
 
-	//std::cout << "The sum is: " << result << std::endl;
+    print << "The sum is: " << result << std::endl;
 	
     return result;
 }

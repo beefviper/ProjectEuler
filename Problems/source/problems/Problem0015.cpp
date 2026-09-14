@@ -25,7 +25,7 @@ uint64_t problem15()
 	std::string start = "1111111111111111111100000000000000000000";
 	uint64_t counter = 0;
 
-	//std::cout << start << " [" << ++counter << "]" << std::endl;
+    print << start << " [" << ++counter << "]" << std::endl;
 
 	auto bits = setBits(start);
 	auto begin = bits.begin();

@@ -30,20 +30,20 @@ uint64_t problem21()
 	std::vector<uint64_t> properDivisors = getProperDivisors(number);
 	uint64_t answer = sumOfVector(properDivisors);
 	
-	//std::cout << "The factors of " << number << " are ";
-	//for (auto f : factors) {
-	//	std::cout << f << ", ";
-	//}
-	//std::cout << std::endl;
+    print << "The factors of " << number << " are ";
+	for (auto f : factors) {
+       print << f << ", ";
+	}
+   print << std::endl;
 
-	//std::cout << "The proper divisors of " << number << " are ";
-	//for (auto d : properDivisors) {
-	//	std::cout << d << ", ";
-	//}
-	//std::cout << std::endl;
+    print << "The proper divisors of " << number << " are ";
+	for (auto d : properDivisors) {
+       print << d << ", ";
+	}
+   print << std::endl;
 
-	//std::cout << "The sum of the divisors of " << number << " is "
-	//	<< answer << std::endl;
+    print << "The sum of the divisors of " << number << " is "
+		<< answer << std::endl;
 	
 	std::map<uint64_t, uint64_t> numbers;
 	std::vector<uint64_t> vecOfNumbers;
@@ -74,12 +74,12 @@ uint64_t problem21()
 	}
 
 	for (auto n : vecOfNumbers) {
-		//std::cout << n << ", ";
+        print << n << ", ";
 		result += n;
 	}
-	//std::cout << std::endl;
+    print << std::endl;
 
-	//std::cout << "Total is " << result << std::endl;
+    print << "Total is " << result << std::endl;
 
 	return result;
 }

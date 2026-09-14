@@ -30,13 +30,13 @@ uint64_t problem2()
 
 	while ( result < max ) {
 		number = fib(index);
-		//std::cout << number << ", ";
+        print << number << ", ";
 		if (number % 2 == 0) {
 			result += number;
 		}
 		index++;
 	}
-	//std::cout << std::endl << result << std::endl;
+    print << std::endl << result << std::endl;
 
     return result;
 }

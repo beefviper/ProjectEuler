@@ -35,8 +35,8 @@ uint64_t problem14()
 	uint64_t length = collatz(num);
 	uint64_t max_num = 0;
 
-//	std::cout << "The chain length for " << num << " is "
-//		<< length << " numbers long." << std::endl;
+  print << "The chain length for " << num << " is "
+		<< length << " numbers long." << std::endl;
 
 	for (uint64_t i = 1; i <= 1000000; i++) {
 		uint64_t max_temp = collatz(i);
@@ -44,11 +44,11 @@ uint64_t problem14()
 			result = max_temp;
 			max_num = i;
 		}
-		//std::cout << i << ", " << max_temp << std::endl;
+        print << i << ", " << max_temp << std::endl;
 	}
 
-//	std::cout << "The number with the longest chain is " << max_num
-//		<< " with a length of " << result << "." << std::endl;
+  print << "The number with the longest chain is " << max_num
+		<< " with a length of " << result << "." << std::endl;
 
 	return max_num;
 }

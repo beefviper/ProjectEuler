@@ -22,19 +22,19 @@ uint64_t problem3()
 	uint64_t numberToFactor{ 600851475143 };
 	std::vector<uint64_t> factors = primeFactors(numberToFactor);
 
-	//std::cout << "The prime factors of " << numberToFactor << " is ";
+    print << "The prime factors of " << numberToFactor << " is ";
 	for (uint64_t factor : factors) {
-		//std::cout << factor << ", ";
+        print << factor << ", ";
 	}
-	//std::cout << std::endl;
+    print << std::endl;
 
 	if (!factors.empty()) {
 		result = factors.back();
-		//std::cout << "The largest prime factor of " << numberToFactor << " is "
-		//	<< result << std::endl;
+        print << "The largest prime factor of " << numberToFactor << " is "
+			<< result << std::endl;
 	}
 	else {
-		//std::cout << "There are no prime factors." << std::endl;
+        print << "There are no prime factors." << std::endl;
 	}
 
     return result;

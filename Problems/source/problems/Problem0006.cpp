@@ -31,9 +31,9 @@ uint64_t problem6()
 
 	result = squareOfSums(limit) - sumOfSquares(limit);
 
-	//std::cout << "The difference between the sum of the squares of the"
-	//	<< " first one hundred natural numbers and the square of the sum is "
-	//	<< result << "." << std::endl;
+    print << "The difference between the sum of the squares of the"
+		<< " first one hundred natural numbers and the square of the sum is "
+		<< result << "." << std::endl;
 	
 	return result;
 }

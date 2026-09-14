@@ -10,6 +10,8 @@ Menu::Menu(uint64_t problemNumber)
 }
 
 int Menu::run() const {
+    setPrintEnabled(problemNumber_ != 0);
+
     auto allProblems = problems();
     std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
         {

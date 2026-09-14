@@ -25,9 +25,9 @@ uint64_t problem16() {
 	std::string numberTwo = "546546468415312";
 	std::string largeNumber = multipleLargeNumbers(numberOne, numberTwo);
 
-	//std::cout << "numberOne = " << numberOne << std::endl;
-	//std::cout << "numberTwo = " << numberTwo << std::endl;
-	//std::cout << "largeNumber = " << largeNumber << std::endl;
+    print << "numberOne = " << numberOne << std::endl;
+	print << "numberTwo = " << numberTwo << std::endl;
+	print << "largeNumber = " << largeNumber << std::endl;
 	
 	std::string total = "1";
 
@@ -39,7 +39,7 @@ uint64_t problem16() {
 		result = result + atoi(&c);
 	}
 
-	//std::cout << "The sum is " << result << std::endl;
+    print << "The sum is " << result << std::endl;
 
 	return result;
 }

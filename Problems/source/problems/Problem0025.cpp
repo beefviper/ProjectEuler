@@ -45,8 +45,8 @@ uint64_t problem25()
 	std::string index = "999";
 	std::string answer = "0";
 
-	//std::cout << "index: " << atoi(index.c_str()) + 1
-	//	<< ", answer: " << answer << std::endl;
+    print << "index: " << atoi(index.c_str()) + 1
+		<< ", answer: " << answer << std::endl;
 
 	return result;
 }

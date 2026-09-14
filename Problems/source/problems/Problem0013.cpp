@@ -23,11 +23,11 @@ uint64_t problem13()
 	std::string total(50, '0');
 	
 	for (auto& number : numbers) {
-		//std::cout << number << std::endl;
+        print << number << std::endl;
 		total = addLargeNumbers(total, number);
 	}
 
-	//std::cout << "The total is " << total << "." << std::endl;
+    print << "The total is " << total << "." << std::endl;
 
 	//result = std::stol(total);
 
