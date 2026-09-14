@@ -165,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\menu.cpp" />
+    <ClCompile Include="source\print.cpp" />
     <ClCompile Include="source\problems\problem0001.cpp" />
     <ClCompile Include="source\problems\problem0002.cpp" />
     <ClCompile Include="source\problems\problem0003.cpp" />
@@ -191,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h" />
+    <ClInclude Include="include\print.h" />
     <ClInclude Include="include\problems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

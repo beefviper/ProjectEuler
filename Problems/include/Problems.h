@@ -6,52 +6,19 @@
 #pragma once
 
 #include "eulerlib.h"
+#include "print.h"
 
 #include <algorithm>
 #include <cstdint>
 #include <fstream>
 #include <functional>
 #include <iomanip>
-#include <iostream>
 #include <map>
 #include <optional>
 #include <sstream>
 #include <string>
 #include <utility>
 #include <vector>
-
-class ConditionalPrint {
-public:
-	void setEnabled(bool enabled) {
-		enabled_ = enabled;
-	}
-
- template <typename T>
-	ConditionalPrint& operator<<(T&& value) {
-		if (enabled_) {
-			std::cout << std::forward<T>(value);
-		}
-
-		return *this;
-	}
-
-	ConditionalPrint& operator<<(std::ostream& (*manipulator)(std::ostream&)) {
-		if (enabled_) {
-			manipulator(std::cout);
-		}
-
-		return *this;
-	}
-
-private:
-	bool enabled_{false};
-};
-
-inline ConditionalPrint print;
-
-inline void setPrintEnabled(bool enabled) {
-	print.setEnabled(enabled);
-}
 
 struct Problem {
 	uint64_t number{0};

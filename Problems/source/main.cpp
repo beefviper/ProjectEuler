@@ -7,7 +7,7 @@
 
 int main()
 {
-	uint64_t doProblem{11};
+	uint64_t doProblem{0};
 	Menu menu{doProblem};
 	return menu.run();
 }

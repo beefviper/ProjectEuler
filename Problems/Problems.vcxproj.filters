@@ -93,12 +93,18 @@
     <ClCompile Include="source\menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\print.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\problems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\print.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
