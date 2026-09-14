@@ -11,4 +11,3 @@ int main()
 	Menu menu{doProblem};
 	return menu.run();
 }
-

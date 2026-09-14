@@ -60,4 +60,3 @@ void Menu::runProblem(const Problem& problem) {
         std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
     }
 }
-

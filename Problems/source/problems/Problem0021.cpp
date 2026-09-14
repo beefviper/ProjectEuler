@@ -85,4 +85,3 @@ uint64_t problem21()
 }
 
 static const ProblemRegistrar problem21_registrar{ Problem{ 21, problem21, 31626 } };
-

@@ -48,4 +48,3 @@ public:
 		problems().emplace_back(std::move(problem));
 	}
 };
-

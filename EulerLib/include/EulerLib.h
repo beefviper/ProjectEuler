@@ -39,4 +39,3 @@ struct SetOfBits
 	uint64_t numberOfBits = 0;
 	uint64_t amountToShift = 0;
 };
-

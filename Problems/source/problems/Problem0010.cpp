@@ -34,4 +34,3 @@ uint64_t problem10()
 }
 
 static const ProblemRegistrar problem10_registrar{ Problem{ 10, problem10 } };
-

@@ -17,4 +17,3 @@ private:
 
     static void runProblem(const Problem& problem);
 };
-
