@@ -21,7 +21,6 @@ with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
 )" };
 
-
 uint64_t problem18()
 {
 	uint64_t result{ 0 };

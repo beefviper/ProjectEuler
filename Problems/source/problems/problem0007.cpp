@@ -14,7 +14,6 @@ we can see that the 6th prime is 13.
 What is the 10 001st prime number?
 )" };
 
-
 uint64_t problem7()
 {
 	uint64_t result{ 0 };

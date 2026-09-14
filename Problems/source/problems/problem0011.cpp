@@ -39,7 +39,6 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 )" };
 
-
 uint64_t problem11()
 {
 	uint64_t result{ 0 };

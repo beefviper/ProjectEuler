@@ -21,7 +21,6 @@ Find the difference between the sum of the squares of the first one
 hundred natural numbers and the square of the sum.
 )" };
 
-
 uint64_t problem6()
 {
 	uint64_t result{ 0 };

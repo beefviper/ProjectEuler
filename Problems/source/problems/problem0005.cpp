@@ -15,7 +15,6 @@ What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
 )" };
 
-
 uint64_t problem5()
 {
 	uint64_t result{ 0 };

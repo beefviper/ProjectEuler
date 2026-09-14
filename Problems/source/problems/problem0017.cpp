@@ -20,7 +20,6 @@ and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 )" };
 
-
 uint64_t problem17()
 {
 	uint64_t result{ 0 };

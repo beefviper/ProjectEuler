@@ -15,7 +15,6 @@ right corner.
 How many such routes are there through a 20x20 grid ?
 )" };
 
-
 uint64_t problem15()
 {
 	uint64_t result{ 0 };

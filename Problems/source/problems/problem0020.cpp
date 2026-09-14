@@ -17,7 +17,6 @@ and the sum of the digits in the number 10! is
 Find the sum of the digits in the number 100!
 )" };
 
-
 uint64_t problem20()
 {
 	uint64_t result{ 0 };

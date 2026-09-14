@@ -33,7 +33,6 @@ What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
 )" };
 
-
 uint64_t problem25()
 {
 	uint64_t result{ 0 };

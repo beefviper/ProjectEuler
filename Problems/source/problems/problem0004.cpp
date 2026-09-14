@@ -14,7 +14,6 @@ from the product of two 2-digit numbers is 9009 = 91 x 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 )" };
 
-
 uint64_t problem4()
 {
 	uint64_t result{ 0 };
