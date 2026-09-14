@@ -3,7 +3,7 @@
 // author: beefviper
 // date: Sept 14, 2026
 
-#include "EulerLib.h"
+#include "eulerlib.h"
 
 #include <iostream>
 #include <vector>

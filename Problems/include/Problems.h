@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "EulerLib.h"
+#include "eulerlib.h"
 
 #include <algorithm>
 #include <cstdint>
