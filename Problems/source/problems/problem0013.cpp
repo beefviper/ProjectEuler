@@ -5,14 +5,12 @@
 
 #include "problems.h"
 
-/*
-Problem 13: Large sum
+static const std::string title{ "Large sum" };
 
+static const std::string body{ R"(
 Work out the first ten digits of the sum of the following
 one-hundred 50-digit numbers.
-
-Answer: 5537376230
-*/
+)" };
 
 
 uint64_t problem13()
@@ -34,4 +32,6 @@ uint64_t problem13()
 	return result;
 }
 
-static const ProblemRegistrar problem13_registrar{ Problem{ 13, problem13, 5537376230 } };
+static const std::optional<uint64_t> answer{ 5537376230 };
+
+static const ProblemRegistrar problem13_registrar{ Problem{ 13, title, body, problem13, answer } };
