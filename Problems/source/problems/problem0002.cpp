@@ -17,7 +17,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 )" };
 
-uint64_t problem2()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 
@@ -40,4 +40,4 @@ uint64_t problem2()
 
 static const std::optional<uint64_t> answer{ 4613732 };
 
-static const ProblemRegistrar problem2_registrar{ Problem{ 2, title, body, problem2, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 2, title, body, problem, answer } };

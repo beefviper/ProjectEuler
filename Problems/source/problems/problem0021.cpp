@@ -16,7 +16,7 @@ pair and each of a and b are called amicable numbers.
 Evaluate the sum of all the amicable numbers under 10000.
 )" };
 
-uint64_t problem21()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 496 };
@@ -81,4 +81,4 @@ uint64_t problem21()
 
 static const std::optional<uint64_t> answer{ 31626 };
 
-static const ProblemRegistrar problem21_registrar{ Problem{ 21, title, body, problem21, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 21, title, body, problem, answer } };

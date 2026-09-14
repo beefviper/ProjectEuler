@@ -21,7 +21,7 @@ So, COLIN would obtain a score of 938 x 53 = 49714.
 What is the total of all the name scores in the file?
 )" };
 
-uint64_t problem22()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	std::string namesFilename = "data/names.txt";
@@ -69,4 +69,4 @@ uint64_t problem22()
 
 static const std::optional<uint64_t> answer{ 871198282 };
 
-static const ProblemRegistrar problem22_registrar{ Problem{ 22, title, body, problem22, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 22, title, body, problem, answer } };

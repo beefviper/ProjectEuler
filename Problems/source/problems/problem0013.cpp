@@ -12,7 +12,7 @@ Work out the first ten digits of the sum of the following
 one-hundred 50-digit numbers.
 )" };
 
-uint64_t problem13()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	std::string numbersFileName = "data/numbers.txt";
@@ -33,4 +33,4 @@ uint64_t problem13()
 
 static const std::optional<uint64_t> answer{ 5537376230 };
 
-static const ProblemRegistrar problem13_registrar{ Problem{ 13, title, body, problem13, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 13, title, body, problem, answer } };

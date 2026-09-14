@@ -15,7 +15,7 @@ What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
 )" };
 
-uint64_t problem5()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	bool flag = false;
@@ -33,4 +33,4 @@ uint64_t problem5()
 
 static const std::optional<uint64_t> answer{ 232792560 };
 
-static const ProblemRegistrar problem5_registrar{ Problem{ 5, title, body, problem5, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 5, title, body, problem, answer } };

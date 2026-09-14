@@ -30,7 +30,7 @@ What is the value of the first triangle number to have over five hundred
 divisors?
 )" };
 
-uint64_t problem12()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t numberOfFactors = 0;
@@ -53,4 +53,4 @@ uint64_t problem12()
 
 static const std::optional<uint64_t> answer{ 76576500 };
 
-static const ProblemRegistrar problem12_registrar{ Problem{ 12, title, body, problem12, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 12, title, body, problem, answer } };

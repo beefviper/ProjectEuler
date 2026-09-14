@@ -27,7 +27,7 @@ Find the sum of all the positive integers which cannot be written as the sum
 of two abundant numbers.
 )" };
 
-uint64_t problem23()
+static uint64_t problem()
 {
 
 	return 0;
@@ -35,4 +35,4 @@ uint64_t problem23()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem23_registrar{ Problem{ 23, title, body, problem23, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 23, title, body, problem, answer } };

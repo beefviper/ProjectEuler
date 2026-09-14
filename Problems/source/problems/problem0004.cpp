@@ -14,7 +14,7 @@ from the product of two 2-digit numbers is 9009 = 91 x 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 )" };
 
-uint64_t problem4()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t num1{ 2203 };
@@ -46,4 +46,4 @@ uint64_t problem4()
 
 static const std::optional<uint64_t> answer{ 906609 };
 
-static const ProblemRegistrar problem4_registrar{ Problem{ 4, title, body, problem4, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 4, title, body, problem, answer } };

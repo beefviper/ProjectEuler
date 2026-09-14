@@ -13,7 +13,7 @@ static const std::string body{ R"(
 What is the sum of the digits of the number 2^1000?
 )" };
 
-uint64_t problem16() {
+static uint64_t problem() {
 	uint64_t result{ 0 };
 	
 	std::string numberOne = "654646846453489";
@@ -41,4 +41,4 @@ uint64_t problem16() {
 
 static const std::optional<uint64_t> answer{ 1366 };
 
-static const ProblemRegistrar problem16_registrar{ Problem{ 16, title, body, problem16, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 16, title, body, problem, answer } };

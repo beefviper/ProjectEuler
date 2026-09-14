@@ -25,7 +25,7 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 )" };
 
-uint64_t problem14()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t num = 13;
@@ -52,4 +52,4 @@ uint64_t problem14()
 
 static const std::optional<uint64_t> answer{ 837799 };
 
-static const ProblemRegistrar problem14_registrar{ Problem{ 14, title, body, problem14, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 14, title, body, problem, answer } };

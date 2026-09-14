@@ -15,7 +15,7 @@ right corner.
 How many such routes are there through a 20x20 grid ?
 )" };
 
-uint64_t problem15()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 
@@ -34,4 +34,4 @@ uint64_t problem15()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem15_registrar{ Problem{ 15, title, body, problem15, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 15, title, body, problem, answer } };

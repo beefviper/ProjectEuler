@@ -17,7 +17,7 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 )" };
 
-uint64_t problem9()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 
@@ -52,4 +52,4 @@ uint64_t problem9()
 
 static const std::optional<uint64_t> answer{ 31875000 };
 
-static const ProblemRegistrar problem9_registrar{ Problem{ 9, title, body, problem9, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 9, title, body, problem, answer } };

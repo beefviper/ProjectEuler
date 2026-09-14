@@ -13,7 +13,7 @@ The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 Find the sum of all the primes below two million.
 )" };
 
-uint64_t problem10()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t limit{ 2000000 };
@@ -32,4 +32,4 @@ uint64_t problem10()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem10_registrar{ Problem{ 10, title, body, problem10, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 10, title, body, problem, answer } };

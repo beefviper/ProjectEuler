@@ -20,7 +20,7 @@ and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 )" };
 
-uint64_t problem17()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 1000 };
@@ -40,4 +40,4 @@ uint64_t problem17()
 
 static const std::optional<uint64_t> answer{ 21124 };
 
-static const ProblemRegistrar problem17_registrar{ Problem{ 17, title, body, problem17, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 17, title, body, problem, answer } };

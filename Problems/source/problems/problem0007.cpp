@@ -14,7 +14,7 @@ we can see that the 6th prime is 13.
 What is the 10 001st prime number?
 )" };
 
-uint64_t problem7()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t index{ 10001 };
@@ -28,4 +28,4 @@ uint64_t problem7()
 
 static const std::optional<uint64_t> answer{ 104743 };
 
-static const ProblemRegistrar problem7_registrar{ Problem{ 7, title, body, problem7, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 7, title, body, problem, answer } };

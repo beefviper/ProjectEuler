@@ -17,7 +17,7 @@ and the sum of the digits in the number 10! is
 Find the sum of the digits in the number 100!
 )" };
 
-uint64_t problem20()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 100 };
@@ -41,4 +41,4 @@ uint64_t problem20()
 
 static const std::optional<uint64_t> answer{ 648 };
 
-static const ProblemRegistrar problem20_registrar{ Problem{ 20, title, body, problem20, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 20, title, body, problem, answer } };

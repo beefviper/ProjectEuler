@@ -21,20 +21,23 @@ Find the difference between the sum of the squares of the first one
 hundred natural numbers and the square of the sum.
 )" };
 
-uint64_t problem6()
+namespace
 {
-	uint64_t result{ 0 };
-	uint64_t limit{ 100 };
+	static uint64_t problem()
+	{
+		uint64_t result{ 0 };
+		uint64_t limit{ 100 };
 
-	result = squareOfSums(limit) - sumOfSquares(limit);
+		result = squareOfSums(limit) - sumOfSquares(limit);
 
-    print << "The difference between the sum of the squares of the"
-		<< " first one hundred natural numbers and the square of the sum is "
-		<< result << "." << std::endl;
-	
-	return result;
+		print << "The difference between the sum of the squares of the"
+			<< " first one hundred natural numbers and the square of the sum is "
+			<< result << "." << std::endl;
+
+		return result;
+	}
+
+	static const std::optional<uint64_t> answer{ 25164150 };
+
+	static const ProblemRegistrar problem_registrar{ Problem{ 6, title, body, problem, answer } };
 }
-
-static const std::optional<uint64_t> answer{ 25164150 };
-
-static const ProblemRegistrar problem6_registrar{ Problem{ 6, title, body, problem6, answer } };

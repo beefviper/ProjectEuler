@@ -33,7 +33,7 @@ What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
 )" };
 
-uint64_t problem25()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	std::string index = "999";
@@ -47,4 +47,4 @@ uint64_t problem25()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem25_registrar{ Problem{ 25, title, body, problem25, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 25, title, body, problem, answer } };

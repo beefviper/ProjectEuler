@@ -14,7 +14,7 @@ we get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 )" };
 
-uint64_t problem1()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 
@@ -31,4 +31,4 @@ uint64_t problem1()
 
 static const std::optional<uint64_t> answer{ 233168 };
 
-static const ProblemRegistrar problem1_registrar{ Problem{ 1, title, body, problem1, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 1, title, body, problem, answer } };

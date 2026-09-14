@@ -31,7 +31,7 @@ Find the thirteen adjacent digits in the 1000-digit number that have the
 greatest product. What is the value of this product?
 )" };
 
-uint64_t problem8()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t run = 13;
@@ -74,4 +74,4 @@ uint64_t problem8()
 
 static const std::optional<uint64_t> answer{ 23514624000 };
 
-static const ProblemRegistrar problem8_registrar{ Problem{ 8, title, body, problem8, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 8, title, body, problem, answer } };

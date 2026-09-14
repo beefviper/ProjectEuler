@@ -21,7 +21,7 @@ with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
 )" };
 
-uint64_t problem18()
+static uint64_t problem()
 {
 	uint64_t result{ 0 };
 
@@ -77,4 +77,4 @@ uint64_t problem18()
 
 static const std::optional<uint64_t> answer{ 1074 };
 
-static const ProblemRegistrar problem18_registrar{ Problem{ 18, title, body, problem18, answer } };
+static const ProblemRegistrar problem_registrar{ Problem{ 18, title, body, problem, answer } };
