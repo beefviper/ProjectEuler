@@ -35,10 +35,6 @@ struct Problem {
 			std::optional<uint64_t> a = {})
 		: number{n}, title{std::move(t)}, body{std::move(b)},
 		  solution{std::move(s)}, answer{std::move(a)} {}
-
-	std::optional<uint64_t> try_solve() const {
-		return solution ? std::make_optional(solution()) : std::nullopt;
-	}
 };
 
 inline std::vector<Problem>& problems() {
