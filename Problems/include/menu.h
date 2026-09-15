@@ -8,7 +8,7 @@
 #include "problems.h"
 
 enum class PrintMode {
-    test,
+    verify,
     question,
     statements,
     both
@@ -16,7 +16,7 @@ enum class PrintMode {
 
 class Menu {
 public:
-    explicit Menu(uint64_t problemNumber = 0, PrintMode printMode = PrintMode::test);
+    explicit Menu(uint64_t problemNumber = 0, PrintMode printMode = PrintMode::verify);
     int run() const;
 
 private:

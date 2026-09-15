@@ -62,10 +62,10 @@ void Menu::runProblem(const Problem& problem) const {
     {
         std::cout << "Problem " << problem.number << " is "
             << (problem.answer.value() == result ? "correct." : "incorrect.")
-            << std::endl << std::endl;
+            << std::endl;
     }
     else
     {
-        std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl << std::endl;
+        std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
     }
 }
