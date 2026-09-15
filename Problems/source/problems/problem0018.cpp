@@ -79,4 +79,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 1074 };
 
-static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };
+static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

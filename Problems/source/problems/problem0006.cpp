@@ -41,5 +41,5 @@ namespace
 
 	static const std::optional<uint64_t> answer{ 25164150 };
 
-	static const ProblemRegistrar problem_registrar{ Problem{ number, title, body, problem, answer } };
+	static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
 }

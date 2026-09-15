@@ -9,6 +9,7 @@
 #include "print.h"
 
 #include <algorithm>
+#include <concepts>
 #include <cstdint>
 #include <fstream>
 #include <functional>
@@ -47,7 +48,9 @@ inline std::vector<Problem>& problems() {
 
 class ProblemRegistrar {
 public:
-	explicit ProblemRegistrar(Problem problem) {
-		problems().emplace_back(std::move(problem));
+	template<typename... Args>
+		requires std::constructible_from<Problem, Args...>
+	explicit ProblemRegistrar(Args&&... args) {
+		problems().emplace_back(std::forward<Args>(args)...);
 	}
 };

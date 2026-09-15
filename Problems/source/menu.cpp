@@ -13,7 +13,7 @@ int Menu::run() const {
     setPrintEnabled(problemNumber_ != 0 &&
         (printMode_ == PrintMode::statements || printMode_ == PrintMode::both));
 
-    auto allProblems = problems();
+    auto& allProblems = problems();
     std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
         {
             return left.number < right.number;
