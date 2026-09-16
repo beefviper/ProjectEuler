@@ -1,3 +1,8 @@
+// print.h
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #include "print.h"
 
 ConditionalPrint print;

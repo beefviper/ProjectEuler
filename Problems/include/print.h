@@ -1,3 +1,8 @@
+// print.h
+// Project Euler Problems
+// author: beefviper
+// date: Sept 14, 2026
+
 #pragma once
 
 #include <iostream>
