@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 6 };
 
 static const std::string title{ "Sum square difference" };
@@ -30,9 +32,9 @@ namespace
 		uint64_t result{ 0 };
 		uint64_t limit{ 100 };
 
-		result = squareOfSums(limit) - sumOfSquares(limit);
+		result = pe::squareOfSums(limit) - pe::sumOfSquares(limit);
 
-		print << "The difference between the sum of the squares of the"
+		pe::print << "The difference between the sum of the squares of the"
 			<< " first one hundred natural numbers and the square of the sum is "
 			<< result << "." << std::endl;
 
@@ -41,5 +43,5 @@ namespace
 
 	static const std::optional<uint64_t> answer{ 25164150 };
 
-	static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+	static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
 }

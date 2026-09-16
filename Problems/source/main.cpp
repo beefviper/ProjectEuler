@@ -5,14 +5,16 @@
 
 #include "menu.h"
 
+namespace pe = ProjectEuler;
+
 int main()
 {
 	uint64_t all{ 0 };
 
 	uint64_t doProblem{ all };
-	PrintMode printMode{ PrintMode::all };
+	pe::PrintMode printMode{ pe::PrintMode::all };
 	
-	Menu menu{doProblem, printMode};
+	pe::Menu menu{doProblem, printMode};
 	
 	return menu.run();
 }

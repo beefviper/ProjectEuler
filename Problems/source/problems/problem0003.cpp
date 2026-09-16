@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 3 };
 
 static const std::string title{ "Largest prime factor" };
@@ -19,21 +21,21 @@ static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	uint64_t numberToFactor{ 600851475143 };
-	std::vector<uint64_t> factors = primeFactors(numberToFactor);
+	std::vector<uint64_t> factors = pe::primeFactors(numberToFactor);
 
-    print << "The prime factors of " << numberToFactor << " is ";
+    pe::print << "The prime factors of " << numberToFactor << " is ";
 	for (uint64_t factor : factors) {
-        print << factor << ", ";
+        pe::print << factor << ", ";
 	}
-    print << std::endl;
+    pe::print << std::endl;
 
 	if (!factors.empty()) {
 		result = factors.back();
-        print << "The largest prime factor of " << numberToFactor << " is "
+        pe::print << "The largest prime factor of " << numberToFactor << " is "
 			<< result << std::endl;
 	}
 	else {
-        print << "There are no prime factors." << std::endl;
+        pe::print << "There are no prime factors." << std::endl;
 	}
 
     return result;
@@ -41,4 +43,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 6857 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

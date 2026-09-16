@@ -11,6 +11,8 @@
 #include <fstream>
 #include <algorithm>
 
+namespace ProjectEuler {
+
 uint64_t fib(uint64_t number) {
 	if (number == 1) {
 		return 1;
@@ -431,3 +433,5 @@ std::vector<std::string> loadTriangle(std::string fileName) {
 
 	return result;
 }
+
+} // namespace ProjectEuler

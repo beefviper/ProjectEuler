@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 16 };
 
 static const std::string title{ "Power digit sum" };
@@ -20,27 +22,27 @@ static uint64_t problem() {
 	
 	std::string numberOne = "654646846453489";
 	std::string numberTwo = "546546468415312";
-	std::string largeNumber = multipleLargeNumbers(numberOne, numberTwo);
+	std::string largeNumber = pe::multipleLargeNumbers(numberOne, numberTwo);
 
-    print << "numberOne = " << numberOne << std::endl;
-	print << "numberTwo = " << numberTwo << std::endl;
-	print << "largeNumber = " << largeNumber << std::endl;
+    pe::print << "numberOne = " << numberOne << std::endl;
+	pe::print << "numberTwo = " << numberTwo << std::endl;
+	pe::print << "largeNumber = " << largeNumber << std::endl;
 	
 	std::string total = "1";
 
 	for (int i = 0; i < 1000; i++) {
-		total = multipleLargeNumbers(total, "2");
+		total = pe::multipleLargeNumbers(total, "2");
 	}
 
 	for (char c : total) {
 		result = result + atoi(&c);
 	}
 
-    print << "The sum is " << result << std::endl;
+    pe::print << "The sum is " << result << std::endl;
 
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 1366 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

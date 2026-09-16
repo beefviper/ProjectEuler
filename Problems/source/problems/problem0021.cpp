@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 21 };
 
 static const std::string title{ "Amicable numbers" };
@@ -23,23 +25,23 @@ static uint64_t problem()
 	uint64_t result{ 0 };
 	uint64_t number{ 496 };
 	uint64_t max_num{ 10000 };
-	std::vector<uint64_t> factors = getFactors(number);
-	std::vector<uint64_t> properDivisors = getProperDivisors(number);
-	uint64_t answer = sumOfVector(properDivisors);
+	std::vector<uint64_t> factors = pe::getFactors(number);
+	std::vector<uint64_t> properDivisors = pe::getProperDivisors(number);
+	uint64_t answer = pe::sumOfVector(properDivisors);
 	
-    print << "The factors of " << number << " are ";
+    pe::print << "The factors of " << number << " are ";
 	for (auto f : factors) {
-       print << f << ", ";
+       pe::print << f << ", ";
 	}
-   print << std::endl;
+   pe::print << std::endl;
 
-    print << "The proper divisors of " << number << " are ";
+    pe::print << "The proper divisors of " << number << " are ";
 	for (auto d : properDivisors) {
-       print << d << ", ";
+       pe::print << d << ", ";
 	}
-   print << std::endl;
+   pe::print << std::endl;
 
-    print << "The sum of the divisors of " << number << " is "
+    pe::print << "The sum of the divisors of " << number << " is "
 		<< answer << std::endl;
 	
 	std::map<uint64_t, uint64_t> numbers;
@@ -47,8 +49,8 @@ static uint64_t problem()
 	uint64_t number_max = 0;
 
 	for (uint64_t i = 1; i < max_num; i++) {
-		std::vector<uint64_t> numberDivisors = getProperDivisors(i);
-		uint64_t numberDivisorsSum = sumOfVector(numberDivisors);
+		std::vector<uint64_t> numberDivisors = pe::getProperDivisors(i);
+		uint64_t numberDivisorsSum = pe::sumOfVector(numberDivisors);
 
 		numbers[i] = numberDivisorsSum;
 
@@ -71,16 +73,16 @@ static uint64_t problem()
 	}
 
 	for (auto n : vecOfNumbers) {
-        print << n << ", ";
+        pe::print << n << ", ";
 		result += n;
 	}
-    print << std::endl;
+    pe::print << std::endl;
 
-    print << "Total is " << result << std::endl;
+    pe::print << "Total is " << result << std::endl;
 
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 31626 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 9 };
 
 static const std::string title{ "Special Pythagorean triplet" };
@@ -44,14 +46,14 @@ static uint64_t problem()
 	uint64_t sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
-    print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
-	print << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
-	print << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
-	print << "The product of abc is " << result << "." << std::endl;
+    pe::print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
+	pe::print << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
+	pe::print << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
+	pe::print << "The product of abc is " << result << "." << std::endl;
 
     return result;
 }
 
 static const std::optional<uint64_t> answer{ 31875000 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

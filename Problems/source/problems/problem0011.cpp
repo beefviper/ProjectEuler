@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 11 };
 
 static const std::string title{ "Largest product in a grid" };
@@ -61,11 +63,11 @@ static uint64_t problem()
 	for (int i = 0; i < 20; i++) {
 		for (int j = 0; j < 20; j++) {
 			if (j != 20 - 1) {
-                print << std::setfill('0') << std::setw(2)
+                pe::print << std::setfill('0') << std::setw(2)
 					<< data[i][j] << ", ";
 			}
 			else {
-                print << std::setfill('0') << std::setw(2)
+                pe::print << std::setfill('0') << std::setw(2)
 					<< data[i][j] << std::endl;
 			}
 		}
@@ -91,7 +93,7 @@ static uint64_t problem()
 
 	result = *max_element(product.begin(), product.end());
 
-    print << "The greatest product of four adjacent numbers is "
+    pe::print << "The greatest product of four adjacent numbers is "
 		<< result << std::endl;
 
 	return result;
@@ -99,4 +101,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 70600674 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

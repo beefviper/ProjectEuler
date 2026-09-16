@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 2 };
 
 static const std::string title{ "Even Fibonacci numbers" };
@@ -28,18 +30,18 @@ static uint64_t problem()
 	uint64_t max{ 4000000 };
 
 	while ( result < max ) {
-		number = fib(index);
-        print << number << ", ";
+		number = pe::fib(index);
+        pe::print << number << ", ";
 		if (number % 2 == 0) {
 			result += number;
 		}
 		index++;
 	}
-    print << std::endl << result << std::endl;
+    pe::print << std::endl << result << std::endl;
 
     return result;
 }
 
 static const std::optional<uint64_t> answer{ 4613732 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

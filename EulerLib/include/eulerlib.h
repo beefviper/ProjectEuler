@@ -9,6 +9,8 @@
 #include <vector>
 #include <cstdint>
 
+namespace ProjectEuler {
+
 struct SetOfBits;
 
 uint64_t fib(uint64_t number);
@@ -39,3 +41,5 @@ struct SetOfBits
 	uint64_t numberOfBits = 0;
 	uint64_t amountToShift = 0;
 };
+
+} // namespace ProjectEuler

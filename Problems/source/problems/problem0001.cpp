@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 1 };
 
 static const std::string title{ "Multiples of 3 and 5" };
@@ -26,11 +28,11 @@ static uint64_t problem()
 		}
 	}
 
-    print << "The sum is: " << result << std::endl;
+    pe::print << "The sum is: " << result << std::endl;
 	
     return result;
 }
 
 static const std::optional<uint64_t> answer{ 233168 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 18 };
 
 static const std::string title{ "Maximum path sum I" };
@@ -28,7 +30,7 @@ static uint64_t problem()
 	uint64_t result{ 0 };
 
 	std::string triangleFileName = "data/large_tri.txt";
-	std::vector<std::string> triangleData = loadTriangle(triangleFileName);
+	std::vector<std::string> triangleData = pe::loadTriangle(triangleFileName);
 	std::vector<std::vector<int64_t>> triangle;
 
 	for (uint64_t i = 0; i < triangleData.size(); i++) {
@@ -45,9 +47,9 @@ static uint64_t problem()
 
    for (auto& v1 : triangle) {
 		for (auto v2 : v1) {
-           print << v2 << " ";
+           pe::print << v2 << " ";
 		}
-       print << std::endl;
+       pe::print << std::endl;
 	}
 
 	for (int64_t i = triangle.size() - 2; i >= 0; i--) {
@@ -66,17 +68,17 @@ static uint64_t problem()
 
    for (auto& v1 : triangle) {
 		for (auto v2 : v1) {
-           print << v2 << " ";
+           pe::print << v2 << " ";
 		}
-       print << std::endl;
+       pe::print << std::endl;
 	}
 
 	result = triangle.at(0).at(0);
 
-    print << "result: " << result << std::endl;
+    pe::print << "result: " << result << std::endl;
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 1074 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

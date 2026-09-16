@@ -8,6 +8,8 @@
 #include "flags.h"
 #include "problems.h"
 
+namespace ProjectEuler {
+
 enum class PrintMode : uint32_t {
     none     = 0,
     verify   = 1 << 0,
@@ -27,3 +29,5 @@ private:
 
     void runProblem(const Problem& problem) const;
 };
+
+} // namespace ProjectEuler

@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 22 };
 
 static const std::string title{ "Names scores" };
@@ -60,15 +62,15 @@ static uint64_t problem()
 	}
 
 	for (auto it = nameScore.cbegin(); it != nameScore.cend(); ++it) {
-        print << it->first << " = " << it->second << std::endl;
+        pe::print << it->first << " = " << it->second << std::endl;
 		result += it->second;
 	}
 
-    print << "The sum of all the name scores is " << result << std::endl;
+    pe::print << "The sum of all the name scores is " << result << std::endl;
 
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 871198282 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

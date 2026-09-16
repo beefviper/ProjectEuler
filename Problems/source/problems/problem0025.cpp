@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 25 };
 
 static const std::string title{ "1000-digit Fibonacci number" };
@@ -41,7 +43,7 @@ static uint64_t problem()
 	std::string index = "999";
 	std::string answer = "0";
 
-    print << "index: " << atoi(index.c_str()) + 1
+    pe::print << "index: " << atoi(index.c_str()) + 1
 		<< ", answer: " << answer << std::endl;
 
 	return result;
@@ -49,4 +51,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

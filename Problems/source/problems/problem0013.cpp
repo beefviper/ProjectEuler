@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 13 };
 
 static const std::string title{ "Large sum" };
@@ -18,15 +20,15 @@ static uint64_t problem()
 {
 	uint64_t result{ 0 };
 	std::string numbersFileName = "data/numbers.txt";
-	std::vector<std::string> numbers = loadNumbers(numbersFileName);
+	std::vector<std::string> numbers = pe::loadNumbers(numbersFileName);
 	std::string total(50, '0');
 	
 	for (auto& number : numbers) {
-        print << number << std::endl;
-		total = addLargeNumbers(total, number);
+        pe::print << number << std::endl;
+		total = pe::addLargeNumbers(total, number);
 	}
 
-    print << "The total is " << total << "." << std::endl;
+    pe::print << "The total is " << total << "." << std::endl;
 
 	//result = std::stol(total);
 
@@ -35,4 +37,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 5537376230 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

@@ -8,6 +8,8 @@
 #include <iostream>
 #include <utility>
 
+namespace ProjectEuler {
+
 class ConditionalPrint {
 public:
     void setEnabled(bool enabled);
@@ -30,3 +32,5 @@ private:
 extern ConditionalPrint print;
 
 void setPrintEnabled(bool enabled);
+
+} // namespace ProjectEuler

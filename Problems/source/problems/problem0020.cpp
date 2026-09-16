@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 20 };
 
 static const std::string title{ "Factorial digit sum" };
@@ -26,21 +28,21 @@ static uint64_t problem()
 	std::string answer = "1";
 
 	for (int i = 1; i <= number; i++) {
-		answer = multipleLargeNumbers(answer, std::to_string(i));
+		answer = pe::multipleLargeNumbers(answer, std::to_string(i));
 	}
 
-    print << "The factorial of " << number << " is "
+    pe::print << "The factorial of " << number << " is "
 		<< answer << std::endl;
 
 	for (char c : answer) {
 		result += atoi(&c);
 	}
 
-    print << "The sum of all the digits is " << result << std::endl;
+    pe::print << "The sum of all the digits is " << result << std::endl;
 
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 648 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

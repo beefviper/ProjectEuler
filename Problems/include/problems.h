@@ -21,6 +21,8 @@
 #include <utility>
 #include <vector>
 
+namespace ProjectEuler {
+
 struct Problem {
 	uint64_t number{0};
 	std::string title{};
@@ -50,3 +52,5 @@ public:
 		problems().emplace_back(std::forward<Args>(args)...);
 	}
 };
+
+} // namespace ProjectEuler

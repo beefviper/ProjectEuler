@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 17 };
 
 static const std::string title{ "Number letter counts" };
@@ -27,19 +29,19 @@ static uint64_t problem()
 	uint64_t result{ 0 };
 	uint64_t number{ 1000 };
 
-	//std::string words = makeStringFromNumber(9999);
+	//std::string words = pe::makeStringFromNumber(9999);
 
 	for (int i = 1; i <= number; i++) {
-		std::string words = makeStringFromNumber(i);
-        print << words << std::endl;
+		std::string words = pe::makeStringFromNumber(i);
+        pe::print << words << std::endl;
 		result += words.length();
 	}
 
-    print << "The total is " << result << "." << std::endl;
+    pe::print << "The total is " << result << "." << std::endl;
 
 	return result;
 }
 
 static const std::optional<uint64_t> answer{ 21124 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

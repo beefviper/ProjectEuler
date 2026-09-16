@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 4 };
 
 static const std::string title{ "Largest palindrome product" };
@@ -22,8 +24,8 @@ static uint64_t problem()
 	uint64_t num1{ 2203 };
 	uint64_t num2{ 906609 };
 
-    print << num1 << " is " << isPalindrome(num1) << std::endl;
-	print << num2 << " is " << isPalindrome(num2) << std::endl;
+    pe::print << num1 << " is " << pe::isPalindrome(num1) << std::endl;
+	pe::print << num2 << " is " << pe::isPalindrome(num2) << std::endl;
 
 	uint64_t largestPalindrome{ 0 };
 	
@@ -31,7 +33,7 @@ static uint64_t problem()
 		for (int j = 1; j < 1000; j++) {
 			int testNumber = i * j;
 
-			if (isPalindrome(testNumber)) {
+			if (pe::isPalindrome(testNumber)) {
 				if (testNumber > largestPalindrome) {
 					largestPalindrome = testNumber;
 				}
@@ -40,7 +42,7 @@ static uint64_t problem()
 	}
 	
 	result = largestPalindrome;
-    print << "The largest palindrome made from the product of two 3-digit"
+    pe::print << "The largest palindrome made from the product of two 3-digit"
 		<< " numbers is " << result << "." << std::endl;
 
 	return result;
@@ -48,4 +50,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 906609 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

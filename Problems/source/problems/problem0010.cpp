@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 10 };
 
 static const std::string title{ "Summation of primes" };
@@ -21,12 +23,12 @@ static uint64_t problem()
 	uint64_t limit{ 2000000 };
 
 	for (int i = 0; i < limit; i++) {
-		if (checkPrime(i) == true) {
+		if (pe::checkPrime(i) == true) {
 			result += i;
 		}
 	}
 
-    print << "The sum of all the primes below " << limit << " is "
+    pe::print << "The sum of all the primes below " << limit << " is "
 		<< result << "." << std::endl;
 
     return result;
@@ -34,4 +36,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

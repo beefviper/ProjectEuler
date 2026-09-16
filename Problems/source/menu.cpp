@@ -8,6 +8,8 @@
 #include <algorithm>
 #include <iostream>
 
+namespace ProjectEuler {
+
 Menu::Menu(uint64_t problemNumber, PrintMode printMode)
     : problemNumber_{problemNumber}, printMode_{printMode} {
     auto& allProblems = problems();
@@ -81,3 +83,5 @@ void Menu::runProblem(const Problem& problem) const {
         }
     }
 }
+
+} // namespace ProjectEuler

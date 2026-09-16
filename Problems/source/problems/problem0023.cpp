@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 23 };
 
 static const std::string title{ "Non-abundant sums" };
@@ -37,4 +39,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

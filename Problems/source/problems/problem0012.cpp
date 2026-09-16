@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 12 };
 
 static const std::string title{ "Highly divisible triangular number" };
@@ -42,12 +44,12 @@ static uint64_t problem()
 
 	while (numberOfFactors < maxFactors) {
 		result += counter;
-		factors = getFactors(result);
+		factors = pe::getFactors(result);
 		numberOfFactors = factors.size();
 		counter++;
 	}
 
-    print << "The first tringle number with " << numberOfFactors
+    pe::print << "The first tringle number with " << numberOfFactors
 		<< " factors is " << result << std::endl;
 
     return result;
@@ -55,4 +57,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 76576500 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

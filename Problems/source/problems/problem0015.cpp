@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 15 };
 
 static const std::string title{ "Lattice paths" };
@@ -24,9 +26,9 @@ static uint64_t problem()
 	std::string start = "1111111111111111111100000000000000000000";
 	uint64_t counter = 0;
 
-    print << start << " [" << ++counter << "]" << std::endl;
+    pe::print << start << " [" << ++counter << "]" << std::endl;
 
-	auto bits = setBits(start);
+	auto bits = pe::setBits(start);
 	auto begin = bits.begin();
 	auto end = bits.end() - 1;
 	auto midpoint = start.length() / 2;
@@ -36,4 +38,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ std::nullopt };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

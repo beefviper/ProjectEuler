@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 7 };
 
 static const std::string title{ "10001st prime" };
@@ -21,8 +23,8 @@ static uint64_t problem()
 	uint64_t result{ 0 };
 	uint64_t index{ 10001 };
 
-	result = getPrimeByIndex(index);
-    print << "The " << index << "th prime is "
+	result = pe::getPrimeByIndex(index);
+    pe::print << "The " << index << "th prime is "
 		<< result << "." << std::endl;
 	
 	return result;
@@ -30,4 +32,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 104743 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

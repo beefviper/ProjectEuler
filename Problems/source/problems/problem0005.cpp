@@ -5,6 +5,8 @@
 
 #include "problems.h"
 
+namespace pe = ProjectEuler;
+
 static const uint64_t number{ 5 };
 
 static const std::string title{ "Smallest multiple" };
@@ -24,10 +26,10 @@ static uint64_t problem()
 
 	while (flag == false) {
 		result++;
-		flag = isDivisibleByRange(1, 20, result);
+		flag = pe::isDivisibleByRange(1, 20, result);
 	}
 	
-    print << "The smallest positive number that is evenly divisible by"
+    pe::print << "The smallest positive number that is evenly divisible by"
 		<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
 
 	return result;
@@ -35,4 +37,4 @@ static uint64_t problem()
 
 static const std::optional<uint64_t> answer{ 232792560 };
 
-static const ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };

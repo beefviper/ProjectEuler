@@ -5,6 +5,8 @@
 
 #include "print.h"
 
+namespace ProjectEuler {
+
 ConditionalPrint print;
 
 void ConditionalPrint::setEnabled(bool enabled) {
@@ -22,3 +24,5 @@ ConditionalPrint& ConditionalPrint::operator<<(std::ostream& (*manipulator)(std:
 void setPrintEnabled(bool enabled) {
     print.setEnabled(enabled);
 }
+
+} // namespace ProjectEuler
