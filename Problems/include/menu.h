@@ -12,8 +12,7 @@ enum class PrintMode : uint32_t {
     verify   = 1 << 0,
     question = 1 << 1,
     solution = 1 << 2,
-    answer   = 1 << 3,
-    all      = verify | question | solution | answer
+    all      = verify | question | solution
 };
 
 [[nodiscard]] constexpr PrintMode operator|(PrintMode left, PrintMode right) {

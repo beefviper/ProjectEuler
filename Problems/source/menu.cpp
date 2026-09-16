@@ -5,18 +5,22 @@
 
 #include "menu.h"
 
+#include <algorithm>
+#include <iostream>
+
 Menu::Menu(uint64_t problemNumber, PrintMode printMode)
     : problemNumber_{problemNumber}, printMode_{printMode} {
-}
-
-int Menu::run() const {
-    setPrintEnabled(hasFlag(printMode_, PrintMode::solution));
-
     auto& allProblems = problems();
     std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
         {
             return left.number < right.number;
         });
+}
+
+int Menu::run() const {
+    setPrintEnabled(hasFlag(printMode_, PrintMode::solution));
+
+    const auto& allProblems = problems();
 
     if (problemNumber_ == 0)
     {
@@ -56,6 +60,11 @@ void Menu::runProblem(const Problem& problem) const {
         std::cout << problem.body << std::endl;
     }
 
+    if (!hasFlag(printMode_, PrintMode::verify) && !hasFlag(printMode_, PrintMode::solution))
+    {
+        return;
+    }
+
     const auto result = problem.solution();
 
     if (hasFlag(printMode_, PrintMode::verify))
@@ -66,14 +75,9 @@ void Menu::runProblem(const Problem& problem) const {
                 << (problem.answer.value() == result ? "correct." : "incorrect.")
                 << std::endl;
         }
-        else if (!hasFlag(printMode_, PrintMode::answer))
+        else
         {
             std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
         }
-    }
-
-    if (hasFlag(printMode_, PrintMode::answer))
-    {
-        std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
     }
 }
