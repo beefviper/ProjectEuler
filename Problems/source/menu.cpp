@@ -10,8 +10,7 @@ Menu::Menu(uint64_t problemNumber, PrintMode printMode)
 }
 
 int Menu::run() const {
-    setPrintEnabled(problemNumber_ != 0 &&
-        (printMode_ == PrintMode::statements || printMode_ == PrintMode::both));
+    setPrintEnabled(hasFlag(printMode_, PrintMode::solution));
 
     auto& allProblems = problems();
     std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
@@ -51,20 +50,29 @@ void Menu::runProblem(const Problem& problem) const {
         return;
     }
 
-    if (printMode_ == PrintMode::question || printMode_ == PrintMode::both)
+    if (hasFlag(printMode_, PrintMode::question))
     {
         std::cout << "Problem " << problem.number << ": " << problem.title << std::endl;
         std::cout << problem.body << std::endl;
     }
 
     const auto result = problem.solution();
-    if (problem.answer.has_value())
+
+    if (hasFlag(printMode_, PrintMode::verify))
     {
-        std::cout << "Problem " << problem.number << " is "
-            << (problem.answer.value() == result ? "correct." : "incorrect.")
-            << std::endl;
+        if (problem.answer.has_value())
+        {
+            std::cout << "Problem " << problem.number << " is "
+                << (problem.answer.value() == result ? "correct." : "incorrect.")
+                << std::endl;
+        }
+        else if (!hasFlag(printMode_, PrintMode::answer))
+        {
+            std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
+        }
     }
-    else
+
+    if (hasFlag(printMode_, PrintMode::answer))
     {
         std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
     }

@@ -10,7 +10,7 @@ int main()
 	uint64_t all{ 0 };
 
 	uint64_t doProblem{ all };
-	PrintMode printMode{ PrintMode::verify };
+	PrintMode printMode{ PrintMode::all };
 	
 	Menu menu{doProblem, printMode};
 	
