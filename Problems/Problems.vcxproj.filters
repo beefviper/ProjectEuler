@@ -107,5 +107,8 @@
     <ClInclude Include="include\print.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

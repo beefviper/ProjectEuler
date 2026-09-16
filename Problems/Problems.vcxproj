@@ -191,6 +191,7 @@
     <ClCompile Include="source\problems\problem0025.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\flags.h" />
     <ClInclude Include="include\menu.h" />
     <ClInclude Include="include\print.h" />
     <ClInclude Include="include\problems.h" />
