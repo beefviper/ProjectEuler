@@ -1,4 +1,4 @@
-// print.h
+// print.cpp
 // Project Euler Problems
 // author: beefviper
 // date: Sept 14, 2026
