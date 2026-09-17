@@ -24,7 +24,6 @@ static const uint64_t number{ 11 };
 static const std::string title{ "Largest product in a grid" };
 
 static const std::string body{ R"(
-
 In the 20x20 grid below, four numbers along a diagonal line have been
 marked in [red].
 
