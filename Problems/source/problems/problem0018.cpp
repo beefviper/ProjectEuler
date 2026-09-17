@@ -5,6 +5,16 @@
 
 #include "problems.h"
 
+#include "eulerlib.h"
+#include "print.h"
+
+#include <cstdlib>
+#include <iostream>
+#include <optional>
+#include <sstream>
+#include <string>
+#include <vector>
+
 namespace pe = ProjectEuler;
 
 static const uint64_t number{ 18 };

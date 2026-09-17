@@ -5,6 +5,9 @@
 
 #include "problems.h"
 
+#include <optional>
+#include <string>
+
 namespace pe = ProjectEuler;
 
 static const uint64_t number{ 23 };

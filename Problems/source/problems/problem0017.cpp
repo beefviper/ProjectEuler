@@ -5,6 +5,13 @@
 
 #include "problems.h"
 
+#include "eulerlib.h"
+#include "print.h"
+
+#include <iostream>
+#include <optional>
+#include <string>
+
 namespace pe = ProjectEuler;
 
 static const uint64_t number{ 17 };

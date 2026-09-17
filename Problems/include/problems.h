@@ -5,18 +5,10 @@
 
 #pragma once
 
-#include "eulerlib.h"
-#include "print.h"
-
-#include <algorithm>
 #include <concepts>
 #include <cstdint>
-#include <fstream>
 #include <functional>
-#include <iomanip>
-#include <map>
 #include <optional>
-#include <sstream>
 #include <string>
 #include <utility>
 #include <vector>

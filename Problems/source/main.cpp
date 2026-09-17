@@ -5,6 +5,8 @@
 
 #include "menu.h"
 
+#include <cstdint>
+
 namespace pe = ProjectEuler;
 
 int main()

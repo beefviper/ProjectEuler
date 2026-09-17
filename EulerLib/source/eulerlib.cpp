@@ -5,11 +5,14 @@
 
 #include "eulerlib.h"
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
 #include <algorithm>
+#include <cmath>
+#include <cstdint>
+#include <cstdlib>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
 
 namespace ProjectEuler {
 

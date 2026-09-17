@@ -5,8 +5,9 @@
 
 #pragma once
 
-#include "flags.h"
 #include "problems.h"
+
+#include <cstdint>
 
 namespace ProjectEuler {
 

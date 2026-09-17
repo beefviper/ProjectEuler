@@ -5,7 +5,12 @@
 
 #include "menu.h"
 
+#include "flags.h"
+#include "print.h"
+#include "problems.h"
+
 #include <algorithm>
+#include <cstdint>
 #include <iostream>
 
 namespace ProjectEuler {

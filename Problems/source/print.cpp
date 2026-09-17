@@ -5,6 +5,9 @@
 
 #include "print.h"
 
+#include <iostream>
+#include <ostream>
+
 namespace ProjectEuler {
 
 ConditionalPrint print;

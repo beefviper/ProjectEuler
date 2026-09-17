@@ -5,6 +5,12 @@
 
 #include "problems.h"
 
+#include "print.h"
+
+#include <iostream>
+#include <optional>
+#include <string>
+
 namespace pe = ProjectEuler;
 
 static const uint64_t number{ 9 };
