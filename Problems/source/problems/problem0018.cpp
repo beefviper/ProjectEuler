@@ -52,14 +52,18 @@ static pe::Number solution()
 		triangle.push_back(v);
 	}
 
-   for (auto& v1 : triangle) {
+	for (auto& v1 : triangle) {
 		for (auto v2 : v1) {
-           pe::print << v2 << " ";
+			pe::print << v2 << " ";
 		}
-       pe::print << pe::endl;
+		pe::print << pe::endl;
 	}
 
-	for (pe::Number i = triangle.size() - 2; i >= 0; i--) {
+	const pe::Number rows = triangle.size();
+
+	for (pe::Number offset = 1; offset < rows; offset++) {
+		pe::Number i = rows - 1 - offset;
+
 		for (pe::Number j = 0; j < static_cast<pe::Number>(triangle.at(i).size()); j++) {
 			pe::Number a = triangle.at(i + 1).at(j);
 			pe::Number b = triangle.at(i + 1).at(j + 1);
@@ -73,16 +77,16 @@ static pe::Number solution()
 		}
 	}
 
-   for (auto& v1 : triangle) {
+	for (auto& v1 : triangle) {
 		for (auto v2 : v1) {
-           pe::print << v2 << " ";
+			pe::print << v2 << " ";
 		}
-       pe::print << pe::endl;
+		pe::print << pe::endl;
 	}
 
 	result = triangle.at(0).at(0);
 
-    pe::print << "result: " << result << pe::endl;
+	pe::print << "result: " << result << pe::endl;
 	return result;
 }
 
