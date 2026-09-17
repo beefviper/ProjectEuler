@@ -25,7 +25,7 @@ public:
     int run() const;
 
 private:
-    void runProblem(const Problem& problem, PrintMode printMode) const;
+    void runProblem(Problem& problem, PrintMode printMode) const;
     void runVerifyAll() const;
     void runSingle(uint64_t problemNumber) const;
 };

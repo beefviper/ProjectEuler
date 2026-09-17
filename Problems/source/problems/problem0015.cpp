@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 15 };
 
 static const std::string title{ "Lattice paths" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 Starting in the top left corner of a 2x2 grid, and only being able to
 move to the right and down, there are exactly 6 routes to the bottom
 right corner.
@@ -27,7 +26,7 @@ right corner.
 How many such routes are there through a 20x20 grid ?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 
@@ -44,6 +43,6 @@ static uint64_t problem()
     return result;
 }
 
-static const std::optional<uint64_t> answer{ std::nullopt };
+static const std::string answer{ "The number of lattice paths through a 20x20 grid is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

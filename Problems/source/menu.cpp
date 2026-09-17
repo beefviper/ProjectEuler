@@ -18,6 +18,22 @@
 
 namespace ProjectEuler {
 
+namespace {
+
+// Replaces the first "{}" placeholder in tmpl with value.
+// If no placeholder is present, tmpl is returned unchanged.
+std::string formatAnswer(const std::string& tmpl, uint64_t value) {
+    const auto pos = tmpl.find("{}");
+    if (pos == std::string::npos)
+    {
+        return tmpl;
+    }
+
+    return tmpl.substr(0, pos) + std::to_string(value) + tmpl.substr(pos + 2);
+}
+
+} // namespace
+
 Menu::Menu() {
     auto& allProblems = problems();
     std::sort(allProblems.begin(), allProblems.end(), [](const Problem& left, const Problem& right)
@@ -89,14 +105,14 @@ int Menu::run() const {
 void Menu::runVerifyAll() const {
     setPrintEnabled(false);
 
-    for (const auto& problem : problems())
+    for (auto& problem : problems())
     {
         runProblem(problem, PrintMode::verify);
     }
 }
 
 void Menu::runSingle(uint64_t problemNumber) const {
-    const auto& allProblems = problems();
+    auto& allProblems = problems();
 
     const auto it = std::find_if(allProblems.begin(), allProblems.end(), [problemNumber](const Problem& problem)
         {
@@ -114,7 +130,7 @@ void Menu::runSingle(uint64_t problemNumber) const {
     runProblem(*it, PrintMode::all);
 }
 
-void Menu::runProblem(const Problem& problem, PrintMode printMode) const {
+void Menu::runProblem(Problem& problem, PrintMode printMode) const {
     if (!problem.solution)
     {
         std::cout << Color::BrightRed << "Problem " << problem.number << " has no solution function."
@@ -126,7 +142,7 @@ void Menu::runProblem(const Problem& problem, PrintMode printMode) const {
     {
         std::cout << "Problem " << Color::BrightBlue << problem.number << Color::Default
             << ": " << Color::BrightWhite << problem.title << Color::Default << std::endl;
-        std::cout << problem.body << std::endl;
+        std::cout << problem.question << std::endl;
     }
 
     if (!hasFlag(printMode, PrintMode::verify) && !hasFlag(printMode, PrintMode::solution))
@@ -134,13 +150,24 @@ void Menu::runProblem(const Problem& problem, PrintMode printMode) const {
         return;
     }
 
-    const auto result = problem.solution();
+    if (!problem.result)
+    {
+        problem.result = problem.solution();
+    }
+
+    const auto result = problem.result.value();
+
+    if (hasFlag(printMode, PrintMode::solution) && !problem.answer.empty())
+    {
+        std::cout << Color::BrightMagenta << formatAnswer(problem.answer, result)
+            << Color::Default << std::endl;
+    }
 
     if (hasFlag(printMode, PrintMode::verify))
     {
-        if (problem.answer.has_value())
+        if (problem.expected.has_value())
         {
-            const bool correct = problem.answer.value() == result;
+            const bool correct = problem.expected.value() == result;
             std::cout << "Problem " << problem.number << " is "
                 << (correct ? Color::BrightGreen : Color::BrightRed)
                 << (correct ? "correct." : "incorrect.")

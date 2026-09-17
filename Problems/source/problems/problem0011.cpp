@@ -11,7 +11,6 @@
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
-#include <optional>
 #include <cstdint>
 #include <string>
 #include <vector>
@@ -23,7 +22,7 @@ static const uint64_t number{ 11 };
 
 static const std::string title{ "Largest product in a grid" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 In the 20x20 grid below, four numbers along a diagonal line have been
 marked in [red].
 
@@ -54,11 +53,11 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 
-	auto values = pe::loadData<int>(body, "08 02", "67 48", 400);
+	auto values = pe::loadData<int>(question, "08 02", "67 48", 400);
 
 	std::mdspan<int, std::extents<size_t, 20, 20>> data(values.data());
 
@@ -101,6 +100,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 70600674 };
+static const std::string answer{ "The greatest product of four adjacent numbers is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,14 +18,14 @@ static const uint64_t number{ 4 };
 
 static const std::string title{ "Largest palindrome product" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 A palindromic number reads the same both ways. The largest palindrome made
 from the product of two 2-digit numbers is 9009 = 91 x 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t num1{ 2203 };
@@ -56,6 +55,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 906609 };
+static const std::string answer{ "The largest palindrome made from the product of two 3-digit numbers is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

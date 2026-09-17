@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,14 +18,14 @@ static const uint64_t number{ 7 };
 
 static const std::string title{ "10001st prime" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13,
 we can see that the 6th prime is 13.
 
 What is the 10 001st prime number?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t index{ 10001 };
@@ -38,6 +37,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 104743 };
+static const std::string answer{ "The 10001st prime number is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

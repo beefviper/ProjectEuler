@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 6 };
 
 static const std::string title{ "Sum square difference" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The sum of the squares of the first ten natural numbers is,
 1^2 + 2^2 + ... + 10^2 = 385
 
@@ -35,7 +34,7 @@ hundred natural numbers and the square of the sum.
 
 namespace
 {
-	static uint64_t problem()
+	static uint64_t solution()
 	{
 		uint64_t result{ 0 };
 		uint64_t limit{ 100 };
@@ -49,7 +48,7 @@ namespace
 		return result;
 	}
 
-	static const std::optional<uint64_t> answer{ 25164150 };
+	static const std::string answer{ "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is: {}" };
 
-	static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+	static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
 }

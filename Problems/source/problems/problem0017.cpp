@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 17 };
 
 static const std::string title{ "Number letter counts" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 If the numbers 1 to 5 are written out in words: one, two, three, four,
 five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
 
@@ -32,7 +31,7 @@ and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 1000 };
@@ -50,6 +49,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 21124 };
+static const std::string answer{ "The total number of letters used is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

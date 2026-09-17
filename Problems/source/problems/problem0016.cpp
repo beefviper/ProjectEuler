@@ -10,7 +10,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -20,13 +19,13 @@ static const uint64_t number{ 16 };
 
 static const std::string title{ "Power digit sum" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 
 What is the sum of the digits of the number 2^1000?
 )" };
 
-static uint64_t problem() {
+static uint64_t solution() {
 	uint64_t result{ 0 };
 	
 	std::string numberOne = "654646846453489";
@@ -52,6 +51,6 @@ static uint64_t problem() {
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 1366 };
+static const std::string answer{ "The sum of the digits of the number 2^1000 is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

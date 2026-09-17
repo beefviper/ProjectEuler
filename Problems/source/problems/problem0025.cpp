@@ -9,7 +9,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 25 };
 
 static const std::string title{ "1000-digit Fibonacci number" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The Fibonacci sequence is defined by the recurrence relation:
 
 	Fn = Fn-1 + Fn-2, where F1 = 1 and F2 = 1.
@@ -45,7 +44,7 @@ What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	std::string index = "999";
@@ -57,6 +56,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ std::nullopt };
+static const std::string answer{ "The index of the first term in the Fibonacci sequence to contain 1000 digits is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

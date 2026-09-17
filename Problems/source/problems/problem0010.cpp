@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,13 +18,13 @@ static const uint64_t number{ 10 };
 
 static const std::string title{ "Summation of primes" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 Find the sum of all the primes below two million.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t limit{ 2000000 };
@@ -42,6 +41,6 @@ static uint64_t problem()
     return result;
 }
 
-static const std::optional<uint64_t> answer{ std::nullopt };
+static const std::string answer{ "The sum of all the primes below two million is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

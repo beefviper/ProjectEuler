@@ -9,7 +9,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 8 };
 
 static const std::string title{ "Largest product in a series" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The four adjacent digits in the 1000-digit number that have the greatest
 product are 9 x 9 x 8 x 9 = 5832.
 
@@ -43,7 +42,7 @@ Find the thirteen adjacent digits in the 1000-digit number that have the
 greatest product. What is the value of this product?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t run = 13;
@@ -84,6 +83,6 @@ static uint64_t problem()
     return result;
 }
 
-static const std::optional<uint64_t> answer{ 23514624000 };
+static const std::string answer{ "The greatest product of 13 consecutive digits is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

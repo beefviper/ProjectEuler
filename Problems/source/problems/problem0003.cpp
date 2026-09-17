@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <vector>
 #include <cstdint>
@@ -20,13 +19,13 @@ static const uint64_t number{ 3 };
 
 static const std::string title{ "Largest prime factor" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The prime factors of 13195 are 5, 7, 13 and 29.
 
 What is the largest prime factor of the number 600851475143 ?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t numberToFactor{ 600851475143 };
@@ -50,6 +49,6 @@ static uint64_t problem()
     return result;
 }
 
-static const std::optional<uint64_t> answer{ 6857 };
+static const std::string answer{ "The largest prime factor is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

@@ -8,7 +8,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -18,7 +17,7 @@ static const uint64_t number{ 9 };
 
 static const std::string title{ "Special Pythagorean triplet" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
 a2 + b2 = c2
 
@@ -28,7 +27,7 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 
@@ -61,6 +60,6 @@ static uint64_t problem()
     return result;
 }
 
-static const std::optional<uint64_t> answer{ 31875000 };
+static const std::string answer{ "The product of abc is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

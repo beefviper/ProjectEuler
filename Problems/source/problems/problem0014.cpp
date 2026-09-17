@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -19,7 +18,7 @@ static const uint64_t number{ 14 };
 
 static const std::string title{ "Longest Collatz sequence" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 The following iterative sequence is defined for the set of positive integers:
 
 n -> n/2 (n is even)
@@ -37,7 +36,7 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t num = 13;
@@ -62,6 +61,6 @@ static uint64_t problem()
 	return max_num;
 }
 
-static const std::optional<uint64_t> answer{ 837799 };
+static const std::string answer{ "The number with the longest chain is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

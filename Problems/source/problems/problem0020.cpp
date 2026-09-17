@@ -10,7 +10,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <optional>
 #include <string>
 #include <cstdint>
 
@@ -20,7 +19,7 @@ static const uint64_t number{ 20 };
 
 static const std::string title{ "Factorial digit sum" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 n! means n x (n - 1) x ... x 3 x 2 x 1
 
 For example, 10! = 10 x 9 x ... x 3 x 2 x 1 = 3628800,
@@ -30,7 +29,7 @@ and the sum of the digits in the number 10! is
 Find the sum of the digits in the number 100!
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 100 };
@@ -52,6 +51,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 648 };
+static const std::string answer{ "The sum of the digits in the number 100! is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

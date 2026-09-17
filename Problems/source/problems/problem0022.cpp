@@ -8,10 +8,10 @@
 #include "print.h"
 
 #include <algorithm>
+#include <cstdint>
 #include <fstream>
 #include <iostream>
 #include <map>
-#include <optional>
 #include <string>
 #include <vector>
 
@@ -21,7 +21,7 @@ static const uint64_t number{ 22 };
 
 static const std::string title{ "Names scores" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 Using names.txt (right click and 'Save Link/Target As...'), a 46K text file
 containing over five-thousand first names, begin by sorting it into
 alphabetical order. Then working out the alphabetical value for each name,
@@ -35,7 +35,7 @@ So, COLIN would obtain a score of 938 x 53 = 49714.
 What is the total of all the name scores in the file?
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	std::string namesFilename = "data/names.txt";
@@ -59,7 +59,7 @@ static uint64_t problem()
 	std::map<std::string, uint64_t> nameScore;
 	auto max = names.size();
 
-	for (int i = 0; i < max; i++) {
+	for (size_t i = 0; i < max; i++) {
 		std::string currName = names.at(i);
 		int total = 0;
 
@@ -68,19 +68,17 @@ static uint64_t problem()
 			total += temp;
 		}
 
-		nameScore[names.at(i)] = (i + 1) * total;
+		nameScore[names.at(i)] = static_cast<uint64_t>(i + 1) * static_cast<uint64_t>(total);
 	}
 
 	for (auto it = nameScore.cbegin(); it != nameScore.cend(); ++it) {
-        pe::print << it->first << " = " << it->second << std::endl;
+		pe::print << it->first << " = " << it->second << std::endl;
 		result += it->second;
 	}
-
-    pe::print << "The sum of all the name scores is " << result << std::endl;
 
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 871198282 };
+static const std::string answer{ "The sum of all the name scores is {}." };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

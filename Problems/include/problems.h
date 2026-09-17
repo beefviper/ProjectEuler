@@ -1,7 +1,7 @@
 // problems.h
 // Project Euler Problems
 // author: beefviper
-// date: Sept 14, 2026
+// date: Sept 17, 2026
 
 #pragma once
 
@@ -16,19 +16,22 @@
 namespace ProjectEuler {
 
 struct Problem {
-	uint64_t number{0};
+	uint64_t number{ 0 };
 	std::string title{};
-	std::string body{};
+	std::string question{};
 	std::function<uint64_t()> solution;
-	std::optional<uint64_t> answer{};
+	std::string answer{};
+	std::optional<uint64_t> expected{};
+	std::optional<uint64_t> result{};
 
 	Problem(uint64_t n,
-			std::string t = {},
-			std::string b = {},
-			std::function<uint64_t()> s = {},
-			std::optional<uint64_t> a = {})
-		: number{n}, title{std::move(t)}, body{std::move(b)},
-		  solution{std::move(s)}, answer{std::move(a)} {}
+		std::string t = {},
+		std::string q = {},
+		std::function<uint64_t()> s = {},
+		std::string a = {},
+		std::optional<uint64_t> e = {})
+		: number{ n }, title{ std::move(t) }, question{ std::move(q) },
+		solution{ std::move(s) }, answer{ std::move(a) }, expected{ std::move(e) } {}
 };
 
 inline std::vector<Problem>& problems() {

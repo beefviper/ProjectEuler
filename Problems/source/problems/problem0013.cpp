@@ -9,7 +9,6 @@
 #include "print.h"
 
 #include <iostream>
-#include <optional>
 #include <string>
 #include <vector>
 #include <cstdint>
@@ -20,12 +19,12 @@ static const uint64_t number{ 13 };
 
 static const std::string title{ "Large sum" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 Work out the first ten digits of the sum of the following
 one-hundred 50-digit numbers.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	std::string numbersFileName = "data/numbers.txt";
@@ -44,6 +43,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 5537376230 };
+static const std::string answer{ "The first ten digits of the sum of the one-hundred 50-digit numbers is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

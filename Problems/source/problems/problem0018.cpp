@@ -10,7 +10,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <optional>
 #include <sstream>
 #include <string>
 #include <cstdint>
@@ -22,7 +21,7 @@ static const uint64_t number{ 18 };
 
 static const std::string title{ "Maximum path sum I" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 By starting at the top of the triangle below and moving to adjacent
 lines on the row below, the maximum total from top to bottom is 23.
 
@@ -36,7 +35,7 @@ with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 
@@ -90,6 +89,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 1074 };
+static const std::string answer{ "The maximum total from top to bottom of the triangle is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

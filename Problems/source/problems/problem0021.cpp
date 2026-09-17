@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <map>
-#include <optional>
 #include <string>
 #include <vector>
 #include <cstdint>
@@ -21,7 +20,7 @@ static const uint64_t number{ 21 };
 
 static const std::string title{ "Amicable numbers" };
 
-static const std::string body{ R"(
+static const std::string question{ R"(
 Let d(n) be defined as the sum of proper divisors of n
 (numbers less than n which divide evenly into n).
 If d(a) = b and d(b) = a, where a != b, then a and b are an amicable
@@ -30,7 +29,7 @@ pair and each of a and b are called amicable numbers.
 Evaluate the sum of all the amicable numbers under 10000.
 )" };
 
-static uint64_t problem()
+static uint64_t solution()
 {
 	uint64_t result{ 0 };
 	uint64_t number{ 496 };
@@ -93,6 +92,6 @@ static uint64_t problem()
 	return result;
 }
 
-static const std::optional<uint64_t> answer{ 31626 };
+static const std::string answer{ "The sum of all the amicable numbers under 10000 is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, body, problem, answer };
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
