@@ -4,18 +4,15 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
 #include <vector>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 3 };
+static const pe::Number number{ 3 };
 
 static const std::string title{ "Largest prime factor" };
 
@@ -25,25 +22,25 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t numberToFactor{ 600851475143 };
-	std::vector<uint64_t> factors = pe::primeFactors(numberToFactor);
+	pe::Number result{ 0 };
+	pe::Number numberToFactor{ 600851475143 };
+	std::vector<pe::Number> factors = pe::primeFactors(numberToFactor);
 
     pe::print << "The prime factors of " << numberToFactor << " is ";
-	for (uint64_t factor : factors) {
+	for (pe::Number factor : factors) {
         pe::print << factor << ", ";
 	}
-    pe::print << std::endl;
+    pe::print << pe::endl;
 
 	if (!factors.empty()) {
 		result = factors.back();
         pe::print << "The largest prime factor of " << numberToFactor << " is "
-			<< result << std::endl;
+			<< result << pe::endl;
 	}
 	else {
-        pe::print << "There are no prime factors." << std::endl;
+        pe::print << "There are no prime factors." << pe::endl;
 	}
 
     return result;
@@ -51,4 +48,6 @@ static uint64_t solution()
 
 static const std::string answer{ "The largest prime factor is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 6857 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

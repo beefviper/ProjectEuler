@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 15 };
+static const pe::Number number{ 15 };
 
 static const std::string title{ "Lattice paths" };
 
@@ -26,14 +23,14 @@ right corner.
 How many such routes are there through a 20x20 grid ?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
 	std::string start = "1111111111111111111100000000000000000000";
-	uint64_t counter = 0;
+	pe::Number counter = 0;
 
-    pe::print << start << " [" << ++counter << "]" << std::endl;
+    pe::print << start << " [" << ++counter << "]" << pe::endl;
 
 	auto bits = pe::setBits(start);
 	auto begin = bits.begin();
@@ -44,5 +41,7 @@ static uint64_t solution()
 }
 
 static const std::string answer{ "The number of lattice paths through a 20x20 grid is: {}" };
+
+[[maybe_unused]] static const pe::Number expected{};
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

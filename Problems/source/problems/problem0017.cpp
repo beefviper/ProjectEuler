@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 17 };
+static const pe::Number number{ 17 };
 
 static const std::string title{ "Number letter counts" };
 
@@ -31,24 +28,26 @@ and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t number{ 1000 };
+	pe::Number result{ 0 };
+	pe::Number number{ 1000 };
 
 	//std::string words = pe::makeStringFromNumber(9999);
 
 	for (int i = 1; i <= number; i++) {
 		std::string words = pe::makeStringFromNumber(i);
-        pe::print << words << std::endl;
+        pe::print << words << pe::endl;
 		result += words.length();
 	}
 
-    pe::print << "The total is " << result << "." << std::endl;
+    pe::print << "The total is " << result << "." << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The total number of letters used is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 21124 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

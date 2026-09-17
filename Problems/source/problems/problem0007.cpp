@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 7 };
+static const pe::Number number{ 7 };
 
 static const std::string title{ "10001st prime" };
 
@@ -25,18 +22,20 @@ we can see that the 6th prime is 13.
 What is the 10 001st prime number?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t index{ 10001 };
+	pe::Number result{ 0 };
+	pe::Number index{ 10001 };
 
 	result = pe::getPrimeByIndex(index);
     pe::print << "The " << index << "th prime is "
-		<< result << "." << std::endl;
+		<< result << "." << pe::endl;
 	
 	return result;
 }
 
 static const std::string answer{ "The 10001st prime number is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 104743 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

@@ -4,16 +4,13 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
 #include "print.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 9 };
+static const pe::Number number{ 9 };
 
 static const std::string title{ "Special Pythagorean triplet" };
 
@@ -27,13 +24,13 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
-	uint64_t resultA = 0;
-	uint64_t resultB = 0;
-	uint64_t resultC = 0;
+	pe::Number resultA = 0;
+	pe::Number resultB = 0;
+	pe::Number resultC = 0;
 
 	for (int a = 1; a < 1000; a++) {
 		for (int b = 1; b < 1000; b++) {
@@ -49,17 +46,19 @@ static uint64_t solution()
 		}
 	}
 
-	uint64_t sum = resultA + resultB + resultC;
+	pe::Number sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
-    pe::print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << std::endl;
-	pe::print << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << std::endl;
-	pe::print << resultA << " + " << resultB << " + " << resultC << " = " << sum << std::endl;
-	pe::print << "The product of abc is " << result << "." << std::endl;
+    pe::print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << pe::endl;
+	pe::print << resultA << "^2 * " << resultB << "^2 = " << resultC << "^2" << pe::endl;
+	pe::print << resultA << " + " << resultB << " + " << resultC << " = " << sum << pe::endl;
+	pe::print << "The product of abc is " << result << "." << pe::endl;
 
     return result;
 }
 
 static const std::string answer{ "The product of abc is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 31875000 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

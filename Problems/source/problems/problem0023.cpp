@@ -6,11 +6,10 @@
 #include "problems.h"
 
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 23 };
+static const pe::Number number{ 23 };
 
 static const std::string title{ "Non-abundant sums" };
 
@@ -34,12 +33,14 @@ Find the sum of all the positive integers which cannot be written as the sum
 of two abundant numbers.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
 
 	return 0;
 }
 
 static const std::string answer{ "The sum of all the positive integers which cannot be written as the sum of two abundant numbers is: {}" };
+
+[[maybe_unused]] static const pe::Number expected{};
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

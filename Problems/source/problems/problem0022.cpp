@@ -4,20 +4,17 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
 #include "print.h"
 
 #include <algorithm>
-#include <cstdint>
 #include <fstream>
-#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 22 };
+static const pe::Number number{ 22 };
 
 static const std::string title{ "Names scores" };
 
@@ -35,9 +32,9 @@ So, COLIN would obtain a score of 938 x 53 = 49714.
 What is the total of all the name scores in the file?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 	std::string namesFilename = "data/names.txt";
 	std::ifstream namesFile(namesFilename);
 
@@ -56,7 +53,7 @@ static uint64_t solution()
 
 	std::sort(names.begin(), names.end());
 
-	std::map<std::string, uint64_t> nameScore;
+	std::map<std::string, pe::Number> nameScore;
 	auto max = names.size();
 
 	for (size_t i = 0; i < max; i++) {
@@ -68,11 +65,11 @@ static uint64_t solution()
 			total += temp;
 		}
 
-		nameScore[names.at(i)] = static_cast<uint64_t>(i + 1) * static_cast<uint64_t>(total);
+		nameScore[names.at(i)] = static_cast<pe::Number>(i + 1) * static_cast<pe::Number>(total);
 	}
 
 	for (auto it = nameScore.cbegin(); it != nameScore.cend(); ++it) {
-		pe::print << it->first << " = " << it->second << std::endl;
+		pe::print << it->first << " = " << it->second << pe::endl;
 		result += it->second;
 	}
 
@@ -81,4 +78,6 @@ static uint64_t solution()
 
 static const std::string answer{ "The sum of all the name scores is {}." };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 871198282 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

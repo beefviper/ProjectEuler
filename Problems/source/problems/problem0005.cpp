@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 5 };
+static const pe::Number number{ 5 };
 
 static const std::string title{ "Smallest multiple" };
 
@@ -26,9 +23,9 @@ What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 	bool flag = false;
 
 	while (flag == false) {
@@ -37,11 +34,13 @@ static uint64_t solution()
 	}
 	
     pe::print << "The smallest positive number that is evenly divisible by"
-		<< " all of the numbers from 1 to 20 is " << result << "." << std::endl;
+		<< " all of the numbers from 1 to 20 is " << result << "." << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 232792560 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

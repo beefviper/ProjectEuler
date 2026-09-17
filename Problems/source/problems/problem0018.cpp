@@ -4,20 +4,17 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
 #include <cstdlib>
-#include <iostream>
 #include <sstream>
 #include <string>
-#include <cstdint>
 #include <vector>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 18 };
+static const pe::Number number{ 18 };
 
 static const std::string title{ "Maximum path sum I" };
 
@@ -35,18 +32,18 @@ with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
 	std::string triangleFileName = "data/large_tri.txt";
 	std::vector<std::string> triangleData = pe::loadTriangle(triangleFileName);
-	std::vector<std::vector<int64_t>> triangle;
+	std::vector<std::vector<pe::Number>> triangle;
 
-	for (uint64_t i = 0; i < triangleData.size(); i++) {
+	for (pe::Number i = 0; i < triangleData.size(); i++) {
 		std::stringstream ss(triangleData.at(i));
 		std::string s;
-		std::vector<int64_t> v;
+		std::vector<pe::Number> v;
 
 		while (std::getline(ss, s, ' ')) {
 			v.push_back(atoi(s.c_str()));
@@ -59,13 +56,13 @@ static uint64_t solution()
 		for (auto v2 : v1) {
            pe::print << v2 << " ";
 		}
-       pe::print << std::endl;
+       pe::print << pe::endl;
 	}
 
-	for (int64_t i = triangle.size() - 2; i >= 0; i--) {
-		for (int64_t j = 0; j < static_cast<int64_t>(triangle.at(i).size()); j++) {
-			int64_t a = triangle.at(i + 1).at(j);
-			int64_t b = triangle.at(i + 1).at(j + 1);
+	for (pe::Number i = triangle.size() - 2; i >= 0; i--) {
+		for (pe::Number j = 0; j < static_cast<pe::Number>(triangle.at(i).size()); j++) {
+			pe::Number a = triangle.at(i + 1).at(j);
+			pe::Number b = triangle.at(i + 1).at(j + 1);
 
 			if (a > b) {
 				triangle.at(i).at(j) += a;
@@ -80,15 +77,17 @@ static uint64_t solution()
 		for (auto v2 : v1) {
            pe::print << v2 << " ";
 		}
-       pe::print << std::endl;
+       pe::print << pe::endl;
 	}
 
 	result = triangle.at(0).at(0);
 
-    pe::print << "result: " << result << std::endl;
+    pe::print << "result: " << result << pe::endl;
 	return result;
 }
 
 static const std::string answer{ "The maximum total from top to bottom of the triangle is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 1074 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

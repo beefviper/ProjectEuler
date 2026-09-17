@@ -4,16 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 2 };
+static const pe::Number number{ 2 };
 
 static const std::string title{ "Even Fibonacci numbers" };
 
@@ -27,13 +25,13 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
-	uint64_t index{ 1 };
-	uint64_t number{ 0 };
-	uint64_t max{ 4000000 };
+	pe::Number index{ 1 };
+	pe::Number number{ 0 };
+	pe::Number max{ 4000000 };
 
 	while ( result < max ) {
 		number = pe::fib(index);
@@ -49,4 +47,6 @@ static uint64_t solution()
 
 static const std::string answer{ "The sum is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 4613732 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

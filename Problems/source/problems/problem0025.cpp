@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
 #include "print.h"
 
 #include <cstdlib>
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 25 };
+static const pe::Number number{ 25 };
 
 static const std::string title{ "1000-digit Fibonacci number" };
 
@@ -44,18 +41,20 @@ What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 	std::string index = "999";
 	std::string answer = "0";
 
     pe::print << "index: " << atoi(index.c_str()) + 1
-		<< ", answer: " << answer << std::endl;
+		<< ", answer: " << answer << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The index of the first term in the Fibonacci sequence to contain 1000 digits is: {}" };
+
+[[maybe_unused]] static const pe::Number expected{};
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

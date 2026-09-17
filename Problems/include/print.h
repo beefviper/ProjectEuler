@@ -26,10 +26,14 @@ public:
     ConditionalPrint& operator<<(std::ostream& (*manipulator)(std::ostream&));
 
 private:
-    bool enabled_{false};
+    bool enabled_{ false };
 };
 
 extern ConditionalPrint print;
+
+inline std::ostream& endl(std::ostream& os) {
+    return std::endl(os);
+}
 
 void setPrintEnabled(bool enabled);
 

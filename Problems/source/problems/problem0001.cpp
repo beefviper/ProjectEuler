@@ -4,16 +4,13 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
 #include "print.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 1 };
+static const pe::Number number{ 1 };
 
 static const std::string title{ "Multiples of 3 and 5" };
 
@@ -24,25 +21,27 @@ we get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
-	pe::print << "Finding factors of 3 or 5 below 1000..." << std::endl;
+	pe::print << "Finding factors of 3 or 5 below 1000..." << pe::endl;
 
 	for (int i = 0; i < 1000; i++) {
 		if ((i % 3 == 0) || (i % 5 == 0)) {
 			result += i;
 			
-			pe::print << i << "(" << result << ")";
+			//pe::print << i << "(" << result << ")";
 		}
 	}
 
-	pe::print << std::endl;
+	pe::print << pe::endl;
 
     return result;
 }
 
 static const std::string answer{ "The sum is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 233168 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

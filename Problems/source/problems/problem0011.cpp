@@ -4,21 +4,18 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "loaddata.h"
 #include "print.h"
+#include "loaddata.h"
 
 #include <algorithm>
 #include <iomanip>
-#include <iostream>
-#include <cstdint>
 #include <string>
 #include <vector>
 #include <mdspan>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 11 };
+static const pe::Number number{ 11 };
 
 static const std::string title{ "Largest product in a grid" };
 
@@ -53,9 +50,9 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
+	pe::Number result{ 0 };
 
 	auto values = pe::loadData<int>(question, "08 02", "67 48", 400);
 
@@ -69,7 +66,7 @@ static uint64_t solution()
 			}
 			else {
                 pe::print << std::setfill('0') << std::setw(2)
-					<< data[i, j] << std::endl;
+					<< data[i, j] << pe::endl;
 			}
 		}
 	}
@@ -95,11 +92,13 @@ static uint64_t solution()
 	result = *max_element(product.begin(), product.end());
 
     pe::print << "The greatest product of four adjacent numbers is "
-		<< result << std::endl;
+		<< result << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The greatest product of four adjacent numbers is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 70600674 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

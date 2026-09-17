@@ -4,18 +4,15 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
 #include <vector>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 12 };
+static const pe::Number number{ 12 };
 
 static const std::string title{ "Highly divisible triangular number" };
 
@@ -42,13 +39,13 @@ What is the value of the first triangle number to have over five hundred
 divisors?
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t numberOfFactors = 0;
-	uint64_t counter = 1;
-	uint64_t maxFactors = 500;
-	std::vector<uint64_t> factors;
+	pe::Number result{ 0 };
+	pe::Number numberOfFactors = 0;
+	pe::Number counter = 1;
+	pe::Number maxFactors = 500;
+	std::vector<pe::Number> factors;
 
 	while (numberOfFactors < maxFactors) {
 		result += counter;
@@ -58,11 +55,13 @@ static uint64_t solution()
 	}
 
     pe::print << "The first tringle number with " << numberOfFactors
-		<< " factors is " << result << std::endl;
+		<< " factors is " << result << pe::endl;
 
     return result;
 }
 
 static const std::string answer{ "The first triangle number with over five hundred divisors is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 76576500 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

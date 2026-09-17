@@ -4,18 +4,15 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
 #include <cstdlib>
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 16 };
+static const pe::Number number{ 16 };
 
 static const std::string title{ "Power digit sum" };
 
@@ -25,16 +22,16 @@ static const std::string question{ R"(
 What is the sum of the digits of the number 2^1000?
 )" };
 
-static uint64_t solution() {
-	uint64_t result{ 0 };
+static pe::Number solution() {
+	pe::Number result{ 0 };
 	
 	std::string numberOne = "654646846453489";
 	std::string numberTwo = "546546468415312";
 	std::string largeNumber = pe::multipleLargeNumbers(numberOne, numberTwo);
 
-    pe::print << "numberOne = " << numberOne << std::endl;
-	pe::print << "numberTwo = " << numberTwo << std::endl;
-	pe::print << "largeNumber = " << largeNumber << std::endl;
+    pe::print << "numberOne = " << numberOne << pe::endl;
+	pe::print << "numberTwo = " << numberTwo << pe::endl;
+	pe::print << "largeNumber = " << largeNumber << pe::endl;
 	
 	std::string total = "1";
 
@@ -46,11 +43,13 @@ static uint64_t solution() {
 		result = result + atoi(&c);
 	}
 
-    pe::print << "The sum is " << result << std::endl;
+    pe::print << "The sum is " << result << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The sum of the digits of the number 2^1000 is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 1366 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

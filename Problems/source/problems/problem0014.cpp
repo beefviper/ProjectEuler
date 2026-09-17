@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 14 };
+static const pe::Number number{ 14 };
 
 static const std::string title{ "Longest Collatz sequence" };
 
@@ -36,31 +33,33 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t num = 13;
-	uint64_t length = pe::collatz(num);
-	uint64_t max_num = 0;
+	pe::Number result{ 0 };
+	pe::Number num = 13;
+	pe::Number length = pe::collatz(num);
+	pe::Number max_num = 0;
 
   pe::print << "The chain length for " << num << " is "
-		<< length << " numbers long." << std::endl;
+		<< length << " numbers long." << pe::endl;
 
-	for (uint64_t i = 1; i <= 1000000; i++) {
-		uint64_t max_temp = pe::collatz(i);
+	for (pe::Number i = 1; i <= 1000000; i++) {
+		pe::Number max_temp = pe::collatz(i);
 		if (max_temp > result) {
 			result = max_temp;
 			max_num = i;
 		}
-        pe::print << i << ", " << max_temp << std::endl;
+        pe::print << i << ", " << max_temp << pe::endl;
 	}
 
   pe::print << "The number with the longest chain is " << max_num
-		<< " with a length of " << result << "." << std::endl;
+		<< " with a length of " << result << "." << pe::endl;
 
 	return max_num;
 }
 
 static const std::string answer{ "The number with the longest chain is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 837799 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

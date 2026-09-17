@@ -4,17 +4,14 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 4 };
+static const pe::Number number{ 4 };
 
 static const std::string title{ "Largest palindrome product" };
 
@@ -25,20 +22,20 @@ from the product of two 2-digit numbers is 9009 = 91 x 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t num1{ 2203 };
-	uint64_t num2{ 906609 };
+	pe::Number result{ 0 };
+	pe::Number num1{ 2203 };
+	pe::Number num2{ 906609 };
 
-    pe::print << num1 << " is " << pe::isPalindrome(num1) << std::endl;
-	pe::print << num2 << " is " << pe::isPalindrome(num2) << std::endl;
+    pe::print << num1 << " is " << pe::isPalindrome(num1) << pe::endl;
+	pe::print << num2 << " is " << pe::isPalindrome(num2) << pe::endl;
 
-	uint64_t largestPalindrome{ 0 };
+	pe::Number largestPalindrome{ 0 };
 	
-	for (int i = 1; i < 1000; i++) {
-		for (int j = 1; j < 1000; j++) {
-			int testNumber = i * j;
+	for (pe::Number i = 1; i < 1000; i++) {
+		for (pe::Number j = 1; j < 1000; j++) {
+			pe::Number testNumber = i * j;
 
 			if (pe::isPalindrome(testNumber)) {
 				if (testNumber > largestPalindrome) {
@@ -50,11 +47,13 @@ static uint64_t solution()
 	
 	result = largestPalindrome;
     pe::print << "The largest palindrome made from the product of two 3-digit"
-		<< " numbers is " << result << "." << std::endl;
+		<< " numbers is " << result << "." << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The largest palindrome made from the product of two 3-digit numbers is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 906609 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

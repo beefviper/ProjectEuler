@@ -4,18 +4,15 @@
 // date: Sept 14, 2026
 
 #include "problems.h"
-
-#include "eulerlib.h"
 #include "print.h"
+#include "eulerlib.h"
 
 #include <cstdlib>
-#include <iostream>
 #include <string>
-#include <cstdint>
 
 namespace pe = ProjectEuler;
 
-static const uint64_t number{ 20 };
+static const pe::Number number{ 20 };
 
 static const std::string title{ "Factorial digit sum" };
 
@@ -29,28 +26,30 @@ and the sum of the digits in the number 10! is
 Find the sum of the digits in the number 100!
 )" };
 
-static uint64_t solution()
+static pe::Number solution()
 {
-	uint64_t result{ 0 };
-	uint64_t number{ 100 };
+	pe::Number result{ 0 };
+	pe::Number number{ 100 };
 	std::string answer = "1";
 
-	for (int i = 1; i <= number; i++) {
+	for (pe::Number i = 1; i <= number; i++) {
 		answer = pe::multipleLargeNumbers(answer, std::to_string(i));
 	}
 
     pe::print << "The factorial of " << number << " is "
-		<< answer << std::endl;
+		<< answer << pe::endl;
 
 	for (char c : answer) {
 		result += atoi(&c);
 	}
 
-    pe::print << "The sum of all the digits is " << result << std::endl;
+    pe::print << "The sum of all the digits is " << result << pe::endl;
 
 	return result;
 }
 
 static const std::string answer{ "The sum of the digits in the number 100! is: {}" };
 
-static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };
+static const pe::Number expected{ 648 };
+
+static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

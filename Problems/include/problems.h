@@ -15,21 +15,23 @@
 
 namespace ProjectEuler {
 
+using Number = uint64_t;
+
 struct Problem {
-	uint64_t number{ 0 };
+	Number number{ 0 };
 	std::string title{};
 	std::string question{};
-	std::function<uint64_t()> solution;
+	std::function<Number()> solution;
 	std::string answer{};
-	std::optional<uint64_t> expected{};
-	std::optional<uint64_t> result{};
+	std::optional<Number> expected{};
+	std::optional<Number> result{};
 
-	Problem(uint64_t n,
+	Problem(Number n,
 		std::string t = {},
 		std::string q = {},
-		std::function<uint64_t()> s = {},
+		std::function<Number()> s = {},
 		std::string a = {},
-		std::optional<uint64_t> e = {})
+		std::optional<Number> e = {})
 		: number{ n }, title{ std::move(t) }, question{ std::move(q) },
 		solution{ std::move(s) }, answer{ std::move(a) }, expected{ std::move(e) } {}
 };
