@@ -96,6 +96,9 @@
     <ClCompile Include="source\print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\color.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\menu.h">
@@ -111,6 +114,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\loaddata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

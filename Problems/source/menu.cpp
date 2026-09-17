@@ -5,6 +5,7 @@
 
 #include "menu.h"
 
+#include "color.h"
 #include "flags.h"
 #include "print.h"
 #include "problems.h"
@@ -28,7 +29,8 @@ Menu::Menu() {
 int Menu::run() const {
     while (true)
     {
-        std::cout << "\nEnter a problem number (0 = verify all, q = quit): ";
+        std::cout << Color::BrightCyan << "\nEnter a problem number (0 = verify all, q = quit): "
+            << Color::Default;
 
         std::string line;
         if (!std::getline(std::cin, line))
@@ -56,7 +58,7 @@ int Menu::run() const {
 
         if (!isNumeric)
         {
-            std::cout << "Invalid input." << std::endl;
+            std::cout << Color::BrightYellow << "Invalid input." << Color::Default << std::endl;
             continue;
         }
 
@@ -67,7 +69,7 @@ int Menu::run() const {
         }
         catch (...)
         {
-            std::cout << "Invalid input." << std::endl;
+            std::cout << Color::BrightYellow << "Invalid input." << Color::Default << std::endl;
             continue;
         }
 
@@ -103,7 +105,8 @@ void Menu::runSingle(uint64_t problemNumber) const {
 
     if (it == allProblems.end())
     {
-        std::cout << "Problem " << problemNumber << " was not found." << std::endl;
+        std::cout << Color::BrightRed << "Problem " << problemNumber << " was not found."
+            << Color::Default << std::endl;
         return;
     }
 
@@ -114,13 +117,15 @@ void Menu::runSingle(uint64_t problemNumber) const {
 void Menu::runProblem(const Problem& problem, PrintMode printMode) const {
     if (!problem.solution)
     {
-        std::cout << "Problem " << problem.number << " has no solution function." << std::endl;
+        std::cout << Color::BrightRed << "Problem " << problem.number << " has no solution function."
+            << Color::Default << std::endl;
         return;
     }
 
     if (hasFlag(printMode, PrintMode::question))
     {
-        std::cout << "Problem " << problem.number << ": " << problem.title << std::endl;
+        std::cout << "Problem " << Color::BrightBlue << problem.number << Color::Default
+            << ": " << Color::BrightWhite << problem.title << Color::Default << std::endl;
         std::cout << problem.body << std::endl;
     }
 
@@ -135,13 +140,16 @@ void Menu::runProblem(const Problem& problem, PrintMode printMode) const {
     {
         if (problem.answer.has_value())
         {
+            const bool correct = problem.answer.value() == result;
             std::cout << "Problem " << problem.number << " is "
-                << (problem.answer.value() == result ? "correct." : "incorrect.")
-                << std::endl;
+                << (correct ? Color::BrightGreen : Color::BrightRed)
+                << (correct ? "correct." : "incorrect.")
+                << Color::Default << std::endl;
         }
         else
         {
-            std::cout << "Problem " << problem.number << " produced " << result << "." << std::endl;
+            std::cout << "Problem " << problem.number << " produced "
+                << Color::BrightYellow << result << Color::Default << "." << std::endl;
         }
     }
 }
