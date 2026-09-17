@@ -9,6 +9,8 @@
 #include <windows.h>
 #endif
 
+#include <ostream>
+
 namespace ProjectEuler {
 
 std::ostream& operator<<(std::ostream& os, Color color) {
