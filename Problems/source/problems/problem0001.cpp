@@ -10,6 +10,7 @@
 #include <iostream>
 #include <optional>
 #include <string>
+#include <cstdint>
 
 namespace pe = ProjectEuler;
 

@@ -13,6 +13,7 @@
 #include <iostream>
 #include <optional>
 #include <sstream>
+#include <cstdint>
 #include <string>
 #include <vector>
 

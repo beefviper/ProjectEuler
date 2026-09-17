@@ -13,6 +13,7 @@
 #include <optional>
 #include <sstream>
 #include <string>
+#include <cstdint>
 #include <vector>
 
 namespace pe = ProjectEuler;
