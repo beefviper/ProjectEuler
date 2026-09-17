@@ -15,7 +15,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 11 };
+static const pe::value number{ 11 };
 
 static const std::string title{ "Largest product in a grid" };
 
@@ -50,9 +50,9 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 
 	auto values = pe::loadData<int>(question, "08 02", "67 48", 400);
 
@@ -99,6 +99,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The greatest product of four adjacent numbers is: {}" };
 
-static const pe::Number expected{ 70600674 };
+static const pe::value expected{ 70600674 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

@@ -12,7 +12,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 16 };
+static const pe::value number{ 16 };
 
 static const std::string title{ "Power digit sum" };
 
@@ -22,8 +22,8 @@ static const std::string question{ R"(
 What is the sum of the digits of the number 2^1000?
 )" };
 
-static pe::Number solution() {
-	pe::Number result{ 0 };
+static pe::value solution() {
+	pe::value result{ 0 };
 	
 	std::string numberOne = "654646846453489";
 	std::string numberTwo = "546546468415312";
@@ -50,6 +50,6 @@ static pe::Number solution() {
 
 static const std::string answer{ "The sum of the digits of the number 2^1000 is: {}" };
 
-static const pe::Number expected{ 1366 };
+static const pe::value expected{ 1366 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

@@ -12,7 +12,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 20 };
+static const pe::value number{ 20 };
 
 static const std::string title{ "Factorial digit sum" };
 
@@ -26,13 +26,13 @@ and the sum of the digits in the number 10! is
 Find the sum of the digits in the number 100!
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number number{ 100 };
+	pe::value result{ 0 };
+	pe::value number{ 100 };
 	std::string answer = "1";
 
-	for (pe::Number i = 1; i <= number; i++) {
+	for (pe::value i = 1; i <= number; i++) {
 		answer = pe::multipleLargeNumbers(answer, std::to_string(i));
 	}
 
@@ -50,6 +50,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The sum of the digits in the number 100! is: {}" };
 
-static const pe::Number expected{ 648 };
+static const pe::value expected{ 648 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 14 };
+static const pe::value number{ 14 };
 
 static const std::string title{ "Longest Collatz sequence" };
 
@@ -33,18 +33,18 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number num = 13;
-	pe::Number length = pe::collatz(num);
-	pe::Number max_num = 0;
+	pe::value result{ 0 };
+	pe::value num = 13;
+	pe::value length = pe::collatz(num);
+	pe::value max_num = 0;
 
   pe::print << "The chain length for " << num << " is "
 		<< length << " numbers long." << pe::endl;
 
-	for (pe::Number i = 1; i <= 1000000; i++) {
-		pe::Number max_temp = pe::collatz(i);
+	for (pe::value i = 1; i <= 1000000; i++) {
+		pe::value max_temp = pe::collatz(i);
 		if (max_temp > result) {
 			result = max_temp;
 			max_num = i;
@@ -60,6 +60,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The number with the longest chain is: {}" };
 
-static const pe::Number expected{ 837799 };
+static const pe::value expected{ 837799 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

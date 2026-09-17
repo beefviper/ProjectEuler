@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 6 };
+static const pe::value number{ 6 };
 
 static const std::string title{ "Sum square difference" };
 
@@ -29,10 +29,10 @@ Find the difference between the sum of the squares of the first one
 hundred natural numbers and the square of the sum.
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number limit{ 100 };
+	pe::value result{ 0 };
+	pe::value limit{ 100 };
 
 	result = pe::squareOfSums(limit) - pe::sumOfSquares(limit);
 
@@ -45,6 +45,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is: {}" };
 
-static const pe::Number expected{ 25164150 };
+static const pe::value expected{ 25164150 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

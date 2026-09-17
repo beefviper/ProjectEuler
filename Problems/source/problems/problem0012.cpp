@@ -12,7 +12,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 12 };
+static const pe::value number{ 12 };
 
 static const std::string title{ "Highly divisible triangular number" };
 
@@ -39,13 +39,13 @@ What is the value of the first triangle number to have over five hundred
 divisors?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number numberOfFactors = 0;
-	pe::Number counter = 1;
-	pe::Number maxFactors = 500;
-	std::vector<pe::Number> factors;
+	pe::value result{ 0 };
+	pe::value numberOfFactors = 0;
+	pe::value counter = 1;
+	pe::value maxFactors = 500;
+	std::vector<pe::value> factors;
 
 	while (numberOfFactors < maxFactors) {
 		result += counter;
@@ -62,6 +62,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The first triangle number with over five hundred divisors is: {}" };
 
-static const pe::Number expected{ 76576500 };
+static const pe::value expected{ 76576500 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

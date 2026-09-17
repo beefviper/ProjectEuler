@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 5 };
+static const pe::value number{ 5 };
 
 static const std::string title{ "Smallest multiple" };
 
@@ -23,9 +23,9 @@ What is the smallest positive number that is evenly divisible by all of
 the numbers from 1 to 20?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 	bool flag = false;
 
 	while (flag == false) {
@@ -41,6 +41,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: {}" };
 
-static const pe::Number expected{ 232792560 };
+static const pe::value expected{ 232792560 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

@@ -14,7 +14,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 18 };
+static const pe::value number{ 18 };
 
 static const std::string title{ "Maximum path sum I" };
 
@@ -32,18 +32,18 @@ with a triangle containing one-hundred rows; it cannot be solved by brute
 force, and requires a clever method! ;o)
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 
 	std::string triangleFileName = "data/large_tri.txt";
 	std::vector<std::string> triangleData = pe::loadTriangle(triangleFileName);
-	std::vector<std::vector<pe::Number>> triangle;
+	std::vector<std::vector<pe::value>> triangle;
 
-	for (pe::Number i = 0; i < triangleData.size(); i++) {
+	for (pe::value i = 0; i < triangleData.size(); i++) {
 		std::stringstream ss(triangleData.at(i));
 		std::string s;
-		std::vector<pe::Number> v;
+		std::vector<pe::value> v;
 
 		while (std::getline(ss, s, ' ')) {
 			v.push_back(atoi(s.c_str()));
@@ -59,14 +59,14 @@ static pe::Number solution()
 		pe::print << pe::endl;
 	}
 
-	const pe::Number rows = triangle.size();
+	const pe::value rows = triangle.size();
 
-	for (pe::Number offset = 1; offset < rows; offset++) {
-		pe::Number i = rows - 1 - offset;
+	for (pe::value offset = 1; offset < rows; offset++) {
+		pe::value i = rows - 1 - offset;
 
-		for (pe::Number j = 0; j < static_cast<pe::Number>(triangle.at(i).size()); j++) {
-			pe::Number a = triangle.at(i + 1).at(j);
-			pe::Number b = triangle.at(i + 1).at(j + 1);
+		for (pe::value j = 0; j < static_cast<pe::value>(triangle.at(i).size()); j++) {
+			pe::value a = triangle.at(i + 1).at(j);
+			pe::value b = triangle.at(i + 1).at(j + 1);
 
 			if (a > b) {
 				triangle.at(i).at(j) += a;
@@ -92,6 +92,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The maximum total from top to bottom of the triangle is: {}" };
 
-static const pe::Number expected{ 1074 };
+static const pe::value expected{ 1074 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

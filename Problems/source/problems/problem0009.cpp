@@ -10,7 +10,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 9 };
+static const pe::value number{ 9 };
 
 static const std::string title{ "Special Pythagorean triplet" };
 
@@ -24,13 +24,13 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 
-	pe::Number resultA = 0;
-	pe::Number resultB = 0;
-	pe::Number resultC = 0;
+	pe::value resultA = 0;
+	pe::value resultB = 0;
+	pe::value resultC = 0;
 
 	for (int a = 1; a < 1000; a++) {
 		for (int b = 1; b < 1000; b++) {
@@ -46,7 +46,7 @@ static pe::Number solution()
 		}
 	}
 
-	pe::Number sum = resultA + resultB + resultC;
+	pe::value sum = resultA + resultB + resultC;
 	result = resultA * resultB * resultC;
 
     pe::print << "a = " << resultA << ", b = " << resultB << ", c = " << resultC << pe::endl;
@@ -59,6 +59,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The product of abc is: {}" };
 
-static const pe::Number expected{ 31875000 };
+static const pe::value expected{ 31875000 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

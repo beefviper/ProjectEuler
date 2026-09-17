@@ -12,7 +12,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 3 };
+static const pe::value number{ 3 };
 
 static const std::string title{ "Largest prime factor" };
 
@@ -22,14 +22,14 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number numberToFactor{ 600851475143 };
-	std::vector<pe::Number> factors = pe::primeFactors(numberToFactor);
+	pe::value result{ 0 };
+	pe::value numberToFactor{ 600851475143 };
+	std::vector<pe::value> factors = pe::primeFactors(numberToFactor);
 
     pe::print << "The prime factors of " << numberToFactor << " is ";
-	for (pe::Number factor : factors) {
+	for (pe::value factor : factors) {
         pe::print << factor << ", ";
 	}
     pe::print << pe::endl;
@@ -48,6 +48,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The largest prime factor is: {}" };
 
-static const pe::Number expected{ 6857 };
+static const pe::value expected{ 6857 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

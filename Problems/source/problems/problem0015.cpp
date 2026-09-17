@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 15 };
+static const pe::value number{ 15 };
 
 static const std::string title{ "Lattice paths" };
 
@@ -23,12 +23,12 @@ right corner.
 How many such routes are there through a 20x20 grid ?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 
 	std::string start = "1111111111111111111100000000000000000000";
-	pe::Number counter = 0;
+	pe::value counter = 0;
 
     pe::print << start << " [" << ++counter << "]" << pe::endl;
 
@@ -42,6 +42,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The number of lattice paths through a 20x20 grid is: {}" };
 
-[[maybe_unused]] static const pe::Number expected{};
+[[maybe_unused]] static const pe::value expected{};
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 7 };
+static const pe::value number{ 7 };
 
 static const std::string title{ "10001st prime" };
 
@@ -22,10 +22,10 @@ we can see that the 6th prime is 13.
 What is the 10 001st prime number?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number index{ 10001 };
+	pe::value result{ 0 };
+	pe::value index{ 10001 };
 
 	result = pe::getPrimeByIndex(index);
     pe::print << "The " << index << "th prime is "
@@ -36,6 +36,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The 10001st prime number is: {}" };
 
-static const pe::Number expected{ 104743 };
+static const pe::value expected{ 104743 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

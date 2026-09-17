@@ -12,7 +12,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 13 };
+static const pe::value number{ 13 };
 
 static const std::string title{ "Large sum" };
 
@@ -21,9 +21,9 @@ Work out the first ten digits of the sum of the following
 one-hundred 50-digit numbers.
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 	std::string numbersFileName = "data/numbers.txt";
 	std::vector<std::string> numbers = pe::loadNumbers(numbersFileName);
 	std::string total(50, '0');
@@ -40,6 +40,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The first ten digits of the sum of the one-hundred 50-digit numbers is: {}" };
 
-static const pe::Number expected{ 5537376230 };
+static const pe::value expected{ 5537376230 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };

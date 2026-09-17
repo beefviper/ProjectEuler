@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 25 };
+static const pe::value number{ 25 };
 
 static const std::string title{ "1000-digit Fibonacci number" };
 
@@ -41,9 +41,9 @@ What is the index of the first term in the Fibonacci sequence to
 contain 1000 digits?
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
+	pe::value result{ 0 };
 	std::string index = "999";
 	std::string answer = "0";
 
@@ -55,6 +55,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The index of the first term in the Fibonacci sequence to contain 1000 digits is: {}" };
 
-[[maybe_unused]] static const pe::Number expected{};
+[[maybe_unused]] static const pe::value expected{};
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer };

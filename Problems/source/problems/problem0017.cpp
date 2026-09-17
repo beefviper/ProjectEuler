@@ -11,7 +11,7 @@
 
 namespace pe = ProjectEuler;
 
-static const pe::Number number{ 17 };
+static const pe::value number{ 17 };
 
 static const std::string title{ "Number letter counts" };
 
@@ -28,10 +28,10 @@ and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 )" };
 
-static pe::Number solution()
+static pe::value solution()
 {
-	pe::Number result{ 0 };
-	pe::Number number{ 1000 };
+	pe::value result{ 0 };
+	pe::value number{ 1000 };
 
 	//std::string words = pe::makeStringFromNumber(9999);
 
@@ -48,6 +48,6 @@ static pe::Number solution()
 
 static const std::string answer{ "The total number of letters used is: {}" };
 
-static const pe::Number expected{ 21124 };
+static const pe::value expected{ 21124 };
 
 static const pe::ProblemRegistrar problem_registrar{ number, title, question, solution, answer, expected };
